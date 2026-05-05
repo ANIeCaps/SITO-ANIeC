@@ -131,56 +131,66 @@
         </div>
     </main>
 
-  <footer class="footer-simple">
-        <!-- L'ONDA TRICOLORE "AURORA" CONTINUA (Eterea, senza strisce e centrata) -->
-        <div class="wave-container-aurora">
+ <footer class="footer-simple">
+        <!-- ONDA TRICOLORE FINALE (Effetto fibra intrecciata sfumata) -->
+        <div class="wave-container-final">
             <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <defs>
-                    <!-- Gradiente orizzontale continuo e super-trasparente (12-15% opacità) -->
-                    <linearGradient id="grad-aurora" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style="stop-color:#009246;stop-opacity:0.12" /> <!-- Verde tenue -->
-                        <stop offset="15%" style="stop-color:#009246;stop-opacity:0.15" />
-                        <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0" /> <!-- Bianco centrale trasparente -->
-                        <stop offset="85%" style="stop-color:#ce2b37;stop-opacity:0.15" />
-                        <stop offset="100%" style="stop-color:#ce2b37;stop-opacity:0.12" /> <!-- Rosso tenue -->
+                    <linearGradient id="grad-tricolore-final" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#009246;stop-opacity:0.15" />
+                        <stop offset="25%" style="stop-color:#009246;stop-opacity:0.08" />
+                        <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0" />
+                        <stop offset="75%" style="stop-color:#ce2b37;stop-opacity:0.08" />
+                        <stop offset="100%" style="stop-color:#ce2b37;stop-opacity:0.15" />
                     </linearGradient>
                 </defs>
-                <!-- Forma ad onda sinuosa ma pulita -->
-                <path d="M0,80 C150,130 350,20 600,80 C850,140 1050,30 1200,80 L1200,120 L0,120 Z" fill="url(#grad-aurora)"></path>
+                <!-- Tracciati sovrapposti per l'effetto "linee intrecciate" -->
+                <path d="M0,80 C150,130 350,20 600,80 C850,140 1050,30 1200,80 L1200,120 L0,120 Z" fill="url(#grad-tricolore-final)"></path>
+                <path d="M0,90 C200,140 400,30 600,90 C800,150 1000,40 1200,90" fill="none" stroke="url(#grad-tricolore-final)" stroke-width="0.5" opacity="0.4"></path>
+                <path d="M0,70 C250,120 450,10 600,70 C750,130 950,20 1200,70" fill="none" stroke="url(#grad-tricolore-final)" stroke-width="0.3" opacity="0.3"></path>
             </svg>
         </div>
 
-        <!-- TESTO CENTRATO (Copyright e Contatti su due righe) -->
-        <div class="max-w-7xl mx-auto flex flex-col justify-center items-center text-center text-[11px] uppercase tracking-widest font-bold opacity-60 relative z-10">
-            <div>© 2024 ANIeC APS - Insieme per i diritti</div>
-            <div class="mt-2">Tel: +39 06 1234567 | Email: info@aniec.it</div>
+        <!-- BLOCCO TESTO AGGIORNATO E POSIZIONATO ESATTAMENTE COME NELL'IMMAGINE -->
+        <div class="max-w-7xl mx-auto flex flex-col justify-center items-center text-center text-[13px] uppercase tracking-wide font-medium opacity-80 text-[#003366] relative z-10 p-4">
+            <div>© 2024 ANIeC APS - LA STRUTTURA IDEALE PER DARE VOCE AI TUOI DIRITTI</div>
+            <div class="mt-1">AIUTANDOTI A SVOLGERE CON SERENITA' I TUOI DOVERI</div>
+            <div class="mt-3 font-normal opacity-90">Tel: +39 3279342883 | Email: info@aniecaps.it</div>
+            <div class="mt-1 font-normal opacity-90">C.F. 95237870167</div>
         </div>
     </footer>
 
     <style>
-        /* CSS specifico per il footer, non influisce sul resto del sito */
         .footer-simple {
             background: white;
-            padding: 80px 60px 50px 60px; /* Padding bilanciato */
+            height: 250px; /* Altezza sufficiente per contenere il testo su 4 righe e l'onda */
             border-top: 1px solid #f0f0f0;
             color: #003366;
             position: relative;
             overflow: hidden;
+            display: flex;
+            align-items: center; /* Centra verticalmente il contenuto del testo */
+            justify-content: center; /* Centra orizzontalmente il contenuto del testo */
         }
 
-        .wave-container-aurora {
+        .wave-container-final {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
+            height: 100%;
             line-height: 0;
             z-index: 1;
         }
 
-        .wave-container-aurora svg {
+        .wave-container-final svg {
             width: 100%;
-            height: 90px; /* Altezza ridotta per non essere invasiva */
+            height: 100%;
         }
+
+        /* Classi di utilità per i margini (non sovrascriveranno quelle globali) */
+        .mt-1 { margin-top: 4px; }
+        .mt-3 { margin-top: 12px; }
     </style>
 </body>
 </html>
