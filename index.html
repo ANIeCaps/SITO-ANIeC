@@ -7,108 +7,73 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Usiamo la tua immagine come sfondo reale della parte alta */
-        .hero-section {
-            background-image: url('sfondo-home.png');
-            background-size: cover;
-            background-position: center;
-            min-height: 100vh; /* Copre tutta la visuale */
-        }
-        .text-dark-blue { color: #003366; }
-        .bg-green-aniec { background-color: #006b3f; }
-        .bg-dark-blue { background-color: #003366; }
+        body, html { margin: 0; padding: 0; height: 100%; }
         
-        /* Regolazione spazi per far coincidere i testi con i riquadri dell'immagine */
-        .service-container { margin-top: -150px; } 
+        /* Lo sfondo deve coprire tutto senza essere tagliato */
+        .full-page-bg {
+            background-image: url('sfondo-home.png');
+            background-size: 100% auto; /* Forza l'immagine a stare nella larghezza dello schermo */
+            background-repeat: no-repeat;
+            background-position: top center;
+            width: 100%;
+            min-height: 2200px; /* Altezza necessaria per mostrare tutta la tua immagine lunga */
+            position: relative;
+        }
+
+        .text-dark-blue { color: #003366; }
+        
+        /* Posizionamento millimetrico dei testi per farli cadere nei vuoti dell'immagine */
+        .hero-text-box { position: absolute; top: 180px; left: 5%; width: 40%; }
+        .services-labels { position: absolute; top: 580px; width: 100%; }
+        .rete-servizi-text { position: absolute; top: 720px; left: 15%; }
     </style>
 </head>
-<body class="font-sans">
+<body>
 
-    <!-- Sezione Superiore (Header + Hero) -->
-    <div class="hero-section">
-        <!-- Navigazione -->
+    <div class="full-page-bg">
+        
+        <!-- 1. Header Trasparente (Il logo e il menu cadono sopra lo sfondo bianco) -->
         <nav class="flex justify-between items-center px-12 py-6">
-            <img src="favicon.png" alt="Logo ANIeC" class="h-16">
-            <div class="hidden md:flex space-x-8 font-bold text-dark-blue text-xs uppercase tracking-tighter">
-                <a href="index.html" class="border-b-2 border-dark-blue">Home</a>
+            <img src="favicon.png" alt="Logo" class="h-16 opacity-0"> <!-- Opacity 0 se il logo è già nell'immagine, altrimenti toglilo -->
+            <div class="hidden md:flex space-x-8 font-bold text-dark-blue text-xs uppercase">
+                <a href="index.html">Home</a>
                 <a href="chi-siamo.html">Chi Siamo</a>
                 <a href="progettazione.html">Progettazione</a>
                 <a href="servizi.html">Servizi</a>
                 <a href="contatti.html">Contatti</a>
             </div>
-            <a href="contatti.html" class="bg-green-aniec text-white px-8 py-2 rounded-full font-bold text-xs">CONTATTACI ></a>
+            <div class="w-32"></div> <!-- Spazio vuoto per bilanciare il tasto verde dell'immagine -->
         </nav>
 
-        <!-- Testi Hero (Sopra l'area azzurra) -->
-        <div class="max-w-7xl mx-auto px-12 pt-20">
-            <div class="md:w-1/2">
-                <h1 class="text-6xl font-extrabold text-dark-blue mb-6 leading-tight">
-                    Insieme per i diritti,<br>al fianco delle persone.
-                </h1>
-                <p class="text-xl text-dark-blue opacity-80 mb-10 max-w-lg leading-relaxed">
-                    Una rete nazionale di professionisti e volontari impegnati ogni giorno per offrire supporto, tutela e soluzioni concrete.
-                </p>
-                <div class="flex space-x-4">
-                    <button class="bg-green-aniec text-white px-10 py-3 rounded-lg font-bold">SCOPRI I NOSTRI SERVIZI ></button>
-                    <button class="bg-white border-2 border-blue-100 text-dark-blue px-10 py-3 rounded-lg font-bold">CHI SIAMO ></button>
-                </div>
+        <!-- 2. Testi della parte alta (Hero) -->
+        <div class="hero-text-box">
+            <h1 class="text-5xl font-extrabold text-dark-blue leading-tight mb-6">
+                Insieme per i diritti,<br>al fianco delle persone.
+            </h1>
+            <p class="text-lg text-dark-blue opacity-90 leading-relaxed mb-8">
+                Una rete nazionale di professionisti e volontari impegnati ogni giorno per offrire supporto, tutela e soluzioni concrete.
+            </p>
+        </div>
+
+        <!-- 3. Testi sopra i 6 riquadri bianchi -->
+        <div class="services-labels px-4">
+            <div class="max-w-[95%] mx-auto grid grid-cols-6 gap-2 text-center">
+                <div class="h-32 flex items-end justify-center"><p class="text-[9px] font-bold text-dark-blue uppercase leading-tight">Sovraindebitamento e tutela consumatore</p></div>
+                <div class="h-32 flex items-end justify-center"><p class="text-[9px] font-bold text-dark-blue uppercase leading-tight">Disabilità e persone vulnerabili</p></div>
+                <div class="h-32 flex items-end justify-center"><p class="text-[9px] font-bold text-dark-blue uppercase leading-tight">Terza età e assistenza sociale</p></div>
+                <div class="h-32 flex items-end justify-center"><p class="text-[9px] font-bold text-dark-blue uppercase leading-tight">Contrasto alla violenza di genere</p></div>
+                <div class="h-32 flex items-end justify-center"><p class="text-[9px] font-bold text-dark-blue uppercase leading-tight">Tutela minori e bullismo</p></div>
+                <div class="h-32 flex items-end justify-center"><p class="text-[9px] font-bold text-dark-blue uppercase leading-tight">Cyberbullismo e sicurezza digitale</p></div>
             </div>
         </div>
+
+        <!-- 4. Area Riservata -->
+        <div class="rete-servizi-text">
+            <h3 class="text-xl font-bold text-dark-blue">Rete Servizi (Area Riservata)</h3>
+            <p class="text-sm text-blue-800 opacity-70 font-semibold">Pagina in continua evoluzione. Accesso tramite codice abilitazione.</p>
+        </div>
+
     </div>
-
-    <!-- Sezione Ambiti (Sopra i riquadri bianchi dell'immagine) -->
-    <section class="max-w-7xl mx-auto px-6 -mt-32 relative z-10 text-center">
-        <h2 class="text-2xl font-bold text-dark-blue mb-12">I nostri ambiti di intervento</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
-            <!-- Sovrapponiamo i testi ai riquadri esistenti nell'immagine -->
-            <div class="h-40 flex flex-col justify-end pb-4">
-                <h3 class="text-[10px] font-bold text-dark-blue uppercase px-2">Sovraindebitamento e tutela del consumatore</h3>
-            </div>
-            <div class="h-40 flex flex-col justify-end pb-4">
-                <h3 class="text-[10px] font-bold text-dark-blue uppercase px-2">Disabilità e persone vulnerabili</h3>
-            </div>
-            <div class="h-40 flex flex-col justify-end pb-4">
-                <h3 class="text-[10px] font-bold text-dark-blue uppercase px-2">Terza età e assistenza sociale</h3>
-            </div>
-            <div class="h-40 flex flex-col justify-end pb-4">
-                <h3 class="text-[10px] font-bold text-dark-blue uppercase px-2">Contrasto alla violenza di genere</h3>
-            </div>
-            <div class="h-40 flex flex-col justify-end pb-4">
-                <h3 class="text-[10px] font-bold text-dark-blue uppercase px-2">Tutela dei minori e contrasto al bullismo</h3>
-            </div>
-            <div class="h-40 flex flex-col justify-end pb-4">
-                <h3 class="text-[10px] font-bold text-dark-blue uppercase px-2">Cyberbullismo e sicurezza digitale</h3>
-            </div>
-        </div>
-    </section>
-
-    <!-- Banner Rete Servizi -->
-    <section class="max-w-7xl mx-auto px-6 mt-20">
-        <div class="flex justify-between items-center py-8 px-12 bg-blue-50/50 rounded-2xl">
-            <div class="text-left">
-                <h3 class="text-xl font-bold text-dark-blue">Rete Servizi (Area Riservata)</h3>
-                <p class="text-sm text-gray-500">Pagina in continua evoluzione. Accesso tramite codice di abilitazione.</p>
-            </div>
-            <button class="bg-dark-blue text-white px-10 py-3 rounded-full font-bold">CONTATTACI ></button>
-        </div>
-    </section>
-
-    <!-- Footer (In corrispondenza della fascia scura in basso) -->
-    <footer class="mt-20 bg-dark-blue text-white py-12">
-        <div class="max-w-7xl mx-auto px-12 flex justify-between items-center">
-            <div class="text-left">
-                <h4 class="font-bold">Hai bisogno di supporto?</h4>
-                <p class="text-sm opacity-70">Contattaci, siamo qui per aiutarti.</p>
-            </div>
-            <div class="flex space-x-12 text-sm">
-                <span>📞 06 12345678</span>
-                <span>📧 info@aniec-aps.it</span>
-                <span>📍 Roma, Italia</span>
-            </div>
-            <button class="border border-white px-8 py-2 rounded-full text-sm">CONTATTACI ></button>
-        </div>
-    </footer>
 
 </body>
 </html>
