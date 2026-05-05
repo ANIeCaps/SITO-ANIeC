@@ -12,13 +12,13 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Helvetica', sans-serif; background-color: #ffffff; overflow-x: hidden; }
 
-        /* MANTELLO RIDOTTO E ARMONIZZATO */
+        /* MANTELLO: 100% LARGHEZZA PER TOCCARE I MARGINI, POSIZIONE ALTA PER LEGGEREZZA */
         .hero-section {
             width: 100%;
-            min-height: 650px; 
+            min-height: 620px; 
             background-image: url('sfondo-pulito.png');
-            background-size: 95% auto; /* Ridotto ulteriormente per massima leggerezza */
-            background-position: center -100px; /* Posizione naturale e bilanciata */
+            background-size: 100% auto; /* Tocca i bordi laterali */
+            background-position: center -80px; /* Alzata per non sovrastare */
             background-repeat: no-repeat;
             position: relative;
         }
@@ -37,7 +37,7 @@
         .services-area {
             background: linear-gradient(180deg, #f3f8ff 0%, #ffffff 100%);
             padding: 60px 60px;
-            margin-top: -120px; 
+            margin-top: -100px; /* Salita armoniosa */
             position: relative;
             z-index: 10;
         }
@@ -85,7 +85,6 @@
 
         <div class="max-w-7xl mx-auto px-12 mt-16">
             <div class="md:w-1/2">
-                <!-- Testi riproporzionati per non risultare pesanti -->
                 <h1 class="text-5xl font-extrabold text-blue-aniec leading-tight mb-6">
                     Insieme per i diritti,<br>al fianco delle persone.
                 </h1>
