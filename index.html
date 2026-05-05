@@ -7,152 +7,106 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Sfondo con onde e sfumatura azzurra come l'allegato */
-        .hero-custom {
-            background: 
-                radial-gradient(circle at 80% 20%, rgba(219, 234, 254, 0.4) 0%, transparent 50%),
-                linear-gradient(180deg, #ffffff 0%, #e0f2fe 100%);
-            position: relative;
-            overflow: hidden;
+        /* Usiamo la tua immagine come sfondo reale della parte alta */
+        .hero-section {
+            background-image: url('sfondo-home.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh; /* Copre tutta la visuale */
         }
-
-        /* Simulazione delle onde grafiche dell'immagine */
-        .waves {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://www.transparenttextures.com/patterns/white-waves.png');
-            opacity: 0.3;
-            pointer-events: none;
-        }
-
         .text-dark-blue { color: #003366; }
-        .bg-dark-blue { background-color: #003366; }
         .bg-green-aniec { background-color: #006b3f; }
+        .bg-dark-blue { background-color: #003366; }
         
-        .service-card {
-            background: white;
-            transition: all 0.3s ease;
-            border: 1px solid #e2e8f0;
-        }
-        .service-card:hover {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            border-color: #006b3f;
-        }
+        /* Regolazione spazi per far coincidere i testi con i riquadri dell'immagine */
+        .service-container { margin-top: -150px; } 
     </style>
 </head>
-<body class="font-sans text-gray-800">
+<body class="font-sans">
 
-    <!-- Navigazione (Esattamente come l'immagine) -->
-    <nav class="flex justify-between items-center px-12 py-6 bg-white sticky top-0 z-50">
-        <img src="favicon.png" alt="Logo ANIeC" class="h-14">
-        <div class="hidden md:flex space-x-10 font-bold text-dark-blue text-xs uppercase tracking-widest">
-            <a href="index.html" class="border-b-2 border-dark-blue pb-1">Home</a>
-            <a href="chi-siamo.html" class="hover:text-green-700">Chi Siamo</a>
-            <a href="progettazione.html" class="hover:text-green-700">Progettazione</a>
-            <a href="servizi.html" class="hover:text-green-700">Servizi</a>
-            <a href="contatti.html" class="hover:text-green-700">Contatti</a>
-        </div>
-        <a href="contatti.html" class="bg-dark-blue text-white px-8 py-2 rounded-full font-bold text-xs">CONTATTACI ></a>
-    </nav>
+    <!-- Sezione Superiore (Header + Hero) -->
+    <div class="hero-section">
+        <!-- Navigazione -->
+        <nav class="flex justify-between items-center px-12 py-6">
+            <img src="favicon.png" alt="Logo ANIeC" class="h-16">
+            <div class="hidden md:flex space-x-8 font-bold text-dark-blue text-xs uppercase tracking-tighter">
+                <a href="index.html" class="border-b-2 border-dark-blue">Home</a>
+                <a href="chi-siamo.html">Chi Siamo</a>
+                <a href="progettazione.html">Progettazione</a>
+                <a href="servizi.html">Servizi</a>
+                <a href="contatti.html">Contatti</a>
+            </div>
+            <a href="contatti.html" class="bg-green-aniec text-white px-8 py-2 rounded-full font-bold text-xs">CONTATTACI ></a>
+        </nav>
 
-    <!-- Hero Section (Riproduzione immagine ChatGPT Image 30 apr 2026, 19_50_52_2.png) -->
-    <section class="hero-custom py-24 px-12 relative">
-        <div class="waves"></div>
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center relative z-10">
-            <div class="md:w-3/5">
-                <h1 class="text-6xl font-extrabold text-dark-blue mb-8 leading-tight">
+        <!-- Testi Hero (Sopra l'area azzurra) -->
+        <div class="max-w-7xl mx-auto px-12 pt-20">
+            <div class="md:w-1/2">
+                <h1 class="text-6xl font-extrabold text-dark-blue mb-6 leading-tight">
                     Insieme per i diritti,<br>al fianco delle persone.
                 </h1>
-                <p class="text-xl text-blue-900 opacity-80 mb-10 max-w-xl leading-relaxed">
+                <p class="text-xl text-dark-blue opacity-80 mb-10 max-w-lg leading-relaxed">
                     Una rete nazionale di professionisti e volontari impegnati ogni giorno per offrire supporto, tutela e soluzioni concrete.
                 </p>
-                <div class="flex space-x-6">
-                    <button class="bg-green-aniec text-white px-10 py-4 rounded-lg font-bold shadow-xl hover:bg-green-800">SCOPRI I NOSTRI SERVIZI ></button>
-                    <button class="bg-white border-2 border-blue-200 text-dark-blue px-10 py-4 rounded-lg font-bold hover:bg-blue-50">CHI SIAMO ></button>
+                <div class="flex space-x-4">
+                    <button class="bg-green-aniec text-white px-10 py-3 rounded-lg font-bold">SCOPRI I NOSTRI SERVIZI ></button>
+                    <button class="bg-white border-2 border-blue-100 text-dark-blue px-10 py-3 rounded-lg font-bold">CHI SIAMO ></button>
                 </div>
             </div>
-            
-            <!-- Area Mappa/Grafica -->
-            <div class="md:w-2/5 flex justify-end opacity-40">
-                <!-- Qui l'immagine originale ha la mappa dell'Italia e le silhouette -->
-                <svg viewBox="0 0 200 200" class="w-full h-auto max-w-md">
-                    <path fill="#003366" d="M40,-67.5C51.1,-61.1,58.9,-48.6,65.3,-35.6C71.7,-22.6,76.7,-9.1,75.4,3.8C74.1,16.7,66.6,29,57.7,39.6C48.8,50.1,38.6,58.8,26.8,64.2C15,69.5,1.7,71.5,-12.3,69.5C-26.3,67.5,-41,61.5,-52.1,51.2C-63.2,40.9,-70.8,26.3,-74.6,10.6C-78.4,-5.1,-78.4,-21.8,-71.4,-35.2C-64.4,-48.6,-50.3,-58.7,-36.3,-63.9C-22.3,-69.1,-8.3,-69.5,3.6,-75.7C15.6,-81.9,31.1,-93.9,40,-67.5Z" transform="translate(100 100)" opacity="0.1" />
-                </svg>
+        </div>
+    </div>
+
+    <!-- Sezione Ambiti (Sopra i riquadri bianchi dell'immagine) -->
+    <section class="max-w-7xl mx-auto px-6 -mt-32 relative z-10 text-center">
+        <h2 class="text-2xl font-bold text-dark-blue mb-12">I nostri ambiti di intervento</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
+            <!-- Sovrapponiamo i testi ai riquadri esistenti nell'immagine -->
+            <div class="h-40 flex flex-col justify-end pb-4">
+                <h3 class="text-[10px] font-bold text-dark-blue uppercase px-2">Sovraindebitamento e tutela del consumatore</h3>
+            </div>
+            <div class="h-40 flex flex-col justify-end pb-4">
+                <h3 class="text-[10px] font-bold text-dark-blue uppercase px-2">Disabilità e persone vulnerabili</h3>
+            </div>
+            <div class="h-40 flex flex-col justify-end pb-4">
+                <h3 class="text-[10px] font-bold text-dark-blue uppercase px-2">Terza età e assistenza sociale</h3>
+            </div>
+            <div class="h-40 flex flex-col justify-end pb-4">
+                <h3 class="text-[10px] font-bold text-dark-blue uppercase px-2">Contrasto alla violenza di genere</h3>
+            </div>
+            <div class="h-40 flex flex-col justify-end pb-4">
+                <h3 class="text-[10px] font-bold text-dark-blue uppercase px-2">Tutela dei minori e contrasto al bullismo</h3>
+            </div>
+            <div class="h-40 flex flex-col justify-end pb-4">
+                <h3 class="text-[10px] font-bold text-dark-blue uppercase px-2">Cyberbullismo e sicurezza digitale</h3>
             </div>
         </div>
     </section>
 
-    <!-- Sezione Ambiti (6 Colonne come da allegato) -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-dark-blue mb-2">I nostri ambiti di intervento</h2>
-            <div class="w-12 h-1 bg-green-aniec mx-auto mb-16"></div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
-                <!-- Card 1 -->
-                <div class="service-card p-8 rounded-2xl">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3437/3437319.png" class="h-12 mx-auto mb-4 opacity-70">
-                    <h3 class="text-xs font-bold text-dark-blue uppercase">Sovraindebitamento e tutela consumatore</h3>
-                </div>
-                <!-- Card 2 -->
-                <div class="service-card p-8 rounded-2xl">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3063/3063176.png" class="h-12 mx-auto mb-4 opacity-70">
-                    <h3 class="text-xs font-bold text-dark-blue uppercase">Disabilità e persone vulnerabili</h3>
-                </div>
-                <!-- Card 3 -->
-                <div class="service-card p-8 rounded-2xl">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3077/3077166.png" class="h-12 mx-auto mb-4 opacity-70">
-                    <h3 class="text-xs font-bold text-dark-blue uppercase">Terza età e assistenza sociale</h3>
-                </div>
-                <!-- Card 4 -->
-                <div class="service-card p-8 rounded-2xl">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135810.png" class="h-12 mx-auto mb-4 opacity-70">
-                    <h3 class="text-xs font-bold text-dark-blue uppercase">Contrasto alla violenza di genere</h3>
-                </div>
-                <!-- Card 5 -->
-                <div class="service-card p-8 rounded-2xl">
-                    <img src="https://cdn-icons-png.flaticon.com/512/4319/4319159.png" class="h-12 mx-auto mb-4 opacity-70">
-                    <h3 class="text-xs font-bold text-dark-blue uppercase">Tutela minori e bullismo</h3>
-                </div>
-                <!-- Card 6 -->
-                <div class="service-card p-8 rounded-2xl">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2092/2092663.png" class="h-12 mx-auto mb-4 opacity-70">
-                    <h3 class="text-xs font-bold text-dark-blue uppercase">Cyberbullismo e sicurezza digitale</h3>
-                </div>
+    <!-- Banner Rete Servizi -->
+    <section class="max-w-7xl mx-auto px-6 mt-20">
+        <div class="flex justify-between items-center py-8 px-12 bg-blue-50/50 rounded-2xl">
+            <div class="text-left">
+                <h3 class="text-xl font-bold text-dark-blue">Rete Servizi (Area Riservata)</h3>
+                <p class="text-sm text-gray-500">Pagina in continua evoluzione. Accesso tramite codice di abilitazione.</p>
             </div>
+            <button class="bg-dark-blue text-white px-10 py-3 rounded-full font-bold">CONTATTACI ></button>
         </div>
     </section>
 
-    <!-- Banner Area Riservata -->
-    <section class="max-w-7xl mx-auto px-6 mb-24">
-        <div class="bg-blue-50 border border-blue-100 p-10 rounded-3xl flex flex-col md:flex-row justify-between items-center shadow-inner">
-            <div class="flex items-center space-x-6">
-                <div class="bg-white p-4 rounded-full shadow-sm text-3xl">👤</div>
-                <div>
-                    <h3 class="text-2xl font-bold text-dark-blue">Rete Servizi (Area Riservata)</h3>
-                    <p class="text-blue-700 opacity-70">Pagina in continua evoluzione. Accesso tramite registrazione e codice abilitazione.</p>
-                </div>
+    <!-- Footer (In corrispondenza della fascia scura in basso) -->
+    <footer class="mt-20 bg-dark-blue text-white py-12">
+        <div class="max-w-7xl mx-auto px-12 flex justify-between items-center">
+            <div class="text-left">
+                <h4 class="font-bold">Hai bisogno di supporto?</h4>
+                <p class="text-sm opacity-70">Contattaci, siamo qui per aiutarti.</p>
             </div>
-            <a href="#" class="mt-8 md:mt-0 bg-dark-blue text-white px-12 py-4 rounded-full font-bold tracking-wide hover:bg-blue-900 transition shadow-lg">CONTATTACI PER ACCEDERE</a>
-        </div>
-    </section>
-
-    <!-- Footer Blu Scuro (Come immagine) -->
-    <footer class="bg-dark-blue text-white py-16 px-12">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-8 md:mb-0 text-center md:text-left">
-                <h4 class="text-2xl font-bold mb-2">Hai bisogno di supporto?</h4>
-                <p class="text-blue-200">Contattaci, siamo qui per aiutarti.</p>
-            </div>
-            <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 text-sm font-light">
+            <div class="flex space-x-12 text-sm">
                 <span>📞 06 12345678</span>
                 <span>📧 info@aniec-aps.it</span>
                 <span>📍 Roma, Italia</span>
             </div>
-            <button class="mt-8 md:mt-0 border-2 border-green-500 text-green-500 px-10 py-3 rounded-full font-bold hover:bg-green-500 hover:text-white transition">CONTATTACI ></button>
+            <button class="border border-white px-8 py-2 rounded-full text-sm">CONTATTACI ></button>
         </div>
     </footer>
 
