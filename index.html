@@ -12,38 +12,37 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Helvetica', sans-serif; background-color: #ffffff; overflow-x: hidden; }
 
-        /* MANTELLO ALZATO DEL 20% */
+        /* MANTELLO ALZATO ULTERIORMENTE */
         .hero-section {
             width: 100%;
-            min-height: 700px; 
+            min-height: 650px; /* Ridotto leggermente per compattare */
             background-image: url('sfondo-pulito.png');
-            background-size: 105% auto; /* Leggermente più grande per coprire meglio i bordi */
-            /* Il trucco: sposta lo sfondo verso l'alto di circa il 20% dell'altezza della sezione */
-            background-position: center -120px; 
+            background-size: 110% auto; 
+            /* Portato a -180px per alzare un ulteriore 10% circa rispetto ai -120px precedenti */
+            background-position: center -180px;  
             background-repeat: no-repeat;
             position: relative;
         }
 
-        /* Navigazione molto alta e vicina al bordo */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 60px; /* Ridotto il padding per alzare tutto */
+            padding: 10px 60px; /* Padding ridotto per alzare la nav */
             position: relative;
             z-index: 50;
         }
 
         .logo-aniec {
-            height: 145px; 
-            margin-top: -10px; /* Alza leggermente il logo */
+            height: 130px; /* Leggermente rimpicciolito per equilibrio */
+            margin-top: -5px;
         }
 
-        /* Sezione Icone integrata con l'onda */
+        /* Sezione Icone - Alzata ulteriormente per "mangiare" il fondo */
         .services-area {
             background: linear-gradient(180deg, #f3f8ff 0%, #ffffff 100%);
             padding: 60px 60px;
-            margin-top: -160px; /* Sale ancora di più per "mangiare" il fondo dello sfondo */
+            margin-top: -220px; /* Alzato da -160px a -220px */
             position: relative;
             z-index: 10;
         }
@@ -52,11 +51,11 @@
             background: white;
             border: 1px solid #eef2f8;
             border-radius: 12px;
-            padding: 30px 10px;
+            padding: 25px 15px;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0,51,102,0.05);
             transition: 0.3s;
-            min-height: 190px;
+            min-height: 180px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -64,7 +63,7 @@
         }
         .card:hover { transform: translateY(-5px); border-color: var(--green-aniec); }
 
-        .icon-aniec { width: 45px; height: 45px; color: var(--blue-aniec); margin-bottom: 15px; }
+        .icon-aniec { width: 40px; height: 40px; color: var(--blue-aniec); margin-bottom: 15px; }
     </style>
 </head>
 <body>
@@ -82,17 +81,17 @@
             <button class="bg-[#006b3f] text-white px-10 py-3 rounded-full font-bold text-[10px] uppercase shadow-lg">Contattaci ></button>
         </nav>
 
-        <div class="max-w-7xl mx-auto px-12 mt-10">
+        <div class="max-w-7xl mx-auto px-12 mt-6"> <!-- Ridotto mt da 10 a 6 -->
             <div class="md:w-1/2">
-                <h1 class="text-6xl font-extrabold text-blue-aniec leading-[1.05] mb-8">
+                <h1 class="text-5xl font-extrabold text-blue-aniec leading-[1.1] mb-6">
                     Insieme per i diritti,<br>al fianco delle persone.
                 </h1>
-                <p class="text-2xl text-blue-900/70 mb-10 leading-relaxed font-light">
+                <p class="text-xl text-blue-900/70 mb-8 leading-relaxed font-light">
                     Una rete nazionale di professionisti e volontari impegnati ogni giorno per offrire supporto e soluzioni concrete.
                 </p>
                 <div class="flex space-x-6">
-                    <button class="bg-[#006b3f] text-white px-10 py-4 rounded-md font-bold text-sm shadow-xl">I NOSTRI SERVIZI ></button>
-                    <button class="bg-white border-2 border-blue-100 text-blue-aniec px-10 py-4 rounded-md font-bold text-sm hover:bg-blue-50">CHI SIAMO ></button>
+                    <button class="bg-[#006b3f] text-white px-8 py-3 rounded-md font-bold text-sm shadow-xl">I NOSTRI SERVIZI ></button>
+                    <button class="bg-white border-2 border-blue-100 text-blue-aniec px-8 py-3 rounded-md font-bold text-sm hover:bg-blue-50">CHI SIAMO ></button>
                 </div>
             </div>
         </div>
@@ -100,36 +99,36 @@
 
     <main class="services-area">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
+            <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-blue-aniec uppercase tracking-tight">I nostri ambiti di intervento</h2>
                 <div class="w-20 h-1.5 bg-[#006b3f] mx-auto mt-4"></div>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                <!-- Icone Minimal Outline Blue -->
+                <!-- Icone originali mantenute -->
                 <div class="card">
                     <svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
-                    <h3 class="text-[10px] font-bold text-blue-aniec uppercase">Sovraindebitamento e tutela consumatore</h3>
+                    <h3 class="text-[10px] font-bold text-blue-aniec uppercase px-2">Sovraindebitamento e tutela consumatore</h3>
                 </div>
                 <div class="card">
                     <svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
-                    <h3 class="text-[10px] font-bold text-blue-aniec uppercase">Disabilità e persone vulnerabili</h3>
+                    <h3 class="text-[10px] font-bold text-blue-aniec uppercase px-2">Disabilità e persone vulnerabili</h3>
                 </div>
                 <div class="card">
                     <svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                    <h3 class="text-[10px] font-bold text-blue-aniec uppercase">Terza età e assistenza sociale</h3>
+                    <h3 class="text-[10px] font-bold text-blue-aniec uppercase px-2">Terza età e assistenza sociale</h3>
                 </div>
                 <div class="card">
                     <svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                    <h3 class="text-[10px] font-bold text-blue-aniec uppercase">Contrasto alla violenza di genere</h3>
+                    <h3 class="text-[10px] font-bold text-blue-aniec uppercase px-2">Contrasto alla violenza di genere</h3>
                 </div>
                 <div class="card">
                     <svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                    <h3 class="text-[10px] font-bold text-blue-aniec uppercase">Tutela dei minori e bullismo</h3>
+                    <h3 class="text-[10px] font-bold text-blue-aniec uppercase px-2">Tutela dei minori e bullismo</h3>
                 </div>
                 <div class="card">
                     <svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.2" d="M9.75 17L9 21h6l-.75-4M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    <h3 class="text-[10px] font-bold text-blue-aniec uppercase">Cyberbullismo e sicurezza digitale</h3>
+                    <h3 class="text-[10px] font-bold text-blue-aniec uppercase px-2">Cyberbullismo e sicurezza digitale</h3>
                 </div>
             </div>
         </div>
