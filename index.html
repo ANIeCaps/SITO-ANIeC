@@ -132,28 +132,26 @@
     </main>
 
   <footer class="footer-simple">
-        <!-- L'ONDA TRICOLORE DINAMICA (Sostituisce la versione precedente) -->
-        <div class="wave-container">
+        <!-- L'ONDA TRICOLORE "AURORA" CONTINUA (Senza bande e centrata) -->
+        <div class="wave-container-aurora">
             <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <defs>
-                    <linearGradient id="grad-verde" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style="stop-color:#009246;stop-opacity:0.3" />
-                        <stop offset="40%" style="stop-color:#009246;stop-opacity:0" />
-                    </linearGradient>
-                    <linearGradient id="grad-rosso" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="60%" style="stop-color:#ce2b37;stop-opacity:0" />
-                        <stop offset="100%" style="stop-color:#ce2b37;stop-opacity:0.3" />
+                    <!-- Gradiente orizzontale continuo e super-trasparente (12-15% opacità) -->
+                    <linearGradient id="grad-aurora" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#009246;stop-opacity:0.12" /> <!-- Verde tenue -->
+                        <stop offset="15%" style="stop-color:#009246;stop-opacity:0.15" />
+                        <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0" /> <!-- Bianco centrale trasparente -->
+                        <stop offset="85%" style="stop-color:#ce2b37;stop-opacity:0.15" />
+                        <stop offset="100%" style="stop-color:#ce2b37;stop-opacity:0.12" /> <!-- Rosso tenue -->
                     </linearGradient>
                 </defs>
-                <!-- Linee dell'onda che si intrecciano come nello screenshot -->
-                <path d="M0,80 C200,130 400,20 600,80 C800,140 1000,30 1200,80" stroke="url(#grad-verde)" stroke-width="1" fill="transparent"></path>
-                <path d="M0,90 C250,140 450,30 650,90 C850,150 1050,40 1200,90" stroke="url(#grad-rosso)" stroke-width="1" fill="transparent"></path>
-                <path d="M0,70 C150,110 350,10 550,70 C750,130 950,20 1200,70" stroke="url(#grad-verde)" stroke-width="0.5" opacity="0.5" fill="transparent"></path>
-                <path d="M0,100 C300,150 500,40 700,100 C900,160 1100,50 1200,100" stroke="url(#grad-rosso)" stroke-width="0.5" opacity="0.5" fill="transparent"></path>
+                <!-- Forma ad onda sinuosa ma pulita (single-line soft blend) -->
+                <path d="M0,80 C150,130 350,20 600,80 C850,140 1050,30 1200,80 L1200,120 L0,120 Z" fill="url(#grad-aurora)"></path>
             </svg>
         </div>
 
-        <div class="max-w-7xl mx-auto flex flex-col justify-center items-center text-center text-[11px] uppercase tracking-widest font-bold opacity-70 relative z-10">
+        <!-- TESTO CENTRATO (Copyright e Contatti su due righe) -->
+        <div class="max-w-7xl mx-auto flex flex-col justify-center items-center text-center text-[11px] uppercase tracking-widest font-bold opacity-60 relative z-10">
             <div>© 2024 ANIeC APS - Insieme per i diritti</div>
             <div class="mt-2">Tel: +39 06 1234567 | Email: info@aniec.it</div>
         </div>
@@ -162,25 +160,25 @@
     <style>
         .footer-simple {
             background: white;
-            padding: 80px 60px 60px 60px; /* Padding bilanciato */
+            padding: 80px 60px 50px 60px; /* Padding bilanciato per far "respirare" il testo sopra l'onda */
             border-top: 1px solid #f0f0f0;
             color: #003366;
             position: relative;
             overflow: hidden;
         }
 
-        .wave-container {
+        .wave-container-aurora {
             position: absolute;
-            bottom: 10px; /* Alza leggermente l'onda per incorniciare il testo */
+            bottom: 0;
             left: 0;
             width: 100%;
             line-height: 0;
             z-index: 1;
         }
 
-        .wave-container svg {
+        .wave-container-aurora svg {
             width: 100%;
-            height: 120px; /* Più alta per rendere l'onda più visibile */
+            height: 90px; /* Altezza ridotta per non essere invasiva */
         }
     </style>
 </body>
