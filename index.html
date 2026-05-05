@@ -132,35 +132,95 @@
     </main>
 
   <footer class="footer-simple">
-        <!-- L'ONDA TRICOLORE "AURORA" CONTINUA (Senza bande e centrata) -->
+        <!-- L'ONDA TRICOLORE SENZA STRISCE (Per un effetto "soffio" continuo) -->
         <div class="wave-container-aurora">
             <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <defs>
-                    <!-- Gradiente orizzontale continuo e super-trasparente (12-15% opacità) -->
-                    <linearGradient id="grad-aurora" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style="stop-color:#009246;stop-opacity:0.12" /> <!-- Verde tenue -->
-                        <stop offset="15%" style="stop-color:#009246;stop-opacity:0.15" />
-                        <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0" /> <!-- Bianco centrale trasparente -->
-                        <stop offset="85%" style="stop-color:#ce2b37;stop-opacity:0.15" />
-                        <stop offset="100%" style="stop-color:#ce2b37;stop-opacity:0.12" /> <!-- Rosso tenue -->
-                    </linearGradient>
+                    <!-- Gradiente complesso: si diffonde dai lati verso il centro e si sfuma verso l'alto -->
+                    <radialGradient id="flag-soffio-aurora" cx="50%" cy="100%" r="70%" fx="50%" fy="100%">
+                        <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0" /> <!-- Centro: massimo trasparente -->
+                        <stop offset="60%" style="stop-color:#ffffff;stop-opacity:0.2" /> <!-- Centro: massimo trasparente -->
+                        <stop offset="90%" style="stop-color:#009246;stop-opacity:0.15" /> <!-- Bordo sinistro: soffio verde -->
+                        <stop offset="100%" style="stop-color:#ce2b37;stop-opacity:0.15" /> <!-- Bordo destro: soffio rosso -->
+                    </radialGradient>
+                    <!-- Filtro per rendere i bordi del colore ancora più sfumati (come un'aurora) -->
+                    <filter id="soffice" x="0" y="0">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+                    </filter>
                 </defs>
-                <!-- Forma ad onda sinuosa ma pulita (single-line soft blend) -->
-                <path d="M0,80 C150,130 350,20 600,80 C850,140 1050,30 1200,80 L1200,120 L0,120 Z" fill="url(#grad-aurora)"></path>
+                <!-- La forma dell'onda viene riempita con il soffio tricolore sfumato -->
+                <path d="M0,80 C150,130 350,20 600,80 C850,140 1050,30 1200,80 L1200,120 L0,120 Z" fill="url(#flag-soffio-aurora)" filter="url(#soffice)"></path>
             </svg>
         </div>
 
         <!-- TESTO CENTRATO (Copyright e Contatti su due righe) -->
         <div class="max-w-7xl mx-auto flex flex-col justify-center items-center text-center text-[11px] uppercase tracking-widest font-bold opacity-60 relative z-10">
-            <div>© 2024 ANIeC APS - Insieme per i diritti</div>
-            <div class="mt-2">Tel: +39 06 1234567 | Email: info@aniec.it</div>
-        </div>
-    </footer>
-
+            <div>© 2024 ANIeC APS - Insieme per i diritti```html
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIeC APS - Insieme per i diritti</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
     <style>
+        :root { --blue-aniec: #003366; --green-aniec: #006b3f; }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Helvetica', sans-serif; background-color: #ffffff; overflow-x: hidden; }
+
+        .hero-section {
+            width: 100%;
+            min-height: 620px; 
+            background-image: url('sfondo-pulito.png');
+            background-size: 100% auto; 
+            background-position: center -140px; 
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 60px; 
+            position: relative;
+            z-index: 50;
+        }
+
+        .logo-aniec { height: 120px; }
+
+        .services-area {
+            background: linear-gradient(180deg, #f3f8ff 0%, #ffffff 100%);
+            padding: 60px 60px;
+            margin-top: -100px; 
+            position: relative;
+            z-index: 10;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #eef2f8;
+            border-radius: 12px;
+            padding: 25px 10px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,51,102,0.04);
+            transition: 0.3s;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .card:hover { transform: translateY(-5px); border-color: var(--green-aniec); }
+
+        .icon-aniec { width: 42px; height: 42px; color: var(--blue-aniec); margin-bottom: 12px; }
+
+        /* FOOTER CON SOLUZIONE "SOFFIO DI COLORE" TRICOLORE CALIBRATA */
         .footer-simple {
             background: white;
-            padding: 80px 60px 50px 60px; /* Padding bilanciato per far "respirare" il testo sopra l'onda */
+            padding: 80px 60px 50px 60px;
             border-top: 1px solid #f0f0f0;
             color: #003366;
             position: relative;
@@ -178,8 +238,87 @@
 
         .wave-container-aurora svg {
             width: 100%;
-            height: 90px; /* Altezza ridotta per non essere invasiva */
+            height: 90px;
         }
     </style>
+</head>
+<body>
+
+    <header class="hero-section">
+        <nav>
+            <img src="favicon.png" alt="ANIeC" class="logo-aniec">
+            <div class="hidden md:flex space-x-12 font-bold text-blue-aniec text-[11px] uppercase tracking-widest">
+                <a href="#" class="hover:text-green-700">Home</a>
+                <a href="#" class="hover:text-green-700">Chi Siamo</a>
+                <a href="#" class="hover:text-green-700">Progettazione</a>
+                <a href="#" class="hover:text-green-700">Servizi</a>
+                <a href="#" class="hover:text-green-700">Contatti</a>
+            </div>
+            <button class="bg-[#006b3f] text-white px-9 py-3 rounded-full font-bold text-[10px] uppercase shadow-lg hover:bg-green-800 transition">Contattaci ></button>
+        </nav>
+
+        <div class="max-w-7xl mx-auto px-12 mt-16">
+            <div class="md:w-1/2">
+                <h1 class="text-5xl font-extrabold text-blue-aniec leading-tight mb-6">
+                    Insieme per i diritti,<br>al fianco delle persone.
+                </h1>
+                <p class="text-lg text-blue-900/60 mb-10 leading-relaxed font-light max-w-md">
+                    Una rete nazionale di professionisti e volontari impegnati ogni giorno per offrire supporto e soluzioni concrete.
+                </p>
+                <div class="flex space-x-5">
+                    <button class="bg-[#006b3f] text-white px-9 py-3.5 rounded-md font-bold text-xs shadow-xl hover:bg-green-800 transition">I NOSTRI SERVIZI</button>
+                    <button class="bg-white border-2 border-blue-100 text-blue-aniec px-9 py-3.5 rounded-md font-bold text-xs hover:bg-blue-50 transition">CHI SIAMO</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="services-area">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl font-bold text-blue-aniec uppercase tracking-widest">Ambiti di intervento</h2>
+                <div class="w-16 h-1 bg-[#006b3f] mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div class="card"><svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg><h3 class="text-[9px] font-bold text-blue-aniec uppercase">Sovraindebitamento</h3></div>
+                <div class="card"><svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg><h3 class="text-[9px] font-bold text-blue-aniec uppercase">Disabilità</h3></div>
+                <div class="card"><svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg><h3 class="text-[9px] font-bold text-blue-aniec uppercase">Terza età</h3></div>
+                <div class="card"><svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg><h3 class="text-[9px] font-bold text-blue-aniec uppercase">Violenza di genere</h3></div>
+                <div class="card"><svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg><h3 class="text-[9px] font-bold text-blue-aniec uppercase">Tutela minori</h3></div>
+                <div class="card"><svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.2" d="M9.75 17L9 21h6l-.75-4M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg><h3 class="text-[9px] font-bold text-blue-aniec uppercase">Cyberbullismo</h3></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-simple">
+        <!-- L'ONDA TRICOLORE "AURORA" CONTINUA SENZA STRISCE ONDULATE -->
+        <div class="wave-container-aurora">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <defs>
+                    <!-- Gradiente complesso: si diffonde dai lati verso il centro e si sfuma verso l'alto -->
+                    <radialGradient id="flag-soffio-aurora" cx="50%" cy="100%" r="70%" fx="50%" fy="100%">
+                        <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0" /> <!-- Centro: massimo trasparente -->
+                        <stop offset="60%" style="stop-color:#ffffff;stop-opacity:0.2" /> <!-- Centro: massimo trasparente -->
+                        <stop offset="90%" style="stop-color:#009246;stop-opacity:0.15" /> <!-- Bordo sinistro: soffio verde -->
+                        <stop offset="100%" style="stop-color:#ce2b37;stop-opacity:0.15" /> <!-- Bordo destro: soffio rosso -->
+                    </radialGradient>
+                    <!-- Filtro per rendere i bordi del colore ancora più sfumati (come un'aurora) -->
+                    <filter id="soffice" x="0" y="0">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+                    </filter>
+                </defs>
+                <!-- La forma dell'onda viene riempita con il soffio tricolore sfumato -->
+                <path d="M0,80 C150,130 350,20 600,80 C850,140 1050,30 1200,80 L1200,120 L0,120 Z" fill="url(#flag-soffio-aurora)" filter="url(#soffice)"></path>
+            </svg>
+        </div>
+
+        <!-- TESTO CENTRATO (Copyright e Contatti su due righe) -->
+        <div class="max-w-7xl mx-auto flex flex-col justify-center items-center text-center text-[11px] uppercase tracking-widest font-bold opacity-60 relative z-10">
+            <div>© 2024 ANIeC APS - Insieme per i diritti</div>
+            <div class="mt-2">Tel: +39 06 1234567 | Email: info@aniec.it</div>
+        </div>
+    </footer>
+
 </body>
 </html>
