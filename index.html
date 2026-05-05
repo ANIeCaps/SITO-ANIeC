@@ -131,66 +131,87 @@
         </div>
     </main>
 
- <footer class="footer-simple">
-        <!-- ONDA TRICOLORE FINALE (Effetto fibra intrecciata sfumata) -->
-        <div class="wave-container-final">
-            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+<footer class="footer-final-fixed">
+        <!-- CONTENITORE ONDA: Grafica e linee identiche all'immagine 3.png -->
+        <div class="wave-background">
+            <svg viewBox="0 0 1200 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
-                    <linearGradient id="grad-tricolore-final" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style="stop-color:#009246;stop-opacity:0.15" />
-                        <stop offset="25%" style="stop-color:#009246;stop-opacity:0.08" />
+                    <linearGradient id="grad-tricolore" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#009246;stop-opacity:0.4" />
+                        <stop offset="30%" style="stop-color:#009246;stop-opacity:0.1" />
                         <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0" />
-                        <stop offset="75%" style="stop-color:#ce2b37;stop-opacity:0.08" />
-                        <stop offset="100%" style="stop-color:#ce2b37;stop-opacity:0.15" />
+                        <stop offset="70%" style="stop-color:#ce2b37;stop-opacity:0.1" />
+                        <stop offset="100%" style="stop-color:#ce2b37;stop-opacity:0.4" />
                     </linearGradient>
                 </defs>
-                <!-- Tracciati sovrapposti per l'effetto "linee intrecciate" -->
-                <path d="M0,80 C150,130 350,20 600,80 C850,140 1050,30 1200,80 L1200,120 L0,120 Z" fill="url(#grad-tricolore-final)"></path>
-                <path d="M0,90 C200,140 400,30 600,90 C800,150 1000,40 1200,90" fill="none" stroke="url(#grad-tricolore-final)" stroke-width="0.5" opacity="0.4"></path>
-                <path d="M0,70 C250,120 450,10 600,70 C750,130 950,20 1200,70" fill="none" stroke="url(#grad-tricolore-final)" stroke-width="0.3" opacity="0.3"></path>
+                <!-- Gruppo di linee per l'effetto fibra intrecciata dell'allegato -->
+                <g fill="none" stroke="url(#grad-tricolore)" stroke-width="0.5">
+                    <path d="M0,150 C300,250 450,50 600,150 C750,250 900,50 1200,150" opacity="0.6" />
+                    <path d="M0,160 C250,260 500,60 600,160 C700,260 950,60 1200,160" opacity="0.4" />
+                    <path d="M0,140 C350,240 400,40 600,140 C800,240 850,40 1200,140" opacity="0.5" />
+                    <path d="M0,155 C200,220 400,80 600,155 C800,230 1000,90 1200,155" opacity="0.3" />
+                </g>
             </svg>
         </div>
 
-        <!-- BLOCCO TESTO AGGIORNATO E POSIZIONATO ESATTAMENTE COME NELL'IMMAGINE -->
-        <div class="max-w-7xl mx-auto flex flex-col justify-center items-center text-center text-[13px] uppercase tracking-wide font-medium opacity-80 text-[#003366] relative z-10 p-4">
-            <div>© 2024 ANIeC APS - LA STRUTTURA IDEALE PER DARE VOCE AI TUOI DIRITTI</div>
-            <div class="mt-1">AIUTANDOTI A SVOLGERE CON SERENITA' I TUOI DOVERI</div>
-            <div class="mt-3 font-normal opacity-90">Tel: +39 3279342883 | Email: info@aniecaps.it</div>
-            <div class="mt-1 font-normal opacity-90">C.F. 95237870167</div>
+        <!-- TESTO: Stessa centratura e contenuto del documento -->
+        <div class="footer-text-overlay">
+            <p class="main-text">© 2024 ANIeC APS - LA STRUTTURA IDEALE PER DARE VOCE AI TUOI DIRITTI<br>
+            AIUTANDOTI A SVOLGERE CON SERENITA' I TUOI DOVERI</p>
+            <p class="sub-text">Tel: +39 3279342883 | Email: info@aniecaps.it</p>
+            <p class="sub-text">C.F. 95237870167</p>
         </div>
     </footer>
 
     <style>
-        .footer-simple {
-            background: white;
-            height: 250px; /* Altezza sufficiente per contenere il testo su 4 righe e l'onda */
-            border-top: 1px solid #f0f0f0;
-            color: #003366;
+        .footer-final-fixed {
+            background-color: white;
             position: relative;
-            overflow: hidden;
+            width: 100%;
+            height: 350px; /* Spazio verticale identico alla proporzione dell'immagine */
             display: flex;
-            align-items: center; /* Centra verticalmente il contenuto del testo */
-            justify-content: center; /* Centra orizzontalmente il contenuto del testo */
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-top: 1px solid #f0f0f0;
         }
 
-        .wave-container-final {
+        .wave-background {
             position: absolute;
-            bottom: 0;
+            top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            line-height: 0;
             z-index: 1;
         }
 
-        .wave-container-final svg {
+        .wave-background svg {
             width: 100%;
             height: 100%;
         }
 
-        /* Classi di utilità per i margini (non sovrascriveranno quelle globali) */
-        .mt-1 { margin-top: 4px; }
-        .mt-3 { margin-top: 12px; }
+        .footer-text-overlay {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #003366; /* Blu istituzionale dell'immagine */
+            font-family: sans-serif;
+            line-height: 1.6;
+        }
+
+        .main-text {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .sub-text {
+            font-size: 13px;
+            margin: 4px 0;
+            opacity: 0.9;
+        }
     </style>
 </body>
 </html>
