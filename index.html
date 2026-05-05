@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -9,137 +9,131 @@
     <style>
         :root { --blue-aniec: #003366; --green-aniec: #006b3f; }
         
-        body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #ffffff; }
+        body { margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #ffffff; overflow-x: hidden; }
 
-        /* MANTELLO POSIZIONATO PIÙ IN ALTO */
-        .header-hero-wrapper {
+        /* LA FASCIA ALTA (IL MANTELLO) */
+        .hero-top-section {
             background-image: url('sfondo-pulito.png');
-            background-size: 100% auto;
-            /* background-position alzato a -20px o 0 per far salire la mappa */
-            background-position: top center; 
+            background-size: cover; /* Forza l'immagine a riempire la fascia */
+            background-position: center 0px; /* La blocca esattamente al top */
             background-repeat: no-repeat;
             width: 100%;
-            padding-bottom: 60px;
+            min-height: 85vh; /* Questa è l'altezza che vedi nella bozza */
+            display: flex;
+            flex-direction: column;
         }
 
-        /* Navigazione più compatta per far avvicinare i testi alla mappa */
+        /* Navigazione sopra lo sfondo per far salire la mappa */
         nav {
-            padding-top: 2rem;
-            padding-bottom: 1rem;
+            padding-top: 1.5rem;
+            width: 100%;
+            z-index: 20;
         }
 
-        .content-gradient {
-            background: linear-gradient(180deg, #f8fbff 0%, #ffffff 40%);
-            margin-top: -1px;
+        /* LOGO: Posizionato esattamente dove deve stare nella bozza */
+        .logo-main {
+            height: 140px; /* Dimensione generosa come da bozza */
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));
         }
 
-        .text-blue-aniec { color: var(--blue-aniec); }
-        .bg-green-aniec { background-color: var(--green-aniec); }
+        /* SFUMATURA TENUE SOTTO LA FASCIA PER DARE PROFONDITÀ */
+        .lower-content {
+            background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 300px);
+            margin-top: -150px; /* Fa salire le icone sopra l'onda come nella bozza */
+            position: relative;
+            z-index: 30;
+            padding-top: 50px;
+        }
 
         .service-card {
             background: white;
-            border: 1px solid #eef2f7;
-            border-radius: 12px;
-            padding: 20px 10px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 30px 15px;
             text-align: center;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 180px;
         }
-        .service-card:hover { border-color: var(--green-aniec); transform: translateY(-3px); }
+        .service-card:hover { transform: translateY(-10px); border-color: var(--green-aniec); }
 
-        .icon-svg { width: 45px; height: 45px; margin-bottom: 15px; color: var(--blue-aniec); }
+        .icon-svg { width: 40px; height: 40px; margin-bottom: 20px; color: var(--blue-aniec); stroke-width: 1.2; }
     </style>
 </head>
 <body>
 
-<div class="header-hero-wrapper">
-    <!-- Navigazione: Ora "Servizi" sarà più vicino all'apice della mappa -->
-    <nav class="flex justify-between items-center px-12 relative z-10">
-        <img src="favicon.png" alt="ANIeC Logo" class="h-28 md:h-36 object-contain"> 
-        <div class="hidden md:flex space-x-10 font-bold text-blue-aniec text-[11px] uppercase tracking-[0.2em]">
-            <a href="index.html" class="border-b-2 border-blue-aniec pb-1">Home</a>
-            <a href="#" class="hover:text-green-700">Chi Siamo</a>
-            <a href="#" class="hover:text-green-700">Progettazione</a>
-            <a href="#" class="hover:text-green-700">Servizi</a>
-            <a href="#" class="hover:text-green-700">Contatti</a>
-        </div>
-        <button class="bg-green-aniec text-white px-8 py-2 rounded-full font-bold text-[10px] uppercase tracking-wider shadow-md">Contattaci ></button>
-    </nav>
+    <!-- Sezione Superiore (Fascia Alta) -->
+    <div class="hero-top-section">
+        <nav class="flex justify-between items-center px-12">
+            <img src="favicon.png" alt="Logo ANIeC" class="logo-main">
+            <div class="hidden md:flex space-x-12 font-bold text-blue-aniec text-[12px] uppercase tracking-widest">
+                <a href="index.html" class="hover:text-green-700">Home</a>
+                <a href="#" class="hover:text-green-700">Chi Siamo</a>
+                <a href="#" class="hover:text-green-700">Progettazione</a>
+                <a href="#" class="hover:text-green-700">Servizi</a>
+                <a href="#" class="hover:text-green-700">Contatti</a>
+            </div>
+            <button class="bg-[#006b3f] text-white px-10 py-3 rounded-full font-bold text-[11px] uppercase shadow-lg">Contattaci ></button>
+        </nav>
 
-    <!-- Testi Hero alzati leggermente -->
-    <div class="max-w-7xl mx-auto px-12 pt-10">
-        <div class="md:w-1/2">
-            <h1 class="text-5xl md:text-6xl font-extrabold text-blue-aniec leading-[1.1] mb-6">
-                Insieme per i diritti,<br>al fianco delle persone.
-            </h1>
-            <p class="text-xl text-blue-900/80 mb-10 max-w-lg leading-relaxed">
-                Una rete nazionale di professionisti e volontari impegnati ogni giorno per offrire supporto, tutela e soluzioni concrete.
-            </p>
-            <div class="flex space-x-4">
-                <button class="bg-green-aniec text-white px-10 py-4 rounded-lg font-bold text-sm shadow-xl hover:bg-green-800 transition">SCOPRI I NOSTRI SERVIZI ></button>
-                <button class="bg-white/50 backdrop-blur-sm border-2 border-blue-100 text-blue-aniec px-10 py-4 rounded-lg font-bold text-sm hover:bg-blue-50 transition">CHI SIAMO ></button>
+        <!-- Titoli posizionati sopra l'onda azzurra -->
+        <div class="max-w-7xl mx-auto px-12 mt-12 md:mt-20">
+            <div class="md:w-3/5">
+                <h1 class="text-6xl font-extrabold text-blue-aniec leading-tight mb-8">
+                    Insieme per i diritti,<br>al fianco delle persone.
+                </h1>
+                <p class="text-2xl text-blue-900/70 mb-12 max-w-xl leading-relaxed font-light">
+                    Una rete nazionale di professionisti e volontari impegnati ogni giorno per offrire supporto e soluzioni concrete.
+                </p>
+                <div class="flex space-x-6">
+                    <button class="bg-[#006b3f] text-white px-10 py-4 rounded-md font-bold text-sm shadow-xl">SCOPRI I NOSTRI SERVIZI ></button>
+                    <button class="bg-white border-2 border-blue-900 text-blue-900 px-10 py-4 rounded-md font-bold text-sm">CHI SIAMO ></button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="content-gradient">
-    <section class="max-w-7xl mx-auto px-12 py-20">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-blue-aniec uppercase tracking-tight">I nostri ambiti di intervento</h2>
-            <div class="w-16 h-1 bg-green-aniec mx-auto mt-3"></div>
-        </div>
+    <!-- Sezione Icone (Che ora sale sopra lo sfondo) -->
+    <div class="lower-content">
+        <section class="max-w-7xl mx-auto px-12 py-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-aniec uppercase tracking-tighter">I nostri ambiti di intervento</h2>
+                <div class="w-20 h-1.5 bg-[#006b3f] mx-auto mt-4"></div>
+            </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            <!-- Sovraindebitamento -->
-            <div class="service-card">
-                <svg class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
-                <h3 class="text-[10px] font-bold text-blue-aniec uppercase leading-tight px-1">Sovraindebitamento e tutela consumatore</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <!-- Sovraindebitamento -->
+                <div class="service-card flex flex-col items-center">
+                    <svg class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
+                    <h3 class="text-[10px] font-bold text-blue-aniec uppercase leading-tight px-1">Sovraindebitamento e tutela consumatore</h3>
+                </div>
+                <!-- Disabilità -->
+                <div class="service-card flex flex-col items-center">
+                    <svg class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                    <h3 class="text-[10px] font-bold text-blue-aniec uppercase leading-tight px-1">Disabilità e persone vulnerabili</h3>
+                </div>
+                <!-- Terza Età -->
+                <div class="service-card flex flex-col items-center">
+                    <svg class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    <h3 class="text-[10px] font-bold text-blue-aniec uppercase leading-tight px-1">Terza età e assistenza sociale</h3>
+                </div>
+                <!-- Violenza -->
+                <div class="service-card flex flex-col items-center">
+                    <svg class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    <h3 class="text-[10px] font-bold text-blue-aniec uppercase leading-tight px-1">Contrasto alla violenza di genere</h3>
+                </div>
+                <!-- Minori -->
+                <div class="service-card flex flex-col items-center">
+                    <svg class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    <h3 class="text-[10px] font-bold text-blue-aniec uppercase leading-tight px-1">Tutela dei minori e bullismo</h3>
+                </div>
+                <!-- Cyber -->
+                <div class="service-card flex flex-col items-center">
+                    <svg class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9.75 17L9 21h6l-.75-4M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <h3 class="text-[10px] font-bold text-blue-aniec uppercase leading-tight px-1">Cyberbullismo e sicurezza digitale</h3>
+                </div>
             </div>
-            <!-- Disabilità -->
-            <div class="service-card">
-                <svg class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-                <h3 class="text-[10px] font-bold text-blue-aniec uppercase leading-tight px-1">Disabilità e persone vulnerabili</h3>
-            </div>
-            <!-- Terza Età -->
-            <div class="service-card">
-                <svg class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                <h3 class="text-[10px] font-bold text-blue-aniec uppercase leading-tight px-1">Terza età e assistenza sociale</h3>
-            </div>
-            <!-- Violenza -->
-            <div class="service-card">
-                <svg class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                <h3 class="text-[10px] font-bold text-blue-aniec uppercase leading-tight px-1">Contrasto alla violenza di genere</h3>
-            </div>
-            <!-- Minori -->
-            <div class="service-card">
-                <svg class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M14 10h4.757a2 2 0 110 4h-4.757M4 14h4.757a2 2 0 100-4H4m5 8l1-5h4l1 5m-4-15l1 5h2l1-5"></path></svg>
-                <h3 class="text-[10px] font-bold text-blue-aniec uppercase leading-tight px-1">Tutela dei minori e bullismo</h3>
-            </div>
-            <!-- Cyber -->
-            <div class="service-card">
-                <svg class="icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.75 17L9 21h6l-.75-4M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                <h3 class="text-[10px] font-bold text-blue-aniec uppercase leading-tight px-1">Cyberbullismo e sicurezza digitale</h3>
-            </div>
-        </div>
-    </section>
-
-    <!-- Banner Rete Servizi -->
-    <section class="max-w-7xl mx-auto px-12 mb-24">
-        <div class="bg-white border-2 border-blue-50 rounded-[2rem] p-12 flex flex-col md:flex-row justify-between items-center shadow-2xl shadow-blue-100/50">
-            <div>
-                <h3 class="text-2xl font-bold text-blue-aniec mb-2">Rete Servizi (Area Riservata)</h3>
-                <p class="text-blue-900/60 font-medium italic">Pagina in continua evoluzione. Registrazione obbligatoria con codice abilitazione.</p>
-            </div>
-            <button class="mt-8 md:mt-0 bg-blue-aniec text-white px-12 py-4 rounded-full font-bold shadow-lg hover:bg-blue-800 transition">REGISTRATI ORA</button>
-        </div>
-    </section>
-</div>
+        </section>
+    </div>
 
 </body>
 </html>
