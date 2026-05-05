@@ -12,13 +12,13 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Helvetica', sans-serif; background-color: #ffffff; overflow-x: hidden; }
 
+        /* MANTELLO RICALIBRATO: ZOOM RIDOTTO E POSIZIONE ARMONIOSA */
         .hero-section {
             width: 100%;
-            min-height: 750px; 
+            min-height: 720px; 
             background-image: url('sfondo-pulito.png');
-            /* Aumentato lo zoom per non perdere l'asse dell'onda alzandola */
-            background-size: 125% auto;
-            background-position: center -220px; 
+            background-size: 112% auto; /* Ridotto lo zoom per togliere l'effetto "sovrastante" */
+            background-position: center -150px; /* Alzato quanto basta senza perdere l'asse */
             background-repeat: no-repeat;
             position: relative;
         }
@@ -32,20 +32,14 @@
             z-index: 50;
         }
 
-        .logo-aniec { height: 130px; }
+        .logo-aniec { height: 135px; }
 
         .services-area {
             background: linear-gradient(180deg, #f3f8ff 0%, #ffffff 100%);
             padding: 60px 60px;
-            margin-top: -140px; 
+            margin-top: -160px; 
             position: relative;
             z-index: 10;
-        }
-
-        /* Testo più leggibile sopra l'immagine */
-        .hero-title {
-            text-shadow: 0 2px 10px rgba(255,255,255,0.8);
-            line-height: 1.1;
         }
 
         .card {
@@ -68,8 +62,8 @@
 
         .footer-simple {
             background: white;
-            padding: 40px 60px;
-            border-top: 1px solid #eee;
+            padding: 50px 60px;
+            border-top: 1px solid #f0f0f0;
             color: var(--blue-aniec);
         }
     </style>
@@ -79,7 +73,7 @@
     <header class="hero-section">
         <nav>
             <img src="favicon.png" alt="ANIeC" class="logo-aniec">
-            <div class="hidden md:flex space-x-10 font-bold text-blue-aniec text-[11px] uppercase tracking-widest">
+            <div class="hidden md:flex space-x-12 font-bold text-blue-aniec text-[11px] uppercase tracking-widest">
                 <a href="#" class="hover:text-green-700">Home</a>
                 <a href="#" class="hover:text-green-700">Chi Siamo</a>
                 <a href="#" class="hover:text-green-700">Progettazione</a>
@@ -89,18 +83,17 @@
             <button class="bg-[#006b3f] text-white px-10 py-3 rounded-full font-bold text-[10px] uppercase shadow-lg">Contattaci ></button>
         </nav>
 
-        <div class="max-w-7xl mx-auto px-12 mt-16">
-            <div class="md:w-3/5">
-                <!-- Dimensioni riproporzionate per bilanciare l'immagine -->
-                <h1 class="hero-title text-5xl font-extrabold text-blue-aniec mb-6">
+        <div class="max-w-7xl mx-auto px-12 mt-12">
+            <div class="md:w-1/2">
+                <h1 class="text-6xl font-extrabold text-blue-aniec leading-[1.1] mb-8">
                     Insieme per i diritti,<br>al fianco delle persone.
                 </h1>
-                <p class="text-xl text-blue-900/80 mb-10 leading-relaxed font-light max-w-lg">
+                <p class="text-2xl text-blue-900/70 mb-10 leading-relaxed font-light">
                     Una rete nazionale di professionisti e volontari impegnati ogni giorno per offrire supporto e soluzioni concrete.
                 </p>
                 <div class="flex space-x-6">
                     <button class="bg-[#006b3f] text-white px-10 py-4 rounded-md font-bold text-sm shadow-xl">I NOSTRI SERVIZI ></button>
-                    <button class="bg-white/80 border-2 border-blue-100 text-blue-aniec px-10 py-4 rounded-md font-bold text-sm hover:bg-white">CHI SIAMO ></button>
+                    <button class="bg-white border-2 border-blue-100 text-blue-aniec px-10 py-4 rounded-md font-bold text-sm hover:bg-blue-50">CHI SIAMO ></button>
                 </div>
             </div>
         </div>
@@ -114,10 +107,8 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                <div class="card">
-                    <svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
-                    <h3 class="text-[10px] font-bold text-blue-aniec uppercase">Sovraindebitamento e tutela consumatore</h3>
-                </div>
+                <!-- Icone originali -->
+                <div class="card"><svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg><h3 class="text-[10px] font-bold text-blue-aniec uppercase">Sovraindebitamento e tutela consumatore</h3></div>
                 <div class="card"><svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg><h3 class="text-[10px] font-bold text-blue-aniec uppercase">Disabilità e persone vulnerabili</h3></div>
                 <div class="card"><svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg><h3 class="text-[10px] font-bold text-blue-aniec uppercase">Terza età e assistenza sociale</h3></div>
                 <div class="card"><svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="1.2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg><h3 class="text-[10px] font-bold text-blue-aniec uppercase">Contrasto alla violenza di genere</h3></div>
@@ -128,9 +119,9 @@
     </main>
 
     <footer class="footer-simple">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-[11px] uppercase tracking-widest font-bold opacity-70">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-[11px] uppercase tracking-[0.1em] font-bold opacity-60">
             <div>© 2024 ANIeC APS - Insieme per i diritti</div>
-            <div class="flex space-x-6 mt-4 md:mt-0">
+            <div class="flex space-x-8 mt-4 md:mt-0">
                 <span>Tel: +39 06 1234567</span>
                 <span>Email: info@aniec.it</span>
             </div>
