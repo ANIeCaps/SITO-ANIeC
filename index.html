@@ -7,136 +7,129 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root { --dark-blue: #003366; --green-aniec: #006b3f; }
+        :root { --blue-aniec: #003366; --green-aniec: #006b3f; --light-blue: #f0f7ff; }
         
-        body { background-color: #ffffff; color: var(--dark-blue); margin: 0; }
+        body { margin: 0; font-family: 'Helvetica', sans-serif; background-color: #ffffff; }
 
-        /* Lo sfondo con l'onda è posizionato solo in alto */
-        .hero-bg {
+        /* Sfondo con profondità: sfumatura azzurra che dissolve nel bianco */
+        .page-wrapper {
+            background: linear-gradient(180deg, var(--light-blue) 0%, #ffffff 60%);
+            min-height: 100vh;
+        }
+
+        /* Hero: Immagine sfondo-pulito.png bloccata e NON tagliata */
+        .hero-container {
             background-image: url('sfondo-pulito.png');
-            background-size: contain; /* Mantiene le proporzioni originali */
+            background-size: 70% auto; /* Evita che si ingrandisca troppo */
             background-position: top right;
             background-repeat: no-repeat;
-            min-height: 600px;
-            width: 100%;
+            padding-bottom: 50px;
         }
 
+        .text-blue-aniec { color: var(--blue-aniec); }
+        .bg-green-aniec { background-color: var(--green-aniec); }
+
+        /* Card dei servizi con stile "outline" e icone sottili */
         .service-card {
             background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-            border: 1px solid #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px 10px;
-            text-align: center;
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            padding: 25px 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
-        .service-card:hover { transform: translateY(-5px); border-color: var(--green-aniec); }
-        
-        .icon-blue { filter: invert(13%) sepia(54%) saturate(3062%) lg(hue-rotate(195deg)) brightness(93%) contrast(106%); opacity: 0.8; }
+        .service-card:hover { border-color: var(--green-aniec); transform: translateY(-5px); }
+
+        /* Filtro per rendere le icone del blu istituzionale */
+        .icon-style { width: 50px; height: 50px; margin-bottom: 15px; opacity: 0.7; }
     </style>
 </head>
 <body>
 
-    <!-- Header & Hero Section -->
-    <div class="hero-bg">
-        <nav class="flex justify-between items-center px-6 md:px-16 py-6 bg-white/80 backdrop-blur-sm">
-            <img src="favicon.png" alt="Logo ANIeC" class="h-14 md:h-16">
-            <div class="hidden md:flex space-x-8 font-bold text-[11px] uppercase tracking-widest">
-                <a href="index.html" class="text-blue-900 border-b-2 border-blue-900">Home</a>
+<div class="page-wrapper">
+    <div class="hero-container">
+        <!-- Header con Logo Grande -->
+        <nav class="flex justify-between items-center px-10 py-8">
+            <img src="favicon.png" alt="ANIeC Logo" class="h-24 md:h-28 object-contain">
+            <div class="hidden md:flex space-x-10 font-bold text-blue-aniec text-xs uppercase tracking-widest">
+                <a href="index.html" class="border-b-2 border-blue-aniec">Home</a>
                 <a href="#">Chi Siamo</a>
                 <a href="#">Progettazione</a>
                 <a href="#">Servizi</a>
                 <a href="#">Contatti</a>
             </div>
-            <button class="bg-[#006b3f] text-white px-6 py-2 rounded-full font-bold text-[11px] uppercase tracking-wider">Contattaci ></button>
+            <button class="bg-green-aniec text-white px-8 py-2 rounded-full font-bold text-xs uppercase">Contattaci ></button>
         </nav>
 
-        <div class="max-w-7xl mx-auto px-6 md:px-16 pt-20">
+        <!-- Testi Hero allineati a sinistra -->
+        <div class="max-w-7xl mx-auto px-10 pt-10">
             <div class="md:w-1/2">
-                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-blue-aniec leading-tight mb-8">
                     Insieme per i diritti,<br>al fianco delle persone.
                 </h1>
-                <p class="text-lg opacity-80 mb-10 max-w-lg leading-relaxed">
+                <p class="text-xl text-blue-900 opacity-80 mb-10 leading-relaxed max-w-lg">
                     Una rete nazionale di professionisti e volontari impegnati ogni giorno per offrire supporto, tutela e soluzioni concrete.
                 </p>
-                <div class="flex space-x-4">
-                    <button class="bg-[#006b3f] text-white px-8 py-3 rounded-md font-bold text-sm">SCOPRI I NOSTRI SERVIZI ></button>
-                    <button class="border-2 border-blue-900 text-blue-900 px-8 py-3 rounded-md font-bold text-sm">CHI SIAMO ></button>
+                <div class="flex space-x-6">
+                    <button class="bg-green-aniec text-white px-10 py-4 rounded-lg font-bold shadow-lg">SCOPRI I NOSTRI SERVIZI ></button>
+                    <button class="border-2 border-blue-aniec text-blue-aniec px-10 py-4 rounded-lg font-bold">CHI SIAMO ></button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Sezione Ambiti (Icone ricostruite digitalmente) -->
-    <section class="max-w-7xl mx-auto px-6 md:px-16 py-16">
-        <div class="text-center mb-12">
-            <h2 class="text-2xl font-bold mb-2 uppercase tracking-tight">I nostri ambiti di intervento</h2>
-            <div class="w-12 h-1 bg-[#006b3f] mx-auto"></div>
+    <!-- Sezione Ambiti con Icone Sottili (Outline) -->
+    <section class="max-w-7xl mx-auto px-10 py-20">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-blue-aniec uppercase tracking-tight">I nostri ambiti di intervento</h2>
+            <div class="w-16 h-1 bg-green-aniec mx-auto mt-2"></div>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            <!-- Card 1 -->
-            <div class="service-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/3437/3437319.png" class="h-10 mb-4 icon-blue">
-                <h3 class="text-[9px] font-bold uppercase">Sovraindebitamento e tutela consumatore</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
+            <!-- Sovraindebitamento -->
+            <div class="service-card flex flex-col items-center">
+                <img src="https://img.icons8.com/ios/100/003366/scale.png" class="icon-style" alt="Bilancia">
+                <h3 class="text-[10px] font-bold text-blue-aniec uppercase px-2">Sovraindebitamento e tutela consumatore</h3>
             </div>
-            <!-- Card 2 -->
-            <div class="service-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/3063/3063176.png" class="h-10 mb-4 icon-blue">
-                <h3 class="text-[9px] font-bold uppercase">Disabilità e persone vulnerabili</h3>
+            <!-- Disabilità -->
+            <div class="service-card flex flex-col items-center">
+                <img src="https://img.icons8.com/ios/100/003366/wheelchair.png" class="icon-style" alt="Disabilità">
+                <h3 class="text-[10px] font-bold text-blue-aniec uppercase px-2">Disabilità e persone vulnerabili</h3>
             </div>
-            <!-- Card 3 -->
-            <div class="service-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/3077/3077166.png" class="h-10 mb-4 icon-blue">
-                <h3 class="text-[9px] font-bold uppercase">Terza età e assistenza sociale</h3>
+            <!-- Terza Età -->
+            <div class="service-card flex flex-col items-center">
+                <img src="https://img.icons8.com/ios/100/003366/elderly-person.png" class="icon-style" alt="Anziani">
+                <h3 class="text-[10px] font-bold text-blue-aniec uppercase px-2">Terza età e assistenza sociale</h3>
             </div>
-            <!-- Card 4 -->
-            <div class="service-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135810.png" class="h-10 mb-4 icon-blue">
-                <h3 class="text-[9px] font-bold uppercase">Contrasto alla violenza di genere</h3>
+            <!-- Violenza -->
+            <div class="service-card flex flex-col items-center">
+                <img src="https://img.icons8.com/ios/100/003366/shield.png" class="icon-style" alt="Scudo">
+                <h3 class="text-[10px] font-bold text-blue-aniec uppercase px-2">Contrasto alla violenza di genere</h3>
             </div>
-            <!-- Card 5 -->
-            <div class="service-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/4319/4319159.png" class="h-10 mb-4 icon-blue">
-                <h3 class="text-[9px] font-bold uppercase">Tutela minori e bullismo</h3>
+            <!-- Minori -->
+            <div class="service-card flex flex-col items-center">
+                <img src="https://img.icons8.com/ios/100/003366/family-sub-group-man-woman--v1.png" class="icon-style" alt="Famiglia">
+                <h3 class="text-[10px] font-bold text-blue-aniec uppercase px-2">Tutela dei minori e bullismo</h3>
             </div>
-            <!-- Card 6 -->
-            <div class="service-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/2092/2092663.png" class="h-10 mb-4 icon-blue">
-                <h3 class="text-[9px] font-bold uppercase">Cyberbullismo e sicurezza digitale</h3>
+            <!-- Cyber -->
+            <div class="service-card flex flex-col items-center">
+                <img src="https://img.icons8.com/ios/100/003366/laptop-computer.png" class="icon-style" alt="Computer">
+                <h3 class="text-[10px] font-bold text-blue-aniec uppercase px-2">Cyberbullismo e sicurezza digitale</h3>
             </div>
         </div>
     </section>
 
-    <!-- Rete Servizi -->
-    <section class="max-w-7xl mx-auto px-6 md:px-16 mb-16">
-        <div class="bg-blue-50/50 border border-blue-100 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row justify-between items-center shadow-sm">
-            <div>
-                <h3 class="text-xl font-bold mb-2">Rete Servizi (Area Riservata)</h3>
-                <p class="text-sm opacity-70">Pagina in continua evoluzione. Accesso tramite codice abilitazione.</p>
+    <!-- Banner Rete Servizi con Sfondo Tenue -->
+    <section class="max-w-7xl mx-auto px-10 mb-24">
+        <div class="bg-blue-50 border border-blue-100 rounded-3xl p-10 flex flex-col md:flex-row justify-between items-center shadow-inner">
+            <div class="text-left">
+                <h3 class="text-2xl font-bold text-blue-aniec mb-2">Rete Servizi (Area Riservata)</h3>
+                <p class="text-blue-800 opacity-70 font-medium italic">Pagina in continua evoluzione. Accesso tramite codice abilitazione.</p>
             </div>
-            <button class="mt-6 md:mt-0 bg-blue-900 text-white px-10 py-3 rounded-full font-bold text-sm">ACCEDI ORA</button>
+            <button class="mt-8 md:mt-0 bg-blue-aniec text-white px-12 py-4 rounded-full font-bold shadow-lg hover:bg-blue-900">ACCEDI ALL'AREA</button>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="bg-blue-900 text-white py-12 px-6 md:px-16">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-6 md:mb-0">
-                <h4 class="text-xl font-bold mb-2 tracking-tight">Hai bisogno di supporto?</h4>
-                <p class="opacity-70">Contattaci, siamo qui per aiutarti.</p>
-            </div>
-            <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-12 text-sm font-medium">
-                <span>📞 06 12345678</span>
-                <span>📧 info@aniec-aps.it</span>
-                <span>📍 Roma, Italia</span>
-            </div>
-            <button class="mt-6 md:mt-0 border-2 border-[#006b3f] text-[#006b3f] px-8 py-2 rounded-full font-bold hover:bg-[#006b3f] hover:text-white transition-colors">CONTATTACI ></button>
-        </div>
-    </footer>
+</div>
 
 </body>
 </html>
