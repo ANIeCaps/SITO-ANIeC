@@ -186,6 +186,55 @@
         </div>
     </main>
 
+<section class="support-section">
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-extrabold text-blue-aniec mb-3">
+                Hai bisogno di supporto?
+            </h2>
+            <p class="text-blue-900/60 text-lg">
+                Siamo qui per aiutarti. Compila il modulo e verrai ricontattato/a.
+            </p>
+        </div>
+
+        <form class="support-form">
+            <div class="grid md:grid-cols-2 gap-5">
+                <input type="text" placeholder="Nome e cognome" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Telefono">
+                
+                <select required>
+                    <option value="">Seleziona il servizio richiesto</option>
+                    <option>Sovraindebitamento</option>
+                    <option>Disabilità</option>
+                    <option>Terza età</option>
+                    <option>Violenza sulle donne / Violenza di genere</option>
+                    <option>Tutela minori</option>
+                    <option>Bullismo / Cyberbullismo</option>
+                    <option>Orientamento al lavoro</option>
+                    <option>Rete sociale</option>
+                    <option>Altro</option>
+                </select>
+            </div>
+
+            <textarea maxlength="800" placeholder="Natura della richiesta / messaggio - massimo 800 caratteri" required></textarea>
+
+            <label class="privacy-check">
+                <input type="checkbox" required>
+                <span>
+                    Selezionando questa casella autorizzo il trattamento dei dati personali esclusivamente per essere ricontattato/a in merito alla richiesta inviata. I dati non saranno divulgati a terzi.
+                </span>
+            </label>
+
+            <div class="text-center mt-8">
+                <button type="submit" class="bg-[#006b3f] text-white px-10 py-4 rounded-full font-bold text-xs uppercase shadow-lg hover:bg-green-800 transition">
+                    Invia richiesta
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
 <!-- INIZIO FOOTER DEFINITIVO E FUNZIONANTE -->
 <footer class="footer-compact">
     <img src="footer-aniec.png" alt="ANIeC APS footer" class="footer-image">
