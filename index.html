@@ -367,70 +367,86 @@
     </div>
 </footer>
 
-<style>
-    .footer-compact {
-        background-color: white;
-        width: 100%;
-        height: 110px;
-        display: block;
-        overflow: hidden;
-        border-top: 1px solid #eee;
-        margin-top: 50px;
-        padding: 0;
-    }
-
-
-    
-    .footer-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        display: block;
-        opacity: 0.95;
-    }
-
-    @media (max-width: 768px) {
-        .footer-compact {
-            height: 130px;
-        }
-    }
-    .process-modern {
-    padding: 70px 0 50px;
-}
-
-.process-card {
-    background: rgba(255,255,255,0.92);
-    border: 1px solid #eef2f8;
-    border-radius: 18px;
-    padding: 32px 26px;
-    text-align: left;
-    box-shadow: 0 12px 35px rgba(0,51,102,0.06);
-    transition: 0.3s;
-}
-
-.process-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--green-aniec);
-}
-
-.process-card h3 {
-    font-weight: bold;
+.site-footer {
+    position: relative;
+    background: #ffffff;
     color: var(--blue-aniec);
-    margin-bottom: 10px;
+    overflow: hidden;
+    border-top: 1px solid #eef2f8;
 }
 
-.process-card p {
+.site-footer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 120px;
+    background-image: url('footer-aniec.png');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    opacity: 0.85;
+    z-index: 0;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px 60px 70px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-logo {
+    height: 95px;
+    margin-bottom: 18px;
+}
+
+.footer-payoff {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 600;
+    max-width: 520px;
+}
+
+.footer-info {
+    text-align: right;
     font-size: 14px;
-    color: #003366b0;
+    line-height: 1.8;
 }
 
-.step-number {
-    font-size: 28px;
-    font-weight: 800;
-    color: #006b3f20;
-    margin-bottom: 10px;
+.footer-bottom {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #003366;
+    background: rgba(255,255,255,0.72);
+    border-top: 1px solid rgba(0,51,102,0.08);
 }
-</style>
+
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 35px 25px 80px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+
+    .footer-logo {
+        height: 80px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 </body>
 </html>
