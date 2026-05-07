@@ -829,299 +829,278 @@
 
 <body>
 
-    <header id="home" class="hero-section">
-        <nav>
-            <img src="logo-aniec.png" alt="ANIeC APS" class="logo-aniec">
+   <header class="bg-white border-b border-[#eef2f8]">
+    <nav>
+        <img src="logo-aniec.png" alt="ANIeC APS" class="logo-aniec">
 
-            <div class="desktop-menu">
-                <a href="#home">Home</a>
-                <a href="#chi-siamo">Chi Siamo</a>
-                <a href="#processo">Progettazione</a>
-                <a href="#servizi">Servizi</a>
-                <a href="#contatti">Contatti</a>
-            </div>
+        <div class="desktop-menu">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#chi-siamo">Chi Siamo</a>
+            <a href="index.html#processo">Progettazione</a>
+            <a href="index.html#servizi">Servizi</a>
+            <a href="index.html#contatti">Contatti</a>
+        </div>
 
-            <a href="#contatti" class="nav-cta">Contattaci &gt;</a>
+        <a href="index.html#contatti" class="nav-cta">Contattaci &gt;</a>
+    </nav>
+</header>
 
-            <button class="mobile-menu-button" type="button" aria-label="Apri menu" aria-controls="mobileMenu" aria-expanded="false" onclick="toggleMobileMenu()">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"></path>
-                </svg>
-            </button>
+<main>
 
-            <div id="mobileMenu" class="mobile-menu">
-                <a href="#home" onclick="closeMobileMenu()">Home</a>
-                <a href="#processo" onclick="closeMobileMenu()">Chi Siamo</a>
-                <a href="#processo" onclick="closeMobileMenu()">Progettazione</a>
-                <a href="#servizi" onclick="closeMobileMenu()">Servizi</a>
-                <a href="#contatti" onclick="closeMobileMenu()">Contatti</a>
-            </div>
-        </nav>
+<section class="bg-gradient-to-b from-[#f8fbff] to-[#edf4fc] py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
 
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    Insieme per i diritti,<br>al fianco delle persone.
+            <div>
+                <span class="text-[11px] font-extrabold tracking-[0.22em] uppercase text-[#006b3f]">
+                    Servizi / Sovraindebitamento
+                </span>
+
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.05] text-[#003366] mt-5 mb-6">
+                    Quando i debiti diventano un peso difficile da sostenere, ritrovare equilibrio può sembrare impossibile.
                 </h1>
 
-                <p class="hero-description">
-                    Una rete nazionale di professionisti e volontari impegnati ogni giorno per offrire supporto e soluzioni concrete.
+                <p class="text-lg md:text-[19px] leading-[1.8] text-[#003366]/70 max-w-2xl mb-8">
+                    ANIeC APS offre supporto, orientamento e accompagnamento nelle situazioni di sovraindebitamento, aiutando persone e famiglie a comprendere gli strumenti di tutela previsti dalla legge e le possibili soluzioni per affrontare la crisi debitoria con maggiore consapevolezza e stabilità.
                 </p>
 
-                <div class="hero-actions">
-                    <a href="#servizi" class="btn-primary">I nostri servizi</a>
-                    <a href="#processo" class="btn-secondary">Chi siamo</a>
-                </div>
-            </div>
-        </div>
-    </header>
-<section id="chi-siamo" class="about-section">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="index.html#contatti" class="inline-flex justify-center px-8 py-4 rounded-xl bg-[#006b3f] text-white text-xs font-extrabold uppercase tracking-[0.12em] shadow-lg hover:bg-[#005332] transition">
+                        Richiedi supporto
+                    </a>
 
-        <div class="about-intro">
-            <span>Chi siamo</span>
-
-            <h2>
-                Un’associazione costruita sul territorio,
-                attraverso fiducia, ascolto e tutela concreta.
-            </h2>
-
-            <p>
-                ANIeC APS nasce dall’esperienza diretta maturata nel supporto alle persone,
-                alle famiglie e ai cittadini che affrontano situazioni di difficoltà,
-                vulnerabilità o disorientamento nei rapporti sociali, economici e amministrativi.
-            </p>
-        </div>
-
-        <div class="about-grid">
-
-            <div class="about-card">
-                <h3>La nostra evoluzione</h3>
-
-                <p>
-                    Le radici del progetto ANIeC affondano in un percorso iniziato molti anni prima
-                    della sua costituzione formale. Già a partire dal 2004, attraverso collaborazioni,
-                    esperienze territoriali e confronti con realtà associative e sociali differenti,
-                    prende forma una visione progressivamente più autonoma, concreta e orientata alla persona.
-                </p>
-
-                <p>
-                    Nel tempo, l’ascolto diretto delle esigenze del territorio, la costruzione di relazioni umane,
-                    l’osservazione delle fragilità sociali ed economiche e il confronto continuo con cittadini,
-                    professionisti ed enti hanno contribuito a definire un’identità sempre più solida e consapevole.
-                </p>
-
-                <p>
-                    Le prime basi operative del progetto si consolidano poi dal 2010 attraverso attività di orientamento,
-                    supporto e accompagnamento sviluppate direttamente sul territorio, anche grazie al confronto e alla
-                    collaborazione con professionisti, realtà associative e soggetti del Terzo Settore che hanno contribuito,
-                    nel tempo, alla crescita di un’identità sempre più autonoma, strutturata e consapevole,
-                    fino ad arrivare nel 2018 alla nascita formale di ANIeC APS.
-                </p>
-
-                <p>
-                    Dal 2026 l’associazione evolve ulteriormente verso un modello più tecnico,
-                    organizzato e multidisciplinare, orientato alla costruzione di servizi,
-                    sportelli territoriali e progetti sociali replicabili.
-                </p>
-            </div>
-
-            <div class="about-card about-card-strong">
-                <h3>Come operiamo</h3>
-
-                <p>
-                    ANIeC APS opera attraverso un approccio fondato su ascolto,
-                    orientamento, tutela e accompagnamento della persona.
-                </p>
-
-                <p>
-                    L’associazione collabora con professionisti, avvocati,
-                    commercialisti, consulenti, enti territoriali, realtà del Terzo Settore
-                    e reti sociali locali, costruendo interventi integrati e personalizzati.
-                </p>
-
-                <p>
-                    Il nostro obiettivo non è sostituirci ai servizi esistenti,
-                    ma creare un collegamento concreto tra cittadini,
-                    diritti, strumenti di tutela e risorse presenti sul territorio.
-                </p>
-            </div>
-
-        </div>
-
-        <div class="about-values">
-            <div>
-                <h4>Tutela</h4>
-                <p>Promuoviamo la protezione dei diritti e il supporto nelle situazioni di fragilità.</p>
-            </div>
-
-            <div>
-                <h4>Rete territoriale</h4>
-                <p>Collaboriamo con realtà professionali, associative e istituzionali presenti sul territorio.</p>
-            </div>
-
-            <div>
-                <h4>Responsabilità</h4>
-                <p>Operiamo con imparzialità, riservatezza e attenzione alla persona.</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-    <main id="servizi" class="services-area">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-14 md:mb-16">
-                <h2 class="text-2xl font-bold text-blue-aniec uppercase tracking-widest">Ambiti di intervento</h2>
-                <div class="w-16 h-1 bg-[#006b3f] mx-auto mt-4"></div>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 md:gap-5">
-                <div class="card">
-                    <svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-width="1.2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path>
-                    </svg>
-                    <h3 class="card-title">Sovraindebitamento</h3>
-                </div>
-
-                <div class="card">
-                    <svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-width="1.2" d="M12 4v16M6 20h12M8 10h8"></path>
-                    </svg>
-                    <h3 class="card-title">Disabilità</h3>
-                </div>
-
-                <div class="card">
-                    <svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-width="1.2" d="M12 12a4 4 0 100-8 4 4 0 000 8zm-7 9a7 7 0 0114 0"></path>
-                    </svg>
-                    <h3 class="card-title">Terza età</h3>
-                </div>
-
-                <div class="card">
-                    <svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-width="1.2" d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"></path>
-                    </svg>
-                    <h3 class="card-title">Violenza sulle donne<br>Violenza di genere</h3>
-                </div>
-
-                <div class="card">
-                    <svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-width="1.2" d="M8 11a4 4 0 118 0v2h1a2 2 0 012 2v5H5v-5a2 2 0 012-2h1v-2z"></path>
-                    </svg>
-                    <h3 class="card-title">Tutela minori</h3>
-                </div>
-
-                <div class="card">
-                    <svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-width="1.2" d="M4 5h16v10H7l-3 3V5z"></path>
-                    </svg>
-                    <h3 class="card-title">Bullismo<br>Cyberbullismo</h3>
-                </div>
-
-                <div class="card">
-                    <svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-width="1.2" d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-4 0-7 2-7 5v1h14v-1c0-3-3-5-7-5zm7-10v5m2.5-2.5h-5"></path>
-                    </svg>
-                    <h3 class="card-title">Orientamento al lavoro</h3>
-                </div>
-
-                <div class="card">
-                    <svg class="icon-aniec" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-width="1.2" d="M7 11a4 4 0 100-8 4 4 0 000 8zm10 0a4 4 0 100-8 4 4 0 000 8zM3 21a6 6 0 0112 0M9 21a6 6 0 0112 0"></path>
-                    </svg>
-                    <h3 class="card-title">Rete sociale</h3>
+                    <a href="#approfondimento" class="inline-flex justify-center px-8 py-4 rounded-xl border border-[#dfe8f3] bg-white text-[#003366] text-xs font-extrabold uppercase tracking-[0.12em] hover:bg-[#f3f8ff] transition">
+                        Comprendere gli strumenti disponibili
+                    </a>
                 </div>
             </div>
 
-            <section id="processo" class="process-modern">
-                <div class="max-w-7xl mx-auto px-12">
-                    <div class="text-center mb-14 md:mb-16">
-                        <h2 class="text-3xl font-extrabold text-blue-aniec mb-4">
-                            Come ti aiutiamo
-                        </h2>
-                        <p class="text-blue-900/60 max-w-xl mx-auto">
-                            Un percorso chiaro e strutturato per accompagnarti passo dopo passo.
+            <div class="bg-white/75 border border-white/70 rounded-[28px] p-8 md:p-10 shadow-[0_20px_60px_rgba(0,51,102,0.08)]">
+                <div class="space-y-7">
+                    <div>
+                        <h3 class="text-[#003366] text-xl font-extrabold mb-2">Tutela e orientamento</h3>
+                        <p class="text-[#003366]/70 leading-[1.75] text-[15px]">
+                            Supporto orientato alla comprensione della situazione debitoria e degli strumenti previsti dalla normativa vigente.
                         </p>
                     </div>
 
-                    <div class="grid md:grid-cols-4 gap-5 md:gap-8">
-                        <div class="process-card">
-                            <div class="step-number">01</div>
-                            <h3>Ascoltiamo</h3>
-                            <p>Comprendiamo la tua situazione attraverso un primo confronto diretto.</p>
-                        </div>
+                    <div class="h-px bg-[#dfe8f3]"></div>
 
-                        <div class="process-card">
-                            <div class="step-number">02</div>
-                            <h3>Orientiamo</h3>
-                            <p>Ti guidiamo verso la soluzione più adatta alle tue esigenze.</p>
-                        </div>
+                    <div>
+                        <h3 class="text-[#003366] text-xl font-extrabold mb-2">Riservatezza e ascolto</h3>
+                        <p class="text-[#003366]/70 leading-[1.75] text-[15px]">
+                            Ogni situazione viene affrontata con attenzione, rispetto della persona e massima discrezione.
+                        </p>
+                    </div>
 
-                        <div class="process-card">
-                            <div class="step-number">03</div>
-                            <h3>Tuteliamo</h3>
-                            <p>Proteggiamo i tuoi diritti con competenza e professionalità.</p>
-                        </div>
+                    <div class="h-px bg-[#dfe8f3]"></div>
 
-                        <div class="process-card">
-                            <div class="step-number">04</div>
-                            <h3>Supportiamo</h3>
-                            <p>Ti accompagniamo durante tutto il percorso fino alla risoluzione.</p>
-                        </div>
+                    <div>
+                        <h3 class="text-[#003366] text-xl font-extrabold mb-2">Rete professionale</h3>
+                        <p class="text-[#003366]/70 leading-[1.75] text-[15px]">
+                            Collaborazione con professionisti e figure competenti nell’ambito della composizione della crisi e della tutela del debitore.
+                        </p>
                     </div>
                 </div>
-            </section>
-        </div>
-    </main>
+            </div>
 
-    <section id="contatti" class="support-section">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-extrabold text-blue-aniec mb-3">
-                    Hai bisogno di supporto?
-                </h2>
-                <p class="text-blue-900/60 text-lg">
-                    Siamo qui per aiutarti. Compila il modulo e verrai ricontattato/a.
+        </div>
+    </div>
+</section>
+
+<section class="bg-white py-18 md:py-24">
+    <div class="max-w-4xl mx-auto px-6 lg:px-12">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-[#003366] mb-8">
+            Le difficoltà economiche non riguardano solo i numeri.
+        </h2>
+
+        <div class="space-y-6 text-[#003366]/70 text-[17px] leading-[1.85]">
+            <p>
+                Le situazioni di sovraindebitamento coinvolgono spesso equilibrio familiare, serenità personale e stabilità quotidiana.
+            </p>
+
+            <p>
+                Rate, finanziamenti, esposizioni debitorie, difficoltà lavorative o eventi imprevisti possono trasformarsi progressivamente in condizioni difficili da sostenere senza un adeguato supporto.
+            </p>
+
+            <p>
+                Comprendere tempestivamente la propria situazione rappresenta il primo passo per valutare strumenti di tutela, percorsi di riorganizzazione e possibili soluzioni previste dalla normativa vigente.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="bg-[#edf4fc] py-18 md:py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="max-w-3xl mb-12">
+            <span class="text-[11px] font-extrabold tracking-[0.22em] uppercase text-[#006b3f]">
+                Strumenti di tutela
+            </span>
+
+            <h2 class="text-3xl md:text-4xl font-extrabold text-[#003366] mt-4 mb-5">
+                Esistono strumenti previsti dalla legge.
+            </h2>
+
+            <p class="text-[#003366]/70 text-[17px] leading-[1.8]">
+                L’ordinamento italiano prevede specifici strumenti dedicati ai soggetti che si trovano in una condizione di sovraindebitamento non più sostenibile.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-2xl p-7 border border-[#e6eef8] shadow-[0_12px_30px_rgba(0,51,102,0.06)]">
+                <h3 class="text-xl font-extrabold text-[#003366] mb-3">Tutela del debitore</h3>
+                <p class="text-[#003366]/68 leading-[1.7]">
+                    Valutazione degli strumenti di protezione e gestione della crisi debitoria.
                 </p>
             </div>
 
-            <form class="support-form">
-                <div class="grid md:grid-cols-2 gap-5">
-                    <input type="text" placeholder="Nome e cognome" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="tel" placeholder="Telefono">
+            <div class="bg-white rounded-2xl p-7 border border-[#e6eef8] shadow-[0_12px_30px_rgba(0,51,102,0.06)]">
+                <h3 class="text-xl font-extrabold text-[#003366] mb-3">Composizione della crisi</h3>
+                <p class="text-[#003366]/68 leading-[1.7]">
+                    Orientamento verso procedure e percorsi previsti dalla normativa vigente.
+                </p>
+            </div>
 
-                    <select required>
-                        <option value="">Seleziona il servizio richiesto</option>
-                        <option>Sovraindebitamento</option>
-                        <option>Disabilità</option>
-                        <option>Terza età</option>
-                        <option>Violenza sulle donne / Violenza di genere</option>
-                        <option>Tutela minori</option>
-                        <option>Bullismo / Cyberbullismo</option>
-                        <option>Orientamento al lavoro</option>
-                        <option>Rete sociale</option>
-                        <option>Altro</option>
-                    </select>
-                </div>
-
-                <textarea maxlength="800" placeholder="Natura della richiesta / messaggio - massimo 800 caratteri" required></textarea>
-
-                <label class="privacy-check">
-                    <input type="checkbox" required>
-                    <span>
-                        Selezionando questa casella autorizzo il trattamento dei dati personali esclusivamente per essere ricontattato/a in merito alla richiesta inviata. I dati non saranno divulgati a terzi.
-                    </span>
-                </label>
-
-                <div class="text-center mt-8">
-                    <button type="submit" class="bg-[#006b3f] text-white px-10 py-4 rounded-full font-bold text-xs uppercase shadow-lg hover:bg-green-800 transition">
-                        Invia richiesta
-                    </button>
-                </div>
-            </form>
+            <div class="bg-white rounded-2xl p-7 border border-[#e6eef8] shadow-[0_12px_30px_rgba(0,51,102,0.06)]">
+                <h3 class="text-xl font-extrabold text-[#003366] mb-3">Percorso consapevole</h3>
+                <p class="text-[#003366]/68 leading-[1.7]">
+                    Supporto nella comprensione della propria posizione e delle possibili soluzioni.
+                </p>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<section class="bg-white py-18 md:py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-[#003366] mb-5">
+                Come interviene ANIeC
+            </h2>
+
+            <p class="text-[#003366]/70 text-[17px] leading-[1.8]">
+                Un percorso ordinato, riservato e orientato alla tutela concreta della persona.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-[#f8fbff] rounded-2xl p-7 border border-[#e6eef8]">
+                <span class="text-[#006b3f] text-sm font-black tracking-[0.18em]">01</span>
+                <h3 class="text-xl font-extrabold text-[#003366] mt-4 mb-3">Ascolto</h3>
+                <p class="text-[#003366]/68 leading-[1.7]">Comprendiamo la situazione personale, economica e familiare.</p>
+            </div>
+
+            <div class="bg-[#f8fbff] rounded-2xl p-7 border border-[#e6eef8]">
+                <span class="text-[#006b3f] text-sm font-black tracking-[0.18em]">02</span>
+                <h3 class="text-xl font-extrabold text-[#003366] mt-4 mb-3">Analisi preliminare</h3>
+                <p class="text-[#003366]/68 leading-[1.7]">Aiutiamo a ricostruire il quadro debitorio e le criticità principali.</p>
+            </div>
+
+            <div class="bg-[#f8fbff] rounded-2xl p-7 border border-[#e6eef8]">
+                <span class="text-[#006b3f] text-sm font-black tracking-[0.18em]">03</span>
+                <h3 class="text-xl font-extrabold text-[#003366] mt-4 mb-3">Orientamento</h3>
+                <p class="text-[#003366]/68 leading-[1.7]">Indichiamo gli strumenti potenzialmente valutabili in base al caso concreto.</p>
+            </div>
+
+            <div class="bg-[#f8fbff] rounded-2xl p-7 border border-[#e6eef8]">
+                <span class="text-[#006b3f] text-sm font-black tracking-[0.18em]">04</span>
+                <h3 class="text-xl font-extrabold text-[#003366] mt-4 mb-3">Supporto documentale</h3>
+                <p class="text-[#003366]/68 leading-[1.7]">Supportiamo l’organizzazione preliminare della documentazione utile.</p>
+            </div>
+
+            <div class="bg-[#f8fbff] rounded-2xl p-7 border border-[#e6eef8]">
+                <span class="text-[#006b3f] text-sm font-black tracking-[0.18em]">05</span>
+                <h3 class="text-xl font-extrabold text-[#003366] mt-4 mb-3">Rete professionale</h3>
+                <p class="text-[#003366]/68 leading-[1.7]">Collaboriamo con professionisti competenti in ambito economico, legale e sociale.</p>
+            </div>
+
+            <div class="bg-[#f8fbff] rounded-2xl p-7 border border-[#e6eef8]">
+                <span class="text-[#006b3f] text-sm font-black tracking-[0.18em]">06</span>
+                <h3 class="text-xl font-extrabold text-[#003366] mt-4 mb-3">Accompagnamento</h3>
+                <p class="text-[#003366]/68 leading-[1.7]">Seguiamo la persona durante il percorso, favorendo chiarezza e consapevolezza.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-[#f8fbff] py-18 md:py-24">
+    <div class="max-w-6xl mx-auto px-6 lg:px-12 text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-[#003366] mb-8">
+            A chi è rivolto
+        </h2>
+
+        <div class="flex flex-wrap justify-center gap-3">
+            <span class="px-5 py-3 bg-white border border-[#dfe8f3] rounded-full text-[#003366] font-bold text-sm">Famiglie</span>
+            <span class="px-5 py-3 bg-white border border-[#dfe8f3] rounded-full text-[#003366] font-bold text-sm">Lavoratori dipendenti</span>
+            <span class="px-5 py-3 bg-white border border-[#dfe8f3] rounded-full text-[#003366] font-bold text-sm">Pensionati</span>
+            <span class="px-5 py-3 bg-white border border-[#dfe8f3] rounded-full text-[#003366] font-bold text-sm">Autonomi</span>
+            <span class="px-5 py-3 bg-white border border-[#dfe8f3] rounded-full text-[#003366] font-bold text-sm">Piccoli imprenditori</span>
+            <span class="px-5 py-3 bg-white border border-[#dfe8f3] rounded-full text-[#003366] font-bold text-sm">Persone con debiti multipli</span>
+        </div>
+    </div>
+</section>
+
+<section class="bg-white py-18 md:py-24">
+    <div class="max-w-5xl mx-auto px-6 lg:px-12">
+        <div class="bg-[#f8fbff] border border-[#e6eef8] rounded-[28px] p-8 md:p-12">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-[#003366] mb-6">
+                L’approccio ANIeC
+            </h2>
+
+            <p class="text-[#003366]/70 text-[17px] leading-[1.85] mb-5">
+                Affrontare una situazione debitoria complessa richiede attenzione, riservatezza e consapevolezza delle difficoltà personali che spesso accompagnano queste condizioni.
+            </p>
+
+            <p class="text-[#003366]/70 text-[17px] leading-[1.85]">
+                Per questo ANIeC APS promuove un approccio fondato su ascolto, tutela concreta e accompagnamento della persona, favorendo percorsi orientati non soltanto alla gestione della crisi, ma anche alla ricostruzione di stabilità, chiarezza e fiducia.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="approfondimento" class="bg-[#edf4fc] py-18 md:py-24">
+    <div class="max-w-5xl mx-auto px-6 lg:px-12">
+        <span class="text-[11px] font-extrabold tracking-[0.22em] uppercase text-[#006b3f]">
+            Approfondimento
+        </span>
+
+        <h2 class="text-3xl md:text-4xl font-extrabold text-[#003366] mt-4 mb-6">
+            Cos’è il sovraindebitamento
+        </h2>
+
+        <div class="space-y-5 text-[#003366]/70 text-[17px] leading-[1.85]">
+            <p>
+                Il sovraindebitamento è una condizione di squilibrio economico nella quale una persona, una famiglia o un soggetto non fallibile non riesce più a far fronte regolarmente ai propri debiti con le risorse disponibili.
+            </p>
+
+            <p>
+                La normativa italiana prevede strumenti specifici per affrontare queste situazioni attraverso procedure orientate alla gestione della crisi, alla tutela del debitore e, nei casi previsti, alla possibilità di riorganizzare la propria posizione.
+            </p>
+
+            <p>
+                L’accesso a questi strumenti richiede una valutazione attenta della situazione personale, reddituale, patrimoniale e debitoria. Per questo è fondamentale non improvvisare, ma affrontare il percorso con supporto adeguato.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="bg-white py-18 md:py-24">
+    <div class="max-w-5xl mx-auto px-6 lg:px-12 text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-[#003366] mb-5">
+            Affrontare una situazione debitoria non significa affrontarla da soli.
+        </h2>
+
+        <p class="text-[#003366]/70 text-[17px] leading-[1.8] max-w-3xl mx-auto mb-8">
+            Richiedere un primo confronto può aiutare a comprendere con maggiore chiarezza gli strumenti disponibili e le possibili soluzioni applicabili alla propria situazione.
+        </p>
+
+        <a href="index.html#contatti" class="inline-flex justify-center px-10 py-4 rounded-full bg-[#006b3f] text-white text-xs font-extrabold uppercase tracking-[0.12em] shadow-lg hover:bg-[#005332] transition">
+            Richiedi supporto
+        </a>
+    </div>
+</section>
+
+</main>
 
     <footer class="site-footer">
         <div class="footer-card">
