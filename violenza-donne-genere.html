@@ -275,6 +275,26 @@ line-height:1.08 !important;
 .feature-strip{
   bottom:42px !important;
 }
+  .custom-icon{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  background:rgba(255,245,245,.92);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(214,45,70,.14);
+  box-shadow:
+    0 10px 24px rgba(214,45,70,.08),
+    inset 0 1px 0 rgba(255,255,255,.85);
+}
+
+.custom-icon img{
+  width:44px;
+  height:auto;
+  object-fit:contain;
+  display:block;
+}
 </style>
 </head>
 <body>
@@ -317,7 +337,9 @@ line-height:1.08 !important;
         <h3>Hai bisogno di<br>aiuto immediato?</h3>
 
         <div class="em-card">
-        <div class="em-icon">☎</div>
+        <div class="em-icon custom-icon">
+  <img src="img/icon-112.png" alt="Emergenza 112">
+</div>
           <div>
             <div class="em-num">112</div>
             <h4>Emergenza immediata</h4>
