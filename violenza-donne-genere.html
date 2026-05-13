@@ -528,16 +528,35 @@ a{color:inherit;text-decoration:none}
 /* CORREZIONE ROSA + ALTEZZA HERO */
 
 .hero{
+  position:relative;
+  overflow:hidden;
   min-height:720px;
-  padding-bottom:230px;
+  padding:56px 48px 230px;
+  background:#fff8f3;
+}
 
-  background-image:
-    linear-gradient(90deg, rgba(255,248,241,.38) 0%, rgba(255,248,241,.64) 32%, rgba(255,248,241,.92) 58%, rgba(255,248,241,1) 100%),
-    url('hero-rosa-sfondo.png');
+.hero::before{
+  content:'';
+  position:absolute;
 
-  background-size:620px auto, cover;
-  background-position:left -35px top 120px, center center;
+  width:720px;
+  height:720px;
+
+  left:-140px;
+  top:50%;
+
+  transform:translateY(-42%);
+
+  background-image:url('hero-rosa-sfondo.png');
+  background-size:contain;
   background-repeat:no-repeat;
+
+  opacity:.34;
+  pointer-events:none;
+}
+  .hero > *{
+  position:relative;
+  z-index:2;
 }
   .feature-strip{
   bottom:42px;
