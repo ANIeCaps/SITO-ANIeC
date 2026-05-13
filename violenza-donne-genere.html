@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Violenza sulle donne e protezione della persona - DIRITTI&DIFESA</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+:root{
+  --blue:#062f60;
+  --blue2:#083d78;
+  --navy:#062c57;
+  --green:#00784a;
+  --red:#c62632;
+  --cream:#fff8f1;
+  --cream2:#fff2ea;
+  --line:#eadbd3;
+  --muted:#556f91;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Helvetica, Arial, sans-serif;
+  color:var(--blue);
+  background:linear-gradient(180deg,#fff8f1 0%,#fff7ef 62%,#ffffff 100%);
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+.quick-exit{
+  position:fixed;
+  right:22px;
+  top:22px;
+  z-index:9999;
+  background:var(--red);
+  color:#fff;
+  border:0;
+  border-radius:999px;
+  padding:13px 22px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  box-shadow:0 16px 34px rgba(198,38,50,.24);
+  cursor:pointer;
+}
+.page{
+  max-width:1540px;
+  margin:0 auto;
+  background:#fff8f1;
+  min-height:100vh;
+}
+.header{
+  height:108px;
+  display:grid;
+  grid-template-columns:300px minmax(0,1fr) auto auto;
+  align-items:center;
+  gap:28px;
+  padding:0 40px;
+  background:rgba(255,248,241,.95);
+  border-bottom:1px solid rgba(9,47,93,.045);
+}
+.brand-logo{display:flex;align-items:center;width:300px;min-width:0}
+.brand-logo img{width:300px;max-height:82px;object-fit:contain;display:block}
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:28px;
+  font-size:13px;
+  font-weight:700;
+  color:#072f5d;
+  white-space:nowrap;
+}
+.nav a{display:inline-flex;align-items:center;min-height:42px}
+.nav .active{color:#bb1f2d;border-bottom:2px solid #bb1f2d;padding-bottom:13px}
+.private{
+  background:#062f60;
+  color:#fff;
+  border-radius:999px;
+  padding:14px 24px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.08em;
+  white-space:nowrap;
+  box-shadow:0 12px 28px rgba(6,47,96,.13);
+}
+.search{font-size:24px;color:#092f5d;line-height:1}
+.hero{
+  position:relative;
+  min-height:810px;
+  padding:68px 48px 195px;
+  overflow:hidden;
+  background-image:
+    linear-gradient(90deg, rgba(255,248,241,.18) 0%, rgba(255,248,241,.34) 24%, rgba(255,248,241,.82) 48%, rgba(255,248,241,.98) 76%, rgba(255,248,241,1) 100%),
+    url('hero-rosa-sfondo.png');
+  background-size:cover;
+  background-position:left top;
+  background-repeat:no-repeat;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,640px) 380px;
+  gap:92px;
+  max-width:1115px;
+  margin:0 auto;
+  align-items:start;
+}
+.kicker{
+  display:block;
+  color:#c62632;
+  font-weight:900;
+  font-size:12px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  margin-bottom:22px;
+}
+.hero-title{
+  font-family:Georgia,serif;
+  font-size:46px;
+  line-height:1.16;
+  letter-spacing:-.03em;
+  color:#092f5d;
+  margin:0 0 24px;
+  max-width:640px;
+}
+.red-line{width:54px;height:2px;background:#d86b72;margin:0 0 26px}
+.hero-copy{font-size:16px;line-height:1.72;color:#334d72;margin:0 0 26px;max-width:560px}
+.chips{display:flex;flex-wrap:wrap;gap:12px;max-width:620px;margin-bottom:34px}
+.chip{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(255,255,255,.64);
+  border:1px solid rgba(9,47,93,.13);
+  border-radius:999px;
+  padding:9px 15px;
+  font-size:12px;
+  font-weight:800;
+  color:#173b68;
+  box-shadow:0 6px 14px rgba(9,47,93,.025);
+}
+.chip:before{content:'◌';color:#c62632;font-size:13px}
+.cta-main{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  background:#062f60;
+  color:#fff;
+  border-radius:999px;
+  padding:16px 28px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  box-shadow:0 14px 30px rgba(6,47,96,.18);
+}
+.emergency-side{padding-top:0;width:100%;max-width:380px}
+.emergency-side h3{font-size:27px;line-height:1.12;margin:0 0 22px;color:#092f5d}
+.em-card{
+  display:grid;
+  grid-template-columns:66px 1fr;
+  gap:18px;
+  align-items:center;
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(198,38,50,.22);
+  border-radius:22px;
+  padding:23px 26px;
+  min-height:154px;
+  margin-bottom:18px;
+  box-shadow:0 18px 38px rgba(9,47,93,.08), 0 7px 20px rgba(198,38,50,.04);
+  backdrop-filter:blur(4px);
+  overflow:hidden;
+}
+.em-card:nth-of-type(2){border-color:rgba(0,120,74,.22)}
+.em-icon{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff0ef;
+  color:var(--red);
+  font-size:24px;
+}
+.em-icon.green{background:#edf8f1;color:var(--green)}
+.em-num{font-size:48px;font-weight:900;line-height:.95;color:var(--red);letter-spacing:-.05em}
+.em-num.green{color:var(--green)}
+.em-card h4{margin:8px 0 8px;font-size:17px;line-height:1.18;color:#092f5d}
+.em-card p{font-size:13px;line-height:1.55;color:#456285;margin:0;max-width:100%}
+.safe-note{display:flex;gap:12px;align-items:flex-start;color:#617793;font-size:13px;line-height:1.35;margin-top:14px}
+.feature-strip{
+  position:absolute;
+  left:48px;
+  right:48px;
+  bottom:34px;
+  background:rgba(255,250,246,.80);
+  border:1px solid rgba(9,47,93,.10);
+  border-radius:18px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  padding:28px 20px;
+  box-shadow:0 18px 42px rgba(9,47,93,.06);
+  backdrop-filter:blur(5px);
+}
+.feature{text-align:center;padding:0 22px;border-right:1px solid rgba(9,47,93,.08)}
+.feature:last-child{border-right:0}
+.feature .ico{font-size:38px;color:#ef8585;margin-bottom:12px}
+.feature h4{font-size:16px;margin:0 0 10px;color:#092f5d}
+.feature p{font-size:13px;line-height:1.55;color:#506b8e;margin:0}
+.services{
+  display:grid;
+  grid-template-columns:.95fr 1.7fr;
+  gap:54px;
+  padding:66px 48px 54px;
+  background:#fff8f1;
+}
+.section-k{color:#c62632;font-size:12px;letter-spacing:.28em;font-weight:900;text-transform:uppercase;margin-bottom:20px}
+.services h2{font-family:Georgia,serif;font-size:38px;line-height:1.12;margin:0 0 22px;color:#092f5d}
+.services p{font-size:15px;line-height:1.75;color:#4d6687}
+.light-btn{display:inline-flex;border:1px solid rgba(9,47,93,.14);border-radius:999px;padding:13px 23px;font-size:12px;font-weight:900;letter-spacing:.08em;margin-top:18px}
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.service-card{background:rgba(255,255,255,.82);border:1px solid rgba(9,47,93,.10);border-radius:14px;padding:30px 24px;min-height:250px;box-shadow:0 18px 38px rgba(9,47,93,.055)}
+.service-card .ico{font-size:42px;color:#ef7777;margin-bottom:24px}
+.service-card h3{font-size:17px;margin:0 0 12px;color:#092f5d}
+.service-card p{font-size:13px;line-height:1.65;margin:0 0 22px}
+.more{font-size:12px;font-weight:900;letter-spacing:.08em;color:#092f5d}
+.emotional{padding:14px 48px 56px;background:#fff8f1}
+.emotional-card{position:relative;overflow:hidden;min-height:220px;border-radius:16px;border:1px solid rgba(9,47,93,.10);background:rgba(255,255,255,.78);box-shadow:0 18px 38px rgba(9,47,93,.055)}
+.emotional-card img{position:absolute;left:0;top:0;width:38%;height:100%;object-fit:cover;opacity:.78}
+.emotional-content{margin-left:36%;padding:42px 44px;display:grid;grid-template-columns:1.2fr repeat(3,.8fr);gap:34px;align-items:center}
+.emotional-content h2{font-family:Georgia,serif;font-size:27px;line-height:1.25;margin:0 0 12px;color:#092f5d}
+.emotional-content p{font-size:15px;line-height:1.75;color:#415c7e;margin:0}
+.mini h4{font-size:15px;margin:0 0 8px;color:#092f5d}.mini p{font-size:12px}
+.territory{padding:24px 48px 54px;background:#fff8f1}
+.territory-card{display:grid;grid-template-columns:.9fr 1.2fr .7fr;gap:34px;border:1px solid rgba(9,47,93,.10);border-radius:16px;background:rgba(255,255,255,.76);padding:44px 48px;box-shadow:0 18px 38px rgba(9,47,93,.055)}
+.map-soft{min-height:210px;border-radius:16px;background:radial-gradient(circle at 35% 38%, rgba(239,119,119,.30), transparent 12%),linear-gradient(135deg,#fff3ed,#fffaf6);display:flex;align-items:center;justify-content:center;color:#ef7777;font-size:74px}
+.territory h2{font-family:Georgia,serif;font-size:34px;line-height:1.18;margin:0 0 18px;color:#092f5d}.territory p{font-size:14px;line-height:1.75;color:#4a6385;margin:0}
+.territory-actions{display:flex;flex-direction:column;gap:14px;justify-content:center}.blue-btn,.outline-btn{border-radius:8px;padding:16px 22px;text-align:center;font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}.blue-btn{background:#062f60;color:#fff;box-shadow:0 14px 26px rgba(6,47,96,.16)}.outline-btn{background:#fff8f1;color:#062f60;border:1px solid rgba(9,47,93,.16)}
+.results{display:none;padding:0 48px 52px;background:#fff8f1}.results.active{display:block}.results-inner{border:1px solid rgba(9,47,93,.10);border-radius:16px;background:rgba(255,255,255,.90);padding:28px}.results-head{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:20px}.results-head h3{margin:0;font-size:24px;color:#092f5d}.region-select{padding:13px 16px;border-radius:999px;border:1px solid rgba(9,47,93,.16);background:#fff;color:#092f5d;font-weight:800}.center-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-height:520px;overflow:auto;padding-right:8px}.center-card{border:1px solid rgba(9,47,93,.10);border-radius:14px;padding:18px;background:#fff}.center-card b{display:block;color:#092f5d;margin-bottom:8px}.center-card span{display:block;font-size:12px;color:#526b8a;line-height:1.5;margin-top:5px}
+.quote{text-align:center;padding:18px 48px 54px;background:#fff8f1;color:#092f5d}.quote .rose-small{font-size:28px;color:#e77f82;margin-bottom:12px}.quote p{font-family:Georgia,serif;font-size:24px;margin:0}
+.footer{padding:54px 48px 28px;background:#fffaf6;border-top:1px solid rgba(9,47,93,.08);display:grid;grid-template-columns:1.2fr repeat(3,.8fr);gap:50px;color:#092f5d}.footer-logo img{width:260px;max-width:100%;display:block;margin-bottom:16px}.footer h3{margin:0 0 18px}.footer p,.footer a{font-size:13px;line-height:1.7;color:#4b6384;display:block;margin:0 0 8px}
+@media(max-width:1250px){
+  .header{grid-template-columns:260px minmax(0,1fr) auto;gap:22px}.brand-logo{width:260px}.brand-logo img{width:260px}.nav{gap:20px;font-size:12px}.search{display:none}.hero-grid{grid-template-columns:minmax(0,590px) 340px;gap:60px}.hero-title{font-size:43px}.em-card{grid-template-columns:58px 1fr;padding:21px 22px}.em-num{font-size:44px}
+}
+@media(max-width:1050px){
+  .header{height:auto;padding:18px 24px;grid-template-columns:240px auto}.brand-logo,.brand-logo img{width:240px}.nav,.private,.search{display:none}.quick-exit{right:12px;top:12px;padding:11px 14px;font-size:10px}.hero{padding:46px 24px 42px;min-height:auto;background-size:auto 760px;background-position:left top}.hero-grid{margin:0;grid-template-columns:1fr;gap:34px;max-width:720px}.hero-title{font-size:40px}.emergency-side{max-width:100%}.feature-strip{position:relative;left:auto;right:auto;bottom:auto;margin:34px 24px 0;grid-template-columns:1fr 1fr}.services,.territory-card,.emotional-content,.footer{grid-template-columns:1fr}.service-grid,.center-grid{grid-template-columns:1fr 1fr}.emotional-card img{position:relative;width:100%;height:260px}.emotional-content{margin-left:0}
+}
+@media(max-width:680px){
+  .hero{padding:36px 20px 32px;background-size:auto 650px;background-position:left -170px top}.hero-title{font-size:34px}.hero-grid{gap:26px}.em-card{grid-template-columns:1fr;min-height:auto}.feature-strip,.service-grid,.center-grid{grid-template-columns:1fr;margin-left:20px;margin-right:20px}.feature{border-right:0;border-bottom:1px solid rgba(9,47,93,.08);padding:20px}.feature:last-child{border-bottom:0}.services,.emotional,.territory,.results,.quote,.footer{padding-left:20px;padding-right:20px}.territory-card{padding:28px 22px}.footer{gap:26px}
+}
+</style>
+</head>
+<body>
+<button class="quick-exit" onclick="quickExit()">Esci rapido</button>
+
+<div class="page">
+  <header class="header">
+    <a class="brand-logo" href="#" aria-label="DIRITTI &amp; DIFESA - ANIeC APS">
+      <img src="logo-diritti-difesa.png" alt="DIRITTI &amp; DIFESA - ANIeC APS">
+    </a>
+    <nav class="nav">
+      <a>Chi siamo</a><a>Diritti</a><a>Servizi</a><a>Aree tematiche⌄</a><a>Risorse</a><a>Contatti</a><a class="active">Violenza di genere</a>
+    </nav>
+    <a class="private">Assistenza privata</a>
+    <div class="search">⌕</div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <span class="kicker">A chi è rivolto</span>
+        <h1 class="hero-title">Uno spazio per chi vive, osserva o teme una situazione di violenza.</h1>
+        <div class="red-line"></div>
+        <p class="hero-copy">Non serve avere già tutte le risposte.<br>È sufficiente iniziare da un primo contatto sicuro.</p>
+
+        <div class="chips">
+          <span class="chip">Donne in difficoltà</span>
+          <span class="chip">Familiari</span>
+          <span class="chip">Amiche e amici</span>
+          <span class="chip">Persone che subiscono controllo</span>
+          <span class="chip">Vittime di stalking</span>
+          <span class="chip">Persone isolate o minacciate</span>
+        </div>
+
+        <a class="cta-main" href="#supporto">Scopri come possiamo aiutarti ›</a>
+      </div>
+
+      <aside class="emergency-side">
+        <span class="kicker">Accesso rapido</span>
+        <h3>Hai bisogno di<br>aiuto immediato?</h3>
+
+        <div class="em-card">
+          <div class="em-icon">☎</div>
+          <div>
+            <div class="em-num">112</div>
+            <h4>Emergenza immediata</h4>
+            <p>Numero unico europeo per situazioni di pericolo, aggressione, minaccia o rischio attuale.</p>
+          </div>
+        </div>
+
+        <div class="em-card">
+          <div class="em-icon green">♢</div>
+          <div>
+            <div class="em-num green">1522</div>
+            <h4>Antiviolenza e stalking</h4>
+            <p>Numero nazionale gratuito, attivo 24 ore su 24, anche per orientamento e primo supporto.</p>
+          </div>
+        </div>
+
+        <div class="safe-note">🛡️ <span>Le tue informazioni sono al sicuro.<br>Ascolto, rispetto e riservatezza garantiti.</span></div>
+      </aside>
+    </div>
+
+    <div class="feature-strip">
+      <div class="feature"><div class="ico">♡</div><h4>Ascolto e accoglienza</h4><p>Ti ascoltiamo con rispetto e senza giudizio. Ogni storia ha valore.</p></div>
+      <div class="feature"><div class="ico">♢</div><h4>Diritti e tutela</h4><p>Ti aiutiamo a conoscere i tuoi diritti e a difenderti concretamente.</p></div>
+      <div class="feature"><div class="ico">♧</div><h4>Supporto qualificato</h4><p>Professionisti esperti al tuo fianco in ogni fase del percorso.</p></div>
+      <div class="feature"><div class="ico">▣</div><h4>Riservatezza totale</h4><p>Ogni contatto è protetto. La tua privacy è la nostra priorità.</p></div>
+    </div>
+  </section>
+
+  <section class="services" id="supporto">
+    <div>
+      <div class="section-k">I nostri servizi</div>
+      <h2>Un percorso di supporto completo e personalizzato</h2>
+      <div class="red-line"></div>
+      <p>Forniamo assistenza legale, sociale e di orientamento, oltre ad accompagnamento verso una nuova autonomia.</p>
+      <a class="light-btn">Scopri tutti i servizi ›</a>
+    </div>
+
+    <div class="service-grid">
+      <div class="service-card"><div class="ico">⚖</div><h3>Assistenza legale</h3><p>Ti supportiamo nella tutela dei tuoi diritti con avvocati specializzati.</p><a class="more">Scopri di più →</a></div>
+      <div class="service-card"><div class="ico">♡</div><h3>Supporto psicologico</h3><p>Percorsi di ascolto e sostegno per ritrovare serenità e consapevolezza.</p><a class="more">Scopri di più →</a></div>
+      <div class="service-card"><div class="ico">✚</div><h3>Assistenza sanitaria</h3><p>Orientamento e supporto per accedere alle cure e alle strutture sanitarie.</p><a class="more">Scopri di più →</a></div>
+      <div class="service-card"><div class="ico">⌁</div><h3>Orientamento e rete</h3><p>Ti guidiamo verso i servizi del territorio e le risorse più adatte a te.</p><a class="more">Scopri di più →</a></div>
+    </div>
+  </section>
+
+  <section class="emotional">
+    <div class="emotional-card">
+      <img src="rosa-messaggio.png" alt="Rosa bianca simbolica">
+      <div class="emotional-content">
+        <div>
+          <h2>Non devi decidere tutto adesso.</h2>
+          <p>Un primo contatto può servire anche solo a capire cosa sta accadendo, quali possibilità esistono e quali passi possono essere compiuti in sicurezza.</p>
+        </div>
+        <div class="mini"><h4>Ascolto</h4><p>Rispetto, empatia e accoglienza.</p></div>
+        <div class="mini"><h4>Riservatezza</h4><p>Ogni richiesta è trattata in modo sicuro e discreto.</p></div>
+        <div class="mini"><h4>Supporto concreto</h4><p>Indicazioni, risorse e percorsi personalizzati.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="territory">
+    <div class="territory-card">
+      <div class="map-soft">⌖</div>
+      <div>
+        <div class="section-k">Trova supporto vicino a te</div>
+        <h2>Rete territoriale di centri antiviolenza e servizi di supporto.</h2>
+        <p>Cerca il centro più vicino nella tua provincia. Lombardia in evidenza, tutta Italia sempre con te.</p>
+      </div>
+      <div class="territory-actions">
+        <div class="blue-btn" onclick="showNetwork('Lombardia')">Vedi rete in Lombardia ›</div>
+        <div class="outline-btn" onclick="showOtherRegions()">Altre regioni⌄</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="results" id="networkResults">
+    <div class="results-inner">
+      <div class="results-head">
+        <h3 id="resultsTitle">Rete territoriale</h3>
+        <select id="regionSelect" class="region-select" onchange="showNetwork(this.value)" style="display:none"></select>
+      </div>
+      <div id="centersGrid" class="center-grid"></div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div class="rose-small">♧</div>
+    <p>“Non sei sola. Chiedere aiuto è il primo passo per riprendere in mano la tua vita.”</p>
+  </section>
+
+  <footer class="footer">
+    <div><div class="footer-logo"><img src="logo-diritti-difesa.png" alt="DIRITTI &amp; DIFESA - ANIeC APS"></div><p>DIRITTI&DIFESA è lo spazio operativo di ANIeC dedicato all’informazione, alla tutela e al supporto per chi vive, osserva o teme una situazione di violenza.</p></div>
+    <div><h3>Link utili</h3><a>Chi siamo</a><a>Diritti</a><a>Servizi</a><a>Aree tematiche</a></div>
+    <div><h3>Risorse</h3><a>Normativa</a><a>Guide pratiche</a><a>Approfondimenti</a><a>Domande frequenti</a></div>
+    <div><h3>Contatti</h3><p>Email: info@aniecaps.it</p><p>Tel: +39 3279342883</p><p>C.F. 95237870167</p></div>
+  </footer>
+</div>
+
+<script>
+const CENTERS = {"Lombardia": [{"provincia": "Bergamo", "comune": "Bergamo", "centro": "Centro Antiviolenza Aiuto Donna Uscire dalla violenza", "indirizzo": "Via San Lazzaro, 3", "contatti": "035212933; 3933082537"}, {"provincia": "Bergamo", "comune": "San Pellegrino Terme, Santomobono Terme, Almenno San Bartolomeo", "centro": "Centro Antiviolenza Penelope", "indirizzo": "Via San Carlo, 32", "contatti": "0363301773; 3341046230"}, {"provincia": "Bergamo", "comune": "Seriate", "centro": "Centro Antiviolenza R.I.T.A. – Rete Interistituzionale Territoriale Antiviolenza", "indirizzo": "Via Chiesa San Grisogono, 18", "contatti": "035303266; 3933082537"}, {"provincia": "Bergamo", "comune": "Terno d’Isola", "centro": "Centro Antiviolenza Ascolta chi parla", "indirizzo": "Via Trento, 5", "contatti": "03519910067; 3933082537"}, {"provincia": "Bergamo", "comune": "Treviglio, Romano di Lombardia, Rivolta d’Adda, Brignano Gera d’Adda, Castel Rozzone", "centro": "Centro Antiviolenza Sportello Donna", "indirizzo": "Via Roggia Vignola, 18", "contatti": "0363301773"}, {"provincia": "Brescia", "comune": "Brescia", "centro": "Centro Antiviolenza Butterfly", "indirizzo": "Via Bertoni, 6", "contatti": "0302352018; 3924886330"}, {"provincia": "Brescia", "comune": "Brescia", "centro": "Casa delle Donne di Brescia", "indirizzo": "Via S. Faustino, 38", "contatti": "0302400636; 3331258139"}, {"provincia": "Brescia", "comune": "Brescia", "centro": "Centro Antiviolenza il Cerchio della Luna", "indirizzo": "Via Baracca, 1", "contatti": "3516976821"}, {"provincia": "Brescia", "comune": "Comunità Montana di Valle Trompia", "centro": "Centro Antiviolenza Vivadonna", "indirizzo": "Complesso Conventuale S. Maria degli Angeli – Via S. Francesco d’Assisi, s.n.c.", "contatti": "0308337422; 3357240973"}, {"provincia": "Brescia", "comune": "Darfo", "centro": "Centro Antiviolenza Donne e Diritti", "indirizzo": "Via Barbolini, 4", "contatti": "0364536632; 3383706886"}, {"provincia": "Brescia", "comune": "Iseo", "centro": "Centro Antiviolenza Rete di Daphne", "indirizzo": "Piazza Arsenale 1", "contatti": "3470777530"}, {"provincia": "Brescia", "comune": "Salò", "centro": "Centro Antiviolenza Chiare Acque", "indirizzo": "Via Fantoni, 86", "contatti": "03651870245; 3349713199"}, {"provincia": "Como", "comune": "Como", "centro": "Centro Antiviolenza Telefono Donna Como", "indirizzo": "Via Giuseppe Ferrari, 9", "contatti": "031304585; 800166656; 3333908955"}, {"provincia": "Como", "comune": "Mariano Comense", "centro": "Centro Antiviolenza Mariano Comense di Associazione Penta", "indirizzo": "Via Santo Stefano, 40", "contatti": "0313667901; 3514011585"}, {"provincia": "Cremona", "comune": "Crema", "centro": "Centro Antiviolenza Associazione Donne contro la Violenza", "indirizzo": "Via Mercato, 27", "contatti": "037380999; 3393506466"}, {"provincia": "Cremona", "comune": "Cremona", "centro": "Centro Antiviolenza A.I.D.A.", "indirizzo": "Via Palestro, 34", "contatti": "0372801427; 3389604533; 3534637579"}, {"provincia": "Lecco", "comune": "Lecco", "centro": "Centro Antiviolenza Telefono Donna Lecco", "indirizzo": "Via Solferino, 13 A", "contatti": "0341363484"}, {"provincia": "Lecco", "comune": "Merate, Casatenovo", "centro": "Centro Antiviolenza L’Altra metà del Cielo", "indirizzo": "Via Sant’Ambrogio, 17", "contatti": "0399900678"}, {"provincia": "Lodi", "comune": "Lodi", "centro": "Centro Antiviolenza La Metà di Niente", "indirizzo": "Via Gorini, 21", "contatti": "3313495221"}, {"provincia": "Mantova", "comune": "Mantova", "centro": "Centro Antiviolenza Centro di Aiuto alla Vita di Mantova", "indirizzo": "Via Vittorino da Feltre, 46", "contatti": "0376325737; 3499011590"}, {"provincia": "Mantova", "comune": "Mantova", "centro": "Centro Antiviolenza Telefono Rosa Mantova", "indirizzo": "Via Indipendenza 2", "contatti": "0376225656; 3489910043"}, {"provincia": "Mantova", "comune": "Mantova", "centro": "Centro Antiviolenza Centro Donne Mantova", "indirizzo": "Via Giovanni Falcone, 1", "contatti": "3899151596"}, {"provincia": "Milano", "comune": "Bresso", "centro": "Centro Antiviolenza Mittatron Sportello Donna", "indirizzo": "Via Bologna, 4", "contatti": "0261455370; 3666622300"}, {"provincia": "Milano", "comune": "Cinisello Balsamo", "centro": "Centro Antiviolenza Ve.Nu.S Verso Nuove Strade", "indirizzo": "Via Gorki, 50 – c/o Ospedale Bassini", "contatti": "0222199730; 3666622300"}, {"provincia": "Milano", "comune": "Corsico", "centro": "Centro Antiviolenza La stanza dello scirocco", "indirizzo": "Via Marzabotto, 12", "contatti": "800049722; 3295870862"}], "Piemonte": [{"provincia": "Torino", "comune": "—", "centro": "Consultare il centro antiviolenza territoriale tramite rete 1522", "indirizzo": "—", "contatti": "1522"}], "Valle d’Aosta": [{"provincia": "Aosta", "comune": "—", "centro": "Consultare il centro antiviolenza territoriale tramite rete 1522", "indirizzo": "—", "contatti": "1522"}], "Liguria": [{"provincia": "Genova/Recco/Imperia/La Spezia/Savona", "comune": "—", "centro": "Rete centri antiviolenza Liguria", "indirizzo": "—", "contatti": "1522"}], "Veneto": [{"provincia": "Province venete", "comune": "—", "centro": "Rete centri antiviolenza Veneto", "indirizzo": "—", "contatti": "1522"}], "Emilia-Romagna": [{"provincia": "Province Emilia-Romagna", "comune": "—", "centro": "Rete centri antiviolenza Emilia-Romagna", "indirizzo": "—", "contatti": "1522"}], "Toscana": [{"provincia": "Province Toscana", "comune": "—", "centro": "Rete centri antiviolenza Toscana", "indirizzo": "—", "contatti": "1522"}], "Lazio": [{"provincia": "Province Lazio", "comune": "—", "centro": "Rete centri antiviolenza Lazio", "indirizzo": "—", "contatti": "1522"}], "Campania": [{"provincia": "Province Campania", "comune": "—", "centro": "Rete centri antiviolenza Campania", "indirizzo": "—", "contatti": "1522"}], "Puglia": [{"provincia": "Bari/Brindisi/Foggia/BAT e altre province", "comune": "—", "centro": "Rete centri antiviolenza Puglia", "indirizzo": "—", "contatti": "1522"}], "Sicilia": [{"provincia": "Province Sicilia", "comune": "—", "centro": "Rete centri antiviolenza Sicilia", "indirizzo": "—", "contatti": "1522"}], "Sardegna": [{"provincia": "Province Sardegna", "comune": "—", "centro": "Rete centri antiviolenza Sardegna", "indirizzo": "—", "contatti": "1522"}]};
+
+function quickExit(){
+  window.open('https://www.google.it/search?q=meteo', '_blank');
+  window.location.replace('https://www.google.it');
+}
+
+function makeCard(c){
+  return `<div class="center-card">
+    <b>${c.centro}</b>
+    <span><strong>Provincia:</strong> ${c.provincia}</span>
+    <span><strong>Comune:</strong> ${c.comune}</span>
+    <span><strong>Indirizzo:</strong> ${c.indirizzo}</span>
+    <span><strong>Contatti:</strong> ${c.contatti}</span>
+  </div>`;
+}
+
+function showNetwork(region){
+  const wrap = document.getElementById('networkResults');
+  const grid = document.getElementById('centersGrid');
+  const title = document.getElementById('resultsTitle');
+  const select = document.getElementById('regionSelect');
+  wrap.classList.add('active');
+  select.style.display = region === 'Lombardia' ? 'none' : 'block';
+  title.textContent = region === 'Lombardia' ? 'Rete Lombardia' : 'Rete territoriale — ' + region;
+  grid.innerHTML = (CENTERS[region] || []).map(makeCard).join('');
+  wrap.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function showOtherRegions(){
+  const select = document.getElementById('regionSelect');
+  select.innerHTML = '';
+  Object.keys(CENTERS).filter(r => r !== 'Lombardia').forEach(r => {
+    const opt = document.createElement('option');
+    opt.value = r;
+    opt.textContent = r;
+    select.appendChild(opt);
+  });
+  document.getElementById('networkResults').classList.add('active');
+  select.style.display = 'block';
+  showNetwork(select.value || 'Piemonte');
+}
+</script>
+</body>
+</html>
