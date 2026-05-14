@@ -711,10 +711,24 @@ function showNetwork(region){
   const title = document.getElementById('resultsTitle');
   const select = document.getElementById('regionSelect');
 
-  if(region === 'Lombardia' && wrap.classList.contains('active') && title.textContent === 'Rete Lombardia'){
+  const alreadyOpen = wrap.classList.contains('active');
+  const currentRegion = wrap.getAttribute('data-current-region');
+
+  if(alreadyOpen && currentRegion === region){
     wrap.classList.remove('active');
+    wrap.removeAttribute('data-current-region');
     return;
   }
+
+  wrap.classList.add('active');
+  wrap.setAttribute('data-current-region', region);
+
+  select.style.display = region === 'Lombardia' ? 'none' : 'block';
+  title.textContent = region === 'Lombardia' ? 'Rete Lombardia' : 'Rete territoriale — ' + region;
+  grid.innerHTML = (CENTERS[region] || []).map(makeCard).join('');
+
+  wrap.scrollIntoView({behavior:'smooth', block:'start'});
+}
 
   wrap.classList.add('active');
   select.style.display = region === 'Lombardia' ? 'none' : 'block';
