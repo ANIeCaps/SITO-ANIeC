@@ -710,6 +710,12 @@ function showNetwork(region){
   const grid = document.getElementById('centersGrid');
   const title = document.getElementById('resultsTitle');
   const select = document.getElementById('regionSelect');
+
+  if(region === 'Lombardia' && wrap.classList.contains('active') && title.textContent === 'Rete Lombardia'){
+    wrap.classList.remove('active');
+    return;
+  }
+
   wrap.classList.add('active');
   select.style.display = region === 'Lombardia' ? 'none' : 'block';
   title.textContent = region === 'Lombardia' ? 'Rete Lombardia' : 'Rete territoriale — ' + region;
