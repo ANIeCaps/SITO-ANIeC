@@ -452,6 +452,27 @@ min-height:unset;
   height:auto;
   display:block;
   border-radius:30px;
+  opacity:.90;
+  transform:scale(1.01);
+}
+  .comfort-banner{
+  position:relative;
+}
+
+.comfort-banner::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,248,241,.02) 0%,
+      rgba(255,248,241,.12) 34%,
+      rgba(255,248,241,.34) 52%,
+      rgba(255,248,241,.72) 72%,
+      rgba(255,248,241,.92) 100%
+    );
+  pointer-events:none;
 }
 </style>
 </head>
