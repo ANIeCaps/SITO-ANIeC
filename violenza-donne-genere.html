@@ -717,23 +717,17 @@ function showNetwork(region){
   if(alreadyOpen && currentRegion === region){
     wrap.classList.remove('active');
     wrap.removeAttribute('data-current-region');
+    grid.innerHTML = '';
     return;
   }
 
   wrap.classList.add('active');
   wrap.setAttribute('data-current-region', region);
 
-  select.style.display = region === 'Lombardia' ? 'none' : 'block';
+  select.style.display = 'none';
   title.textContent = region === 'Lombardia' ? 'Rete Lombardia' : 'Rete territoriale — ' + region;
   grid.innerHTML = (CENTERS[region] || []).map(makeCard).join('');
 
-  wrap.scrollIntoView({behavior:'smooth', block:'start'});
-}
-
-  wrap.classList.add('active');
-  select.style.display = region === 'Lombardia' ? 'none' : 'block';
-  title.textContent = region === 'Lombardia' ? 'Rete Lombardia' : 'Rete territoriale — ' + region;
-  grid.innerHTML = (CENTERS[region] || []).map(makeCard).join('');
   wrap.scrollIntoView({behavior:'smooth', block:'start'});
 }
 
@@ -742,6 +736,16 @@ function showOtherRegions(){
   const grid = document.getElementById('centersGrid');
   const title = document.getElementById('resultsTitle');
   const select = document.getElementById('regionSelect');
+
+  const alreadyOpen = wrap.classList.contains('active');
+  const currentRegion = wrap.getAttribute('data-current-region');
+
+  if(alreadyOpen && currentRegion === 'altre-regioni'){
+    wrap.classList.remove('active');
+    wrap.removeAttribute('data-current-region');
+    grid.innerHTML = '';
+    return;
+  }
 
   wrap.classList.add('active');
   wrap.setAttribute('data-current-region', 'altre-regioni');
@@ -760,18 +764,6 @@ function showOtherRegions(){
     .join('');
 
   wrap.scrollIntoView({behavior:'smooth', block:'start'});
-}
-  const select = document.getElementById('regionSelect');
-  select.innerHTML = '';
-  Object.keys(CENTERS).filter(r => r !== 'Lombardia').forEach(r => {
-    const opt = document.createElement('option');
-    opt.value = r;
-    opt.textContent = r;
-    select.appendChild(opt);
-  });
-  document.getElementById('networkResults').classList.add('active');
-  select.style.display = 'block';
-  showNetwork(select.value || 'Piemonte');
 }
 </script>
 </body>
