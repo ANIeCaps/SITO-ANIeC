@@ -738,6 +738,29 @@ function showNetwork(region){
 }
 
 function showOtherRegions(){
+  const wrap = document.getElementById('networkResults');
+  const grid = document.getElementById('centersGrid');
+  const title = document.getElementById('resultsTitle');
+  const select = document.getElementById('regionSelect');
+
+  wrap.classList.add('active');
+  wrap.setAttribute('data-current-region', 'altre-regioni');
+
+  select.style.display = 'none';
+  title.textContent = 'Altre regioni';
+
+  grid.innerHTML = Object.keys(CENTERS)
+    .filter(region => region !== 'Lombardia')
+    .map(region => `
+      <div class="center-card" onclick="showNetwork('${region}')">
+        <b>${region}</b>
+        <span>Clicca per visualizzare i riferimenti territoriali disponibili.</span>
+      </div>
+    `)
+    .join('');
+
+  wrap.scrollIntoView({behavior:'smooth', block:'start'});
+}
   const select = document.getElementById('regionSelect');
   select.innerHTML = '';
   Object.keys(CENTERS).filter(r => r !== 'Lombardia').forEach(r => {
