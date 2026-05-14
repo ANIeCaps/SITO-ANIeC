@@ -758,7 +758,9 @@ function showOtherRegions(){
     .map(region => `
       <div class="center-card" onclick="showNetwork('${region}')">
         <b>${region}</b>
-        <span>Clicca per visualizzare i riferimenti territoriali disponibili.</span>
+        <span class="region-note">
+  CONSULTARE IL CENTRO ANTIVIOLENZA TERRITORIALE TRAMITE RETE 1522
+</span>
       </div>
     `)
     .join('');
