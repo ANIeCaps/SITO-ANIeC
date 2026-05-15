@@ -1103,5 +1103,64 @@ function showOtherRegions(){
   wrap.scrollIntoView({behavior:'smooth', block:'start'});
 }
 </script>
+    <script>
+const vdgContents = {
+  servizi: `
+    <h2>Scopri tutti i servizi</h2>
+    <p>ANIeC APS offre un primo spazio di ascolto, orientamento e indirizzo per donne che vivono situazioni di violenza, pressione, minaccia, controllo, isolamento o difficoltà familiare e personale.</p>
+
+    <h3>Ascolto e primo orientamento</h3>
+    <ul>
+      <li>accoglienza riservata della richiesta;</li>
+      <li>analisi iniziale della situazione;</li>
+      <li>orientamento verso i canali più adeguati;</li>
+      <li>supporto nella comprensione dei primi passi da compiere.</li>
+    </ul>
+
+    <div class="vdg-note">
+      In caso di pericolo immediato chiama il <strong>112</strong>. Per supporto antiviolenza e stalking chiama il <strong>1522</strong>.
+    </div>
+  `,
+
+  ascolto: `
+    <h2>Ascolto e accoglienza</h2>
+    <p>Il primo passo è poter parlare con qualcuno senza sentirsi giudicata.</p>
+  `,
+
+  tutela: `
+    <h2>Diritti e tutela</h2>
+    <p>Conoscere i propri diritti è fondamentale per non restare isolate.</p>
+  `,
+
+  supporto: `
+    <h2>Supporto qualificato</h2>
+    <p>Ogni situazione richiede attenzione e competenze adeguate.</p>
+  `,
+
+  riservatezza: `
+    <h2>Riservatezza totale</h2>
+    <p>Ogni richiesta viene trattata con discrezione e rispetto.</p>
+  `
+};
+
+function openVdgOverlay(type){
+  const overlay = document.getElementById('vdgOverlay');
+  const content = document.getElementById('vdgOverlayContent');
+
+  content.innerHTML = vdgContents[type] || vdgContents.servizi;
+
+  overlay.classList.add('is-open');
+
+  document.body.style.overflow = 'hidden';
+}
+
+function closeVdgOverlay(){
+  const overlay = document.getElementById('vdgOverlay');
+
+  overlay.classList.remove('is-open');
+
+  document.body.style.overflow = '';
+}
+</script>
 </body>
 </html>
