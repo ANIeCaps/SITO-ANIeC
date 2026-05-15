@@ -699,6 +699,112 @@ footer{
   padding-top:56px !important;
 }
 }
+  /* OVERLAY APPROFONDIMENTI - VIOLENZA DONNE */
+.vdg-overlay{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:none;
+}
+
+.vdg-overlay.is-open{
+  display:block;
+}
+
+.vdg-overlay-bg{
+  position:absolute;
+  inset:0;
+  background:rgba(8, 20, 50, .58);
+  backdrop-filter:blur(4px);
+}
+
+.vdg-panel{
+  position:relative;
+  width:min(920px, calc(100% - 28px));
+  max-height:86vh;
+  overflow:auto;
+  margin:7vh auto 0;
+  background:#fff8f1;
+  border:1px solid rgba(120,55,75,.18);
+  border-radius:28px;
+  box-shadow:0 26px 70px rgba(18,30,70,.28);
+  padding:34px;
+}
+
+.vdg-close{
+  position:absolute;
+  top:18px;
+  right:22px;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:0;
+  background:#7f1d3a;
+  color:white;
+  font-size:26px;
+  line-height:38px;
+  cursor:pointer;
+}
+
+.vdg-panel h2{
+  margin:0 44px 14px 0;
+  color:#7f1d3a;
+  font-size:clamp(26px, 4vw, 38px);
+  line-height:1.12;
+}
+
+.vdg-panel h3{
+  color:#12306f;
+  margin:26px 0 10px;
+  font-size:22px;
+}
+
+.vdg-panel p{
+  color:#3f3540;
+  font-size:17px;
+  line-height:1.75;
+}
+
+.vdg-panel ul{
+  margin:14px 0 0;
+  padding-left:22px;
+}
+
+.vdg-panel li{
+  margin:9px 0;
+  color:#3f3540;
+  font-size:16.5px;
+  line-height:1.65;
+}
+
+.vdg-note{
+  margin-top:24px;
+  padding:18px 20px;
+  border-radius:20px;
+  background:white;
+  border-left:5px solid #7f1d3a;
+  color:#3f3540;
+}
+
+@media(max-width:768px){
+  .vdg-panel{
+    width:calc(100% - 22px);
+    margin:5vh auto 0;
+    padding:28px 20px;
+    border-radius:22px;
+    max-height:88vh;
+  }
+
+  .vdg-panel p,
+  .vdg-panel li{
+    font-size:15.8px;
+  }
+
+  .vdg-close{
+    top:14px;
+    right:14px;
+  }
+}
 </style>
 </head>
 <body>
