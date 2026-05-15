@@ -1289,7 +1289,7 @@ WhatsApp riservato
   <form class="protected-form" action="mailto:diritti.difesa@aniecaps.it" method="post" enctype="text/plain">
     <input type="text" name="website" class="hidden-trap" tabindex="-1" autocomplete="off">
   <div class="form-note">
-    Puoi inviare una richiesta breve. Non è necessario raccontare tutto subito.
+    Puoi inviare una richiesta breve. Indica solo un modo sicuro per essere ricontattata.
   </div>
 
   <div class="form-grid">
@@ -1304,7 +1304,24 @@ WhatsApp riservato
     <option>Sto aiutando un’altra persona</option>
     <option>Situazione urgente o delicata</option>
   </select>
+<select name="modalita_ricontatto">
+  <option value="">Modalità preferita di ricontatto</option>
+  <option>Telefono</option>
+  <option>WhatsApp</option>
+  <option>Email</option>
+  <option>Preferisco indicarlo nel messaggio</option>
+</select>
 
+<input type="text" name="orario_sicuro" placeholder="Orario o momento sicuro per essere ricontattata">
+
+<select name="messaggi">
+  <option value="">Possiamo lasciare messaggi?</option>
+  <option>Sì, posso ricevere messaggi</option>
+  <option>No, preferisco solo un tentativo di contatto</option>
+  <option>Solo con un testo neutro</option>
+</select>
+
+<input type="text" name="frase_neutra" placeholder="Eventuale frase neutra da usare nel ricontatto">
   <textarea name="messaggio" rows="4" placeholder="Scrivi solo ciò che ti senti di condividere"></textarea>
 
   <label class="privacy-check">
