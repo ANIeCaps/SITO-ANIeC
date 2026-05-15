@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Diritti, identità e tutela contro ogni discriminazione | ANIeC APS</title>
+  <meta name="description" content="Servizio DIRITTI & DIFESA per ascolto riservato, orientamento e tutela contro discriminazioni legate a orientamento sessuale, identità personale, esclusione sociale o familiare." />
+
+  <style>
+    :root{
+      --blu:#123c69;
+      --blu-scuro:#0b2a4a;
+      --verde:#2f8f5b;
+      --avorio:#fff8ef;
+      --bianco:#ffffff;
+      --testo:#1f2933;
+      --muted:#5f6f7a;
+      --ombra:0 18px 45px rgba(18,60,105,.14);
+      --radius:22px;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:linear-gradient(180deg, #fff8ef 0%, #ffffff 55%, #f7fbf9 100%);
+      color:var(--testo);
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .page{
+      width:100%;
+      overflow:hidden;
+    }
+
+    header{
+      background:var(--bianco);
+      border-bottom:1px solid rgba(18,60,105,.12);
+      padding:18px 26px;
+    }
+
+    .header-inner{
+      max-width:1120px;
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .brand-mark{
+      width:58px;
+      height:58px;
+      border-radius:16px;
+      background:linear-gradient(135deg, var(--blu), var(--verde));
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      font-size:20px;
+      box-shadow:0 10px 25px rgba(18,60,105,.22);
+    }
+
+    .brand-text strong{
+      display:block;
+      color:var(--blu);
+      font-size:20px;
+      letter-spacing:.4px;
+    }
+
+    .brand-text span{
+      display:block;
+      font-size:12px;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:.7px;
+    }
+
+    .top-link{
+      color:var(--blu);
+      font-weight:700;
+      font-size:14px;
+    }
+
+    .hero{
+      padding:72px 26px 44px;
+    }
+
+    .hero-inner{
+      max-width:1120px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:rgba(47,143,91,.10);
+      color:var(--verde);
+      padding:8px 14px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:13px;
+      margin-bottom:20px;
+    }
+
+    h1{
+      color:var(--blu-scuro);
+      font-size:44px;
+      line-height:1.12;
+      margin-bottom:20px;
+    }
+
+    .lead{
+      font-size:19px;
+      color:#344653;
+      max-width:720px;
+      margin-bottom:26px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:26px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 22px;
+      border-radius:999px;
+      font-weight:800;
+      font-size:15px;
+      transition:.2s ease;
+    }
+
+    .btn-primary{
+      background:var(--blu);
+      color:#fff;
+      box-shadow:0 12px 26px rgba(18,60,105,.22);
+    }
+
+    .btn-primary:hover{
+      background:var(--blu-scuro);
+      transform:translateY(-2px);
+    }
+
+    .btn-secondary{
+      border:2px solid rgba(18,60,105,.18);
+      color:var(--blu);
+      background:#fff;
+    }
+
+    .service-symbol{
+      background:#fff;
+      border-radius:30px;
+      padding:34px;
+      box-shadow:var(--ombra);
+      border:1px solid rgba(18,60,105,.08);
+      text-align:center;
+      position:relative;
+    }
+
+    .symbol-circle{
+      width:156px;
+      height:156px;
+      border-radius:50%;
+      margin:0 auto 20px;
+      background:
+        radial-gradient(circle at center, #ffffff 42%, transparent 43%),
+        conic-gradient(from 210deg, var(--blu), var(--verde), #e8b44f, #c94f7c, var(--blu));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 14px 35px rgba(18,60,105,.18);
+    }
+
+    .symbol-inner{
+      width:92px;
+      height:92px;
+      border-radius:26px;
+      background:linear-gradient(135deg, var(--blu), var(--verde));
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:34px;
+      font-weight:900;
+      letter-spacing:-1px;
+    }
+
+    .service-symbol h2{
+      color:var(--blu);
+      font-size:22px;
+      margin-bottom:8px;
+    }
+
+    .service-symbol p{
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .reassurance{
+      padding:20px 26px 50px;
+    }
+
+    .reassurance-box{
+      max-width:960px;
+      margin:0 auto;
+      background:rgba(255,255,255,.82);
+      border-left:6px solid var(--verde);
+      border-radius:18px;
+      padding:24px 28px;
+      box-shadow:0 12px 30px rgba(18,60,105,.08);
+      color:#2d3d48;
+      font-size:18px;
+      font-weight:600;
+    }
+
+    .cards{
+      padding:20px 26px 56px;
+    }
+
+    .cards-grid{
+      max-width:1120px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:22px;
+    }
+
+    .card{
+      background:#fff;
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:0 12px 34px rgba(18,60,105,.10);
+      border:1px solid rgba(18,60,105,.08);
+    }
+
+    .card-icon{
+      width:54px;
+      height:54px;
+      border-radius:16px;
+      background:rgba(18,60,105,.08);
+      color:var(--blu);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:26px;
+      margin-bottom:18px;
+    }
+
+    .card h3{
+      color:var(--blu);
+      font-size:21px;
+      margin-bottom:10px;
+    }
+
+    .card p{
+      color:#4d5d68;
+      font-size:16px;
+    }
+
+    .help-section{
+      padding:62px 26px;
+      background:linear-gradient(135deg, rgba(18,60,105,.96), rgba(47,143,91,.92));
+      color:#fff;
+    }
+
+    .help-inner{
+      max-width:1120px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:34px;
+      align-items:start;
+    }
+
+    .help-section h2{
+      font-size:32px;
+      line-height:1.2;
+      margin-bottom:14px;
+    }
+
+    .help-section p{
+      color:rgba(255,255,255,.86);
+      font-size:17px;
+    }
+
+    .help-list{
+      display:grid;
+      gap:12px;
+    }
+
+    .help-item{
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:16px;
+      padding:16px 18px;
+      backdrop-filter:blur(6px);
+    }
+
+    .contact{
+      padding:66px 26px;
+    }
+
+    .contact-box{
+      max-width:900px;
+      margin:0 auto;
+      background:#fff;
+      border-radius:28px;
+      padding:34px;
+      box-shadow:var(--ombra);
+      border:1px solid rgba(18,60,105,.08);
+    }
+
+    .contact-box h2{
+      color:var(--blu);
+      font-size:30px;
+      margin-bottom:10px;
+      text-align:center;
+    }
+
+    .contact-box .intro{
+      text-align:center;
+      color:var(--muted);
+      margin-bottom:28px;
+      font-size:16px;
+    }
+
+    form{
+      display:grid;
+      gap:16px;
+    }
+
+    .form-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
+    label{
+      display:block;
+      font-size:14px;
+      font-weight:700;
+      color:var(--blu-scuro);
+      margin-bottom:6px;
+    }
+
+    input,
+    select,
+    textarea{
+      width:100%;
+      border:1px solid rgba(18,60,105,.20);
+      border-radius:14px;
+      padding:13px 14px;
+      font-size:15px;
+      font-family:inherit;
+      background:#fffdf9;
+      color:var(--testo);
+      outline:none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus{
+      border-color:var(--verde);
+      box-shadow:0 0 0 3px rgba(47,143,91,.13);
+    }
+
+    textarea{
+      min-height:120px;
+      resize:vertical;
+    }
+
+    .privacy-note{
+      font-size:13px;
+      color:var(--muted);
+      background:#f7fbf9;
+      border-radius:14px;
+      padding:14px;
+    }
+
+    .submit-btn{
+      border:0;
+      cursor:pointer;
+      width:100%;
+      margin-top:4px;
+      background:var(--verde);
+      color:#fff;
+      padding:15px 22px;
+      border-radius:999px;
+      font-size:16px;
+      font-weight:800;
+    }
+
+    footer{
+      background:var(--blu-scuro);
+      color:#fff;
+      padding:34px 26px;
+      text-align:center;
+    }
+
+    footer strong{
+      display:block;
+      font-size:18px;
+      margin-bottom:6px;
+    }
+
+    footer p{
+      color:rgba(255,255,255,.75);
+      font-size:14px;
+    }
+
+    @media (max-width:900px){
+      .hero-inner,
+      .help-inner{
+        grid-template-columns:1fr;
+      }
+
+      .service-symbol{
+        max-width:420px;
+        margin:0 auto;
+      }
+
+      .cards-grid{
+        grid-template-columns:1fr;
+      }
+
+      h1{
+        font-size:36px;
+      }
+    }
+
+    @media (max-width:600px){
+      header{
+        padding:16px 18px;
+      }
+
+      .header-inner{
+        align-items:flex-start;
+      }
+
+      .top-link{
+        display:none;
+      }
+
+      .hero{
+        padding:48px 20px 30px;
+      }
+
+      h1{
+        font-size:31px;
+      }
+
+      .lead{
+        font-size:17px;
+      }
+
+      .reassurance,
+      .cards,
+      .help-section,
+      .contact{
+        padding-left:20px;
+        padding-right:20px;
+      }
+
+      .form-row{
+        grid-template-columns:1fr;
+      }
+
+      .contact-box{
+        padding:24px 20px;
+      }
+
+      .symbol-circle{
+        width:132px;
+        height:132px;
+      }
+
+      .symbol-inner{
+        width:78px;
+        height:78px;
+        font-size:28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header>
+      <div class="header-inner">
+        <a href="index.html" class="brand" aria-label="Torna alla Home ANIeC APS">
+          <div class="brand-mark">D&D</div>
+          <div class="brand-text">
+            <strong>DIRITTI & DIFESA</strong>
+            <span>ANIeC APS</span>
+          </div>
+        </a>
+
+        <a class="top-link" href="index.html">Torna alla Home</a>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="hero">
+        <div class="hero-inner">
+          <div>
+            <div class="eyebrow">Tutela · Ascolto · Riservatezza</div>
+
+            <h1>Diritti, identità e tutela contro ogni discriminazione</h1>
+
+            <p class="lead">
+              Uno spazio riservato per chi vive situazioni di esclusione, minacce,
+              emarginazione o difficoltà nel sentirsi accolto a causa della propria
+              identità personale, del proprio orientamento o della propria condizione familiare e sociale.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#contatto-riservato" class="btn btn-primary">Chiedi un contatto riservato</a>
+              <a href="#quando-aiutarti" class="btn btn-secondary">Quando possiamo aiutarti</a>
+            </div>
+          </div>
+
+          <div class="service-symbol" aria-label="Segno grafico del servizio Diritti e Difesa">
+            <div class="symbol-circle">
+              <div class="symbol-inner">D&D</div>
+            </div>
+            <h2>Protezione dei diritti personali</h2>
+            <p>
+              Un segno dedicato al servizio: sobrio, istituzionale e collegato
+              all’identità DIRITTI & DIFESA.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="reassurance">
+        <div class="reassurance-box">
+          Ogni persona ha diritto a essere ascoltata con rispetto, senza giudizio
+          e con la massima riservatezza.
+        </div>
+      </section>
+
+      <section class="cards" aria-label="Servizi principali">
+        <div class="cards-grid">
+
+          <article class="card">
+            <div class="card-icon">🛡️</div>
+            <h3>Ascolto riservato</h3>
+            <p>
+              Accogliamo la richiesta con discrezione, attenzione e rispetto della
+              situazione personale, senza esposizione pubblica.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">⚖️</div>
+            <h3>Orientamento sui diritti</h3>
+            <p>
+              Aiutiamo a comprendere quali strumenti di tutela possono essere valutati
+              in caso di discriminazioni, pressioni, minacce o esclusione.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🤝</div>
+            <h3>Supporto concreto</h3>
+            <p>
+              Possiamo orientare verso percorsi di supporto, tutela associativa,
+              rete territoriale e professionisti qualificati quando necessario.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="help-section" id="quando-aiutarti">
+        <div class="help-inner">
+          <div>
+            <h2>Quando possiamo aiutarti</h2>
+            <p>
+              Il servizio è pensato per offrire un primo punto di ascolto e orientamento,
+              soprattutto quando la persona non sa a chi rivolgersi o teme di non essere compresa.
+            </p>
+          </div>
+
+          <div class="help-list">
+            <div class="help-item">Discriminazioni o esclusione in ambito familiare, sociale, lavorativo o educativo.</div>
+            <div class="help-item">Minacce, pressioni, offese, isolamento o comportamenti lesivi della dignità personale.</div>
+            <div class="help-item">Difficoltà nel chiedere aiuto per timore di giudizio, esposizione o conseguenze personali.</div>
+            <div class="help-item">Necessità di orientamento riservato sui propri diritti e sui possibili passi da compiere.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contatto-riservato">
+        <div class="contact-box">
+          <h2>Contatto riservato</h2>
+          <p class="intro">
+            Puoi inviare una richiesta sintetica. Verrai ricontattato con discrezione.
+          </p>
+
+          <form>
+            <div class="form-row">
+              <div>
+                <label for="nome">Nome o iniziali</label>
+                <input type="text" id="nome" name="nome" placeholder="Es. G. oppure nome" />
+              </div>
+
+              <div>
+                <label for="contatto">Telefono o email</label>
+                <input type="text" id="contatto" name="contatto" placeholder="Inserisci un contatto sicuro" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div>
+                <label for="modalita">Modalità preferita</label>
+                <select id="modalita" name="modalita">
+                  <option value="">Seleziona</option>
+                  <option>Telefono</option>
+                  <option>Email</option>
+                  <option>WhatsApp</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="orario">Orario sicuro</label>
+                <input type="text" id="orario" name="orario" placeholder="Es. mattina, pomeriggio, sera" />
+              </div>
+            </div>
+
+            <div>
+              <label for="messaggio">Messaggio</label>
+              <textarea id="messaggio" name="messaggio" placeholder="Scrivi brevemente di cosa hai bisogno"></textarea>
+            </div>
+
+            <div class="privacy-note">
+              La richiesta sarà trattata con riservatezza. Evita di inserire informazioni
+              estremamente sensibili se il dispositivo o il contatto non sono sicuri.
+            </div>
+
+            <button type="submit" class="submit-btn">Invia richiesta riservata</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <strong>ANIeC APS · DIRITTI & DIFESA</strong>
+      <p>Ascolto, orientamento e tutela della persona.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
