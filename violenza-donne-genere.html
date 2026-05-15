@@ -709,6 +709,7 @@ footer{
 
 .vdg-overlay.is-open{
   display:block;
+  animation:vdgFade .28s ease;
 }
 
 .vdg-overlay-bg{
@@ -730,6 +731,8 @@ footer{
   border-radius:28px;
   box-shadow:0 26px 70px rgba(18,30,70,.28);
   padding:34px;
+  animation:vdgPanelIn .34s cubic-bezier(.22,.9,.32,1);
+transform-origin:center top;
 }
 
 .vdg-close{
