@@ -352,8 +352,18 @@ min-height:unset;
 .emotional-content p{font-size:15px;line-height:1.75;color:#415c7e;margin:0}
 .mini h4{font-size:15px;margin:0 0 8px;color:#092f5d}.mini p{font-size:12px}
 .territory{padding:24px 48px 54px;background:#fff8f1}
-.territory-card{display:grid;grid-template-columns:.9fr 1.2fr .7fr;gap:34px;border:1px solid rgba(9,47,93,.10);border-radius:16px;background:rgba(255,255,255,.76);padding:44px 48px;box-shadow:0 18px 38px rgba(9,47,93,.055)}
-.map-soft{
+.territory-card{position:relative;overflow:hidden;display:grid;grid-template-columns:.9fr 1.2fr .7fr;gap:34px;border:1px solid rgba(9,47,93,.10);border-radius:16px;background:rgba(255,255,255,.76);padding:44px 48px;box-shadow:0 18px 38px rgba(9,47,93,.055)}
+.territory-card:before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at top right,
+    rgba(214,145,145,.10),
+    transparent 42%);
+  pointer-events:none;
+}
+  .map-soft{
   min-height:210px;
   border-radius:22px;
   background:
