@@ -1340,11 +1340,11 @@ WhatsApp riservato
 </form>        
 </section>
 <!-- OVERLAY APPROFONDIMENTI VIOLENZA DONNE -->
-<div id="vdgOverlay" class="vdg-overlay" aria-hidden="true">
+<div id="vdgOverlay" class="vdg-overlay" aria-hidden="true" role="dialog" aria-modal="true">
   <div class="vdg-overlay-bg" onclick="closeVdgOverlay()"></div>
 
   <div class="vdg-panel">
-    <button class="vdg-close" onclick="closeVdgOverlay()">×</button>
+    <button class="vdg-close" onclick="closeVdgOverlay()" aria-label="Chiudi approfondimento">×</button>
     <div id="vdgOverlayContent"></div>
   </div>
 </div>
