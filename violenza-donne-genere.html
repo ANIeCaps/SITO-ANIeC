@@ -1102,8 +1102,7 @@ function showOtherRegions(){
   wrap.scrollIntoView({behavior:'smooth', block:'start'});
 }
 </script>
-    <script>
-<script>
+   <script>
 const vdgContents = {
 
   servizi: `
@@ -1290,24 +1289,6 @@ function closeVdgOverlay(){
   document.body.style.overflow = '';
 }
 </script>
-function openVdgOverlay(type){
-  const overlay = document.getElementById('vdgOverlay');
-  const content = document.getElementById('vdgOverlayContent');
 
-  content.innerHTML = vdgContents[type] || vdgContents.servizi;
-
-  overlay.classList.add('is-open');
-
-  document.body.style.overflow = 'hidden';
-}
-
-function closeVdgOverlay(){
-  const overlay = document.getElementById('vdgOverlay');
-
-  overlay.classList.remove('is-open');
-
-  document.body.style.overflow = '';
-}
-</script>
 </body>
 </html>
