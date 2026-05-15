@@ -510,78 +510,104 @@ min-height:unset;
 }
   @media(max-width:768px){
 
-  /* Pulsante emergenza */
+  body{
+    overflow-x:hidden !important;
+  }
 
   .quick-exit{
-    top:14px !important;
-    right:14px !important;
-    padding:12px 18px !important;
-    font-size:.78rem !important;
-    border-radius:999px !important;
+    top:12px !important;
+    right:12px !important;
+    padding:10px 14px !important;
+    font-size:10px !important;
+    z-index:99999 !important;
   }
-
-  /* Riduzione spaziature generali */
-
-  section{
-    padding-top:54px !important;
-    padding-bottom:54px !important;
-  }
-
-  /* Hero */
 
   .hero{
-    padding-top:110px !important;
+    padding:
+      110px 20px 40px !important;
+    background-position:left top !important;
+    background-size:cover !important;
   }
 
-  /* Feature strip */
+  .hero-title{
+    font-size:28px !important;
+    line-height:1.1 !important;
+  }
+
+  .hero-copy{
+    font-size:14px !important;
+    line-height:1.7 !important;
+  }
+
+  .chips{
+    gap:10px !important;
+  }
+
+  .chip{
+    font-size:11px !important;
+    padding:8px 12px !important;
+  }
 
   .feature-strip{
-    gap:14px !important;
+    margin:24px 0 0 !important;
+    padding:0 !important;
+    grid-template-columns:1fr !important;
   }
-
-  /* Servizi */
 
   .services{
-    padding-top:42px !important;
-    padding-bottom:42px !important;
+    padding:40px 20px !important;
   }
 
-  /* Rete territoriale */
+  .services h2{
+    white-space:normal !important;
+    transform:none !important;
+    width:100% !important;
+    font-size:28px !important;
+    line-height:1.2 !important;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr !important;
+    margin:0 !important;
+  }
+
+  .emotional{
+    padding:0 20px 20px !important;
+  }
 
   .territory{
-    padding-top:42px !important;
-    padding-bottom:42px !important;
+    padding:20px !important;
   }
 
   .territory-card{
-    gap:26px !important;
+    grid-template-columns:1fr !important;
+    padding:24px !important;
+    gap:24px !important;
   }
 
-  /* Claim finale */
+  .map-soft img{
+    max-width:160px !important;
+  }
 
   .quote{
-    padding:42px 24px 46px !important;
+    padding:36px 20px 42px !important;
   }
 
   .quote-main{
-    font-size:30px !important;
-    line-height:1.15 !important;
+    font-size:28px !important;
+    line-height:1.1 !important;
   }
 
   .quote-sub{
-    font-size:16px !important;
-    line-height:1.55 !important;
-    max-width:320px !important;
+    font-size:15px !important;
+    line-height:1.5 !important;
+    max-width:300px !important;
   }
 
-  /* Footer */
-
-  footer{
-    padding-top:46px !important;
-  }
-
-  .footer-grid{
-    gap:34px !important;
+  .footer{
+    grid-template-columns:1fr !important;
+    gap:24px !important;
+    padding:40px 20px !important;
   }
 
 }
