@@ -1465,6 +1465,33 @@ function closeVdgOverlay(){
   document.body.style.overflow = '';
 }
 </script>
+<script>
+function safeExit(){
 
+  const overlay = document.getElementById('vdgOverlay');
+
+  if(overlay){
+    overlay.classList.remove('is-open');
+  }
+
+  document.body.style.overflow='';
+
+  window.location.replace('https://www.google.it');
+}
+
+document.addEventListener('keydown', function(e){
+
+  if(e.key === 'Escape'){
+
+    const overlay = document.getElementById('vdgOverlay');
+
+    if(overlay && overlay.classList.contains('is-open')){
+      closeVdgOverlay();
+    }else{
+      safeExit();
+    }
+  }
+});
+</script>
 </body>
 </html>
