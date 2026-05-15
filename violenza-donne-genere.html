@@ -1623,6 +1623,16 @@ function closeVdgOverlay(){
 
   document.body.style.overflow = '';
 }
+function goProtectedContact(){
+  closeVdgOverlay();
+
+  setTimeout(function(){
+    document.getElementById('contatto-protetto').scrollIntoView({
+      behavior:'smooth',
+      block:'start'
+    });
+  }, 180);
+}     
 </script>
 <script>
 function safeExit(){
