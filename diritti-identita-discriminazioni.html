@@ -196,16 +196,23 @@
 
     .services{padding:8px 0 62px}
     .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-    .service-card{background:#fff;border:1px solid rgba(11,47,95,.09);border-radius:var(--radius);padding:24px;box-shadow:var(--ombra-soft);transition:.2s ease;min-height:278px;position:relative;overflow:hidden}
+    .service-card{background:rgba(255,255,255,.82);backdrop-filter:blur(8px);:1px solid rgba(11,47,95,.09);border-radius:var(--radius);padding:24px;box-shadow:var(--ombra-soft);transition:.2s ease;min-height:278px;position:relative;overflow:hidden}
     .service-card::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:linear-gradient(90deg, var(--blu), var(--verde), var(--oro))}
-    .service-card:hover{transform:translateY(-4px);box-shadow:var(--ombra)}
+    .service-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 22px 44px rgba(11,47,95,.16);
+}
     
     .service-card h3{color:var(--blu);font-size:20px;line-height:1.22;margin-bottom:10px}
     .service-card p{color:#526674;font-size:15.5px}
 
     .situations{padding:66px 0;background:radial-gradient(circle at 15% 15%, rgba(200,149,61,.13), transparent 30%),linear-gradient(180deg, rgba(253,238,230,.82), rgba(255,250,243,.96));border-top:1px solid rgba(11,47,95,.08);border-bottom:1px solid rgba(11,47,95,.08)}
     .situation-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
-    .situation{background:rgba(255,255,255,.82);border:1px solid rgba(11,47,95,.10);border-radius:18px;padding:18px 20px;box-shadow:0 8px 22px rgba(11,47,95,.07);display:flex;gap:13px;align-items:flex-start;color:#344c5c;font-weight:700}
+    .situation{background:rgba(255,255,255,.82);border:1px solid rgba(11,47,95,.10);border-radius:18px;padding:18px 20px;box-shadow:0 8px 22px rgba(11,47,95,.07);display:flex;gap:13px;align-items:flex-start;color:#344c5c;font-weight:700;transition:.2s ease;}
+    .situation:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 28px rgba(11,47,95,.10);
+}
     .dot{width:11px;height:11px;border-radius:50%;background:var(--verde);margin-top:9px;flex:0 0 auto;box-shadow:0 0 0 5px rgba(47,143,91,.12)}
 
     .method{padding:66px 0}
