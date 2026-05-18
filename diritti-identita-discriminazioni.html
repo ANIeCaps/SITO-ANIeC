@@ -216,7 +216,10 @@
 
     .services{padding:8px 0 62px}
     .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-    .service-card{background:rgba(255,255,255,.82);backdrop-filter:blur(8px);:1px solid rgba(11,47,95,.09);border-radius:var(--radius);padding:24px;box-shadow:var(--ombra-soft);transition:.2s ease;min-height:278px;position:relative;overflow:hidden}
+    .service-card{
+  background:rgba(255,255,255,.82);
+  backdrop-filter:blur(8px);
+  border:1px solid rgba(11,47,95,.09);border-radius:var(--radius);padding:24px;box-shadow:var(--ombra-soft);transition:.2s ease;min-height:278px;position:relative;overflow:hidden}
     .service-card::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:linear-gradient(90deg, var(--blu), var(--verde), var(--oro))}
     .service-card:hover{
   transform:translateY(-6px);
