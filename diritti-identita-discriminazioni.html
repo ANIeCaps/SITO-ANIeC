@@ -110,7 +110,13 @@
       opacity:.72;
     }
 
-    .hero-content{max-width:860px;position:relative;text-align:center;margin:0 auto;z-index:1}
+  .hero-content{
+  max-width:860px;
+  position:relative;
+  z-index:1;
+  text-align:center;
+  margin:0 auto;
+}
 
     .eyebrow{
       display:inline-flex;
@@ -152,11 +158,14 @@
       color:#334957;
       font-weight:700;
       margin-top:24px;
+      margin-left:auto;
+      margin-right:auto;
+      text-align:left;
     }
 
     .note-icon{color:var(--oro);font-size:22px;line-height:1.2}
 
-    .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+    .actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:28px}
     .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:14px 22px;font-size:15px;font-weight:900;transition:.2s ease}
     .btn-primary{background:var(--blu);color:#fff;box-shadow:0 12px 26px rgba(11,47,95,.22)}
     .btn-primary:hover{background:var(--blu-profondo);transform:translateY(-2px)}
@@ -169,7 +178,7 @@
     .intro-title h2{font-size:32px;line-height:1.18;margin-bottom:14px;position:relative;z-index:1}
     .intro-title p{color:rgba(255,255,255,.84);position:relative;z-index:1}
     .intro-text{background:rgba(255,255,255,.78);border:1px solid rgba(11,47,95,.10);border-radius:30px;padding:32px;box-shadow:var(--ombra-soft)}
-    .intro-text p{color:#435866;font-size:17px;margin-bottom:14px}
+    .intro-text p{color:#435866;font-size:17px;text-align:justify;margin-bottom:14px}
     .intro-text p:last-child{margin-bottom:0}
 
     .section-title{text-align:center;margin-bottom:30px}
@@ -194,7 +203,7 @@
     .method-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:28px;align-items:center}
     .method-panel{background:#fff;border-radius:30px;padding:34px;box-shadow:var(--ombra);border:1px solid rgba(11,47,95,.09)}
     .method-panel h2{color:var(--blu-profondo);font-size:32px;line-height:1.18;margin-bottom:14px}
-    .method-panel p{color:#4f6370;font-size:17px}
+    .method-panel p{color:#4f6370;text-align:justify;font-size:17px}
     .steps{display:grid;gap:14px}
     .step{background:rgba(255,255,255,.84);border:1px solid rgba(11,47,95,.10);border-radius:20px;padding:19px;box-shadow:var(--ombra-soft);display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start}
     .step-number{width:34px;height:34px;border-radius:50%;background:var(--oro-soft);color:#9a671f;display:flex;align-items:center;justify-content:center;font-weight:900}
