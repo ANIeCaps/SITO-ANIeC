@@ -39,34 +39,28 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
-
-    padding:12px 60px;
-
+    padding:14px 60px;
     position:sticky;
     top:0;
-
     z-index:120;
-
     background:
-      linear-gradient(
-        90deg,
-        rgba(255,255,255,.88) 0%,
-        rgba(248,251,255,.84) 55%,
-        rgba(255,255,255,.88) 100%
-      );
-
-    border-bottom:1px solid rgba(0,51,102,.06);
-
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
-
-    transition:all .28s ease;
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.72) 0%,
+            rgba(248,251,255,.62) 45%,
+            rgba(255,255,255,.78) 100%
+        );
+    border-bottom:1px solid rgba(0,51,102,.08);
+    box-shadow:0 10px 32px rgba(0,51,102,.06);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
 }
         .logo-aniec{
-    height:74px;
+    height:92px;
     width:auto;
-    max-width:320px;
+    max-width:390px;
     object-fit:contain;
+    filter:drop-shadow(0 8px 18px rgba(0,51,102,.10));
 }
         .desktop-menu{display:flex;gap:44px;align-items:center;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--blue-aniec);}
         .desktop-menu a:hover{color:var(--green-aniec);}
