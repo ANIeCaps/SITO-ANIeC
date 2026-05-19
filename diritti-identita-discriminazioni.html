@@ -415,7 +415,49 @@
     radial-gradient(circle at bottom left, rgba(47,143,91,.10), transparent 30%),
     linear-gradient(180deg, #fff, var(--avorio-chiaro));
 }
-    .contact-box{max-width:940px;margin:0 auto;border-radius:32px;padding:36px;background:rgba(255,255,255,.88);backdrop-filter:blur(8px);box-shadow:var(--ombra);border:1px solid rgba(11,47,95,.10)}
+    .contact-box{
+  max-width:940px;
+  margin:0 auto;
+
+  border-radius:34px;
+
+  padding:40px;
+
+  background:
+    linear-gradient(180deg,
+    rgba(255,255,255,.94),
+    rgba(255,250,243,.88));
+
+  backdrop-filter:blur(10px);
+
+  box-shadow:
+    0 24px 54px rgba(11,47,95,.12);
+
+  border:1px solid rgba(11,47,95,.08);
+
+  position:relative;
+  overflow:hidden;
+}
+    .contact-box::after{
+  content:"";
+  position:absolute;
+
+  right:-120px;
+  top:-120px;
+
+  width:260px;
+  height:260px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(circle,
+    rgba(47,143,91,.10),
+    rgba(200,149,61,.08),
+    transparent 72%);
+
+  pointer-events:none;
+}
     .contact-box h2{color:var(--blu-profondo);font-size:32px;line-height:1.16;text-align:center;margin-bottom:10px}
     .contact-box .intro-contact{text-align:center;color:#526674;max-width:720px;margin:0 auto 28px;line-height:1.75;font-size:16.5px}
     form{display:grid;gap:16px}
