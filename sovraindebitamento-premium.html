@@ -35,25 +35,25 @@
         section{scroll-margin-top:120px;}
         img{max-width:100%;}
 
-        nav{
+        header.site-header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.68);
+    border-bottom:1px solid rgba(0,51,102,.08);
+    box-shadow:0 10px 34px rgba(0,51,102,.06);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+}
+
+nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:14px 60px;
-    position:sticky;
-    top:0;
-    z-index:120;
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,.72) 0%,
-            rgba(248,251,255,.62) 45%,
-            rgba(255,255,255,.78) 100%
-        );
-    border-bottom:1px solid rgba(0,51,102,.08);
-    box-shadow:0 10px 32px rgba(0,51,102,.06);
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
+    position:relative;
+    z-index:2;
+    background:transparent;
 }
         .logo-aniec{
     height:92px;
