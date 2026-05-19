@@ -259,7 +259,12 @@
 
     .services{padding:8px 0 62px}
     .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-   .service-card{
+  .service-card{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:center;
+
   background:
     linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,250,243,.84));
   backdrop-filter:blur(8px);
@@ -289,22 +294,32 @@
   box-shadow:0 22px 44px rgba(11,47,95,.16);
 }
     
-    .service-card h3{
+   .service-card h3{
   color:var(--blu);
-  font-size:17px;
-  line-height:1.2;
-  margin-bottom:16px;
+  font-size:15px;
+  line-height:1.28;
+
+  margin-bottom:18px;
 
   text-transform:uppercase;
   text-align:center;
 
-  letter-spacing:.4px;
+  letter-spacing:.6px;
   font-weight:900;
+
+  max-width:220px;
+  margin-left:auto;
+  margin-right:auto;
 }
-   .service-card p{
+  .service-card p{
   color:#526674;
-  font-size:15px;
-  line-height:1.75;
+  font-size:14.5px;
+  line-height:1.82;
+
+  text-align:center;
+  max-width:250px;
+
+  margin:0 auto;
 }
 
     .situations{padding:66px 0;background:radial-gradient(circle at 15% 15%, rgba(200,149,61,.13), transparent 30%),linear-gradient(180deg, rgba(253,238,230,.82), rgba(255,250,243,.96));border-top:1px solid rgba(11,47,95,.08);border-bottom:1px solid rgba(11,47,95,.08)}
