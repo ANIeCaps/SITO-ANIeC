@@ -620,6 +620,76 @@ img{
     border-radius:20px;
   }
 }
+    /* =========================
+   FIRMA VISIVA COMUNE ANIeC
+========================= */
+
+/* sfondo generale più coerente */
+body{
+  background:
+    radial-gradient(circle at top left, rgba(0,120,74,.08), transparent 32%),
+    radial-gradient(circle at top right, rgba(6,47,96,.08), transparent 34%),
+    #fff8f1;
+}
+
+/* fascia superiore più istituzionale */
+header,
+.header,
+nav{
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+}
+
+/* effetto comune sui blocchi principali */
+.hero,
+.hero-section,
+.intro,
+.services,
+.method,
+.contact,
+.about-section,
+.process-section,
+.feature-strip,
+.emotional,
+.section-k{
+  position:relative;
+}
+
+/* piccola linea decorativa comune */
+.hero::after,
+.hero-section::after{
+  content:"";
+  display:block;
+  width:86px;
+  height:4px;
+  border-radius:999px;
+  background:linear-gradient(90deg, #006b3f, #062f60);
+  margin-top:24px;
+}
+
+/* contenitori più coerenti */
+.wrap,
+.hero-content,
+.about-intro,
+.services-intro,
+.contact-inner{
+  max-width:1180px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* testo più leggibile */
+p{
+  line-height:1.72;
+}
+
+/* CTA finali più riconoscibili */
+.contact,
+.final-cta,
+.support-box,
+.safe-box{
+  border-radius:28px;
+}
   </style>
 </head>
 
