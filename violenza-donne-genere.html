@@ -48,8 +48,35 @@ a{color:inherit;text-decoration:none}
 .page{
   max-width:1540px;
   margin:0 auto;
-  background:#fff8f1;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,248,241,.96) 0%,
+      rgba(255,250,246,.98) 52%,
+      rgba(255,255,255,1) 100%
+    );
   min-height:100vh;
+  position:relative;
+  overflow:hidden;
+}
+  .page::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at top left,
+    rgba(0,120,74,.045),
+    transparent 26%),
+    radial-gradient(circle at top right,
+    rgba(6,47,96,.05),
+    transparent 30%);
+  z-index:0;
+}
+
+.page > *{
+  position:relative;
+  z-index:1;
 }
 .header{
   height:108px;
