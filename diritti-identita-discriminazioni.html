@@ -259,10 +259,30 @@
 
     .services{padding:8px 0 62px}
     .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-    .service-card{
-  background:rgba(255,255,255,.82);
+   .service-card{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,250,243,.84));
   backdrop-filter:blur(8px);
-  border:1px solid rgba(11,47,95,.09);border-radius:var(--radius);padding:22px;box-shadow:var(--ombra-soft);transition:.2s ease;min-height:278px;position:relative;overflow:hidden}
+  border:1px solid rgba(11,47,95,.10);
+  border-radius:var(--radius);
+  padding:24px 22px 26px;
+  box-shadow:var(--ombra-soft);
+  transition:.22s ease;
+  min-height:258px;
+  position:relative;
+  overflow:hidden;
+}
+    .service-card::after{
+  content:"";
+  position:absolute;
+  right:-42px;
+  bottom:-42px;
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(47,143,91,.12), transparent 68%);
+  pointer-events:none;
+}
     .service-card::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:linear-gradient(90deg, var(--blu), var(--verde), var(--oro))}
     .service-card:hover{
   transform:translateY(-6px);
