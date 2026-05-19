@@ -512,65 +512,68 @@
 
     footer{
   position:relative;
-
-  background:
-    linear-gradient(
-      135deg,
-      #082a63 0%,
-      #0b346f 55%,
-      #11498c 100%
-    );
-
-  color:#fff;
-
-  padding:46px 0 42px;
-
-  text-align:center;
-
-  border-top:1px solid rgba(255,255,255,.08);
-
+  padding:20px 48px 0;
+  background:#fffaf6;
+  background-image:url('footer-clean.png');
+  background-repeat:no-repeat;
+  background-position:center bottom;
+  background-size:cover;
   overflow:hidden;
+  border-top:1px solid rgba(11,47,95,.08);
 }
 
-footer::before{
-  content:"";
-
-  position:absolute;
-  inset:0;
-
-  background:
-    radial-gradient(circle at left,
-    rgba(47,143,91,.16),
-    transparent 34%),
-
-    radial-gradient(circle at right,
-    rgba(200,149,61,.12),
-    transparent 32%);
-
-  pointer-events:none;
+.footer-card{
+  max-width:1180px;
+  margin:0 auto 28px;
+  padding:26px 42px;
+  min-height:145px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:60px;
+  background:linear-gradient(180deg,rgba(255,255,255,.72),rgba(255,255,255,.48));
+  border:1px solid rgba(255,255,255,.58);
+  border-radius:28px;
+  box-shadow:0 22px 55px rgba(6,47,96,.08);
+  backdrop-filter:blur(8px);
 }
 
-footer .wrap{
-  position:relative;
-  z-index:1;
+.footer-left{text-align:left}
+.footer-right{text-align:right;color:#092f5d;font-size:14px;line-height:1.7}
+.footer-logo img{width:260px;max-width:100%;display:block;margin-bottom:16px}
+.footer-payoff{font-size:14px;line-height:1.65;color:#092f5d;max-width:560px}
+
+.footer-bottom{
+  text-align:center;
+  padding:12px 20px;
+  font-size:12px;
+  font-weight:800;
+  color:#092f5d;
+  border-top:1px solid rgba(9,47,93,.08);
 }
 
-footer strong{
-  display:block;
+@media(max-width:768px){
+  footer{
+    padding:32px 20px 0 !important;
+  }
 
-  font-size:20px;
+  .footer-card{
+    grid-template-columns:1fr;
+    text-align:center;
+    padding:28px 22px;
+    gap:24px;
+  }
 
-  margin-bottom:8px;
+  .footer-left,
+  .footer-right{
+    text-align:center;
+  }
 
-  letter-spacing:.3px;
-}
-
-footer p{
-  color:rgba(255,255,255,.76);
-
-  font-size:14px;
-
-  line-height:1.8;
+  .footer-logo img{
+    margin-left:auto;
+    margin-right:auto;
+    width:220px;
+  }
 }
 
     @media(max-width:1000px){
