@@ -36,11 +36,32 @@
         img{max-width:100%;}
 
         nav{
-            display:flex;justify-content:space-between;align-items:center;
-            padding:10px 60px;position:sticky;top:0;z-index:120;
-            background:rgba(255,255,255,.62);border-bottom:1px solid rgba(0,51,102,.06);
-            backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
-        }
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:12px 60px;
+
+    position:sticky;
+    top:0;
+
+    z-index:120;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(255,255,255,.88) 0%,
+        rgba(248,251,255,.84) 55%,
+        rgba(255,255,255,.88) 100%
+      );
+
+    border-bottom:1px solid rgba(0,51,102,.06);
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    transition:all .28s ease;
+}
         .logo-aniec{height:82px;width:auto;max-width:320px;object-fit:contain;margin-top:4px;}
         .desktop-menu{display:flex;gap:44px;align-items:center;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--blue-aniec);}
         .desktop-menu a:hover{color:var(--green-aniec);}
