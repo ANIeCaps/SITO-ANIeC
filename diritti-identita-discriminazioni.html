@@ -525,6 +525,101 @@
       .intro-title,.intro-text,.method-panel,.contact-box{padding:24px 20px;border-radius:24px}
       .step{grid-template-columns:1fr}
     }
+    /* =========================
+   PATCH COERENZA VISIVA ANIeC
+========================= */
+
+:root{
+  --aniec-blu-master:#062f60;
+  --aniec-verde-master:#00784a;
+  --aniec-avorio-master:#fff8f1;
+  --aniec-radius-master:24px;
+  --aniec-shadow-master:0 18px 46px rgba(6,47,96,.12);
+  --aniec-line-master:1px solid rgba(6,47,96,.10);
+}
+
+/* ritmo generale sezioni */
+section{
+  scroll-margin-top:110px;
+}
+
+/* titoli sezione più coerenti */
+.section-title,
+.intro-title,
+.card-title{
+  color:var(--aniec-blu-master);
+  letter-spacing:-.02em;
+}
+
+/* card coerenti tra le pagine */
+.card,
+.service-card,
+.process-card,
+.about-card,
+.footer-card,
+.territory-card,
+.protected-card,
+.center-card,
+.em-card,
+.hero-panel{
+  border-radius:var(--aniec-radius-master);
+  box-shadow:var(--aniec-shadow-master);
+  border:var(--aniec-line-master);
+}
+
+/* bottoni coerenti */
+.btn,
+.btn-primary,
+.btn-secondary,
+.nav-cta,
+.private,
+.cta-main,
+.blue-btn,
+.light-btn,
+.outline-btn,
+.protected-btn,
+.submit-btn{
+  border-radius:999px;
+  transition:all .25s ease;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.nav-cta:hover,
+.private:hover,
+.cta-main:hover,
+.blue-btn:hover,
+.light-btn:hover,
+.outline-btn:hover,
+.protected-btn:hover,
+.submit-btn:hover{
+  transform:translateY(-2px);
+}
+
+/* immagini e visual più morbidi */
+img{
+  max-width:100%;
+}
+
+/* mobile più ordinato */
+@media (max-width:768px){
+  .hero,
+  .hero-section{
+    min-height:auto;
+  }
+
+  .card,
+  .service-card,
+  .process-card,
+  .about-card,
+  .territory-card,
+  .protected-card,
+  .center-card,
+  .em-card{
+    border-radius:20px;
+  }
+}
   </style>
 </head>
 
