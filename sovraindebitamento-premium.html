@@ -250,10 +250,15 @@ nav{
 .law-card{
     position:relative;
     overflow:hidden;
+    display:flex;
+flex-direction:column;
+justify-content:space-between;
 }
 
 .law-card h3{
-    min-height:58px;
+    min-height:72px;
+    display:flex;
+    align-items:flex-start;
 }
 
 .law-detail{
@@ -281,16 +286,17 @@ nav{
 
 .law-detail summary::after{
     content:"+";
-    width:22px;
-    height:22px;
+    width:20px;
+    height:20px;
     border-radius:999px;
     display:inline-flex;
     align-items:center;
     justify-content:center;
     background:#edf4fc;
     color:var(--green-aniec);
-    font-size:16px;
+    font-size:14px;
     line-height:1;
+    font-weight:900;
 }
 
 .law-detail[open] summary::after{
@@ -299,9 +305,15 @@ nav{
 
 .law-detail p{
     margin-top:14px;
-    font-size:14.5px;
-    line-height:1.75;
+    font-size:14px;
+    line-height:1.72;
     color:rgba(0,51,102,.70);
+}
+
+.law-detail{
+    margin-top:16px;
+    border-top:1px solid #e6eef8;
+    padding-top:14px;
 }
 
 .law-note{
