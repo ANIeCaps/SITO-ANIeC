@@ -840,140 +840,137 @@ justify-content:space-between;
 
     <div class="card-premium law-card">
         <span class="number">A</span>
-
         <h3>Ristrutturazione dei debiti del consumatore</h3>
-
         <p>
             Procedura orientata alle persone fisiche che hanno contratto debiti per esigenze personali o familiari non collegate ad attività imprenditoriali.
         </p>
+        <button class="law-open" type="button" onclick="openLawModal('modal-consumatore')">
+            Approfondisci
+        </button>
     </div>
 
     <div class="card-premium law-card">
         <span class="number">B</span>
-
         <h3>Concordato minore</h3>
-
         <p>
             Strumento che può riguardare piccoli imprenditori, professionisti, autonomi e altri soggetti ammessi dalla disciplina.
         </p>
+        <button class="law-open" type="button" onclick="openLawModal('modal-concordato')">
+            Approfondisci
+        </button>
     </div>
 
     <div class="card-premium law-card">
         <span class="number">C</span>
-
         <h3>Liquidazione controllata</h3>
-
         <p>
             Procedura applicabile quando la gestione della crisi richiede un percorso liquidatorio disciplinato dalla normativa vigente.
         </p>
+        <button class="law-open" type="button" onclick="openLawModal('modal-liquidazione')">
+            Approfondisci
+        </button>
     </div>
 
 </div>
 
-<div class="law-panel-grid">
+<div class="grid-2 law-extra-grid">
 
-    <details class="law-panel">
-        <summary>
-            Approfondimento sulla ristrutturazione dei debiti del consumatore
-        </summary>
+    <div class="card-premium law-card">
+        <span class="eyebrow">Ulteriori strumenti</span>
+        <h3>Procedura familiare o congiunta</h3>
+        <p>
+            In specifiche situazioni, la normativa consente la gestione coordinata di posizioni debitorie che coinvolgono più soggetti collegati tra loro.
+        </p>
+        <button class="law-open" type="button" onclick="openLawModal('modal-familiare')">
+            Approfondisci
+        </button>
+    </div>
 
-        <div>
-            <p>
-                In presenza dei requisiti previsti dalla normativa, questa procedura può consentire la riorganizzazione sostenibile dei debiti attraverso un piano valutato dai soggetti competenti e sottoposto all’autorità giudiziaria.
-            </p>
-
-            <p>
-                In determinate condizioni possono inoltre essere previste misure di protezione del debitore e, al termine del percorso, effetti esdebitatori secondo quanto stabilito dalla legge.
-            </p>
-        </div>
-    </details>
-
-    <details class="law-panel">
-        <summary>
-            Approfondimento sul concordato minore
-        </summary>
-
-        <div>
-            <p>
-                La procedura può consentire la riorganizzazione della posizione debitoria attraverso un percorso strutturato che coinvolge creditori, sostenibilità della proposta e valutazioni tecniche specialistiche.
-            </p>
-
-            <p>
-                La normativa consente inoltre, in presenza di specifiche condizioni, anche la gestione di situazioni connesse a più soggetti economicamente collegati.
-            </p>
-        </div>
-    </details>
-
-    <details class="law-panel">
-        <summary>
-            Approfondimento sulla liquidazione controllata
-        </summary>
-
-        <div>
-            <p>
-                Non si tratta di una cancellazione automatica dei debiti, ma di una procedura regolamentata che richiede verifica dei requisiti, ricostruzione patrimoniale e intervento dei soggetti competenti.
-            </p>
-
-            <p>
-                In presenza delle condizioni previste, il percorso può condurre all’esdebitazione finale del debitore.
-            </p>
-        </div>
-    </details>
+    <div class="card-premium law-card">
+        <span class="eyebrow">Esdebitazione</span>
+        <h3>Debitore incapiente</h3>
+        <p>
+            La normativa contempla specifiche forme di tutela anche per chi non dispone di redditi o beni concretamente utilizzabili.
+        </p>
+        <button class="law-open" type="button" onclick="openLawModal('modal-incapiente')">
+            Approfondisci
+        </button>
+    </div>
 
 </div>
-        <div class="expand-grid">
 
-    <details class="expand-card">
-        <summary>
-            <span>Ulteriori strumenti previsti dalla normativa</span>
-        </summary>
+<div id="modal-consumatore" class="law-modal">
+    <div class="law-modal-content">
+        <button class="law-close" onclick="closeLawModal('modal-consumatore')">×</button>
+        <h2>Ristrutturazione dei debiti del consumatore</h2>
+        <p>
+            In presenza dei requisiti previsti dalla normativa, questa procedura può consentire la riorganizzazione sostenibile dei debiti attraverso un piano valutato dai soggetti competenti e sottoposto all’autorità giudiziaria.
+        </p>
+        <p>
+            In determinate condizioni possono inoltre essere previste misure di protezione del debitore e, al termine del percorso, effetti esdebitatori secondo quanto stabilito dalla legge.
+        </p>
+    </div>
+</div>
 
-        <div class="expand-content">
+<div id="modal-concordato" class="law-modal">
+    <div class="law-modal-content">
+        <button class="law-close" onclick="closeLawModal('modal-concordato')">×</button>
+        <h2>Concordato minore</h2>
+        <p>
+            La procedura può consentire la riorganizzazione della posizione debitoria attraverso un percorso strutturato che coinvolge creditori, sostenibilità della proposta e valutazioni tecniche specialistiche.
+        </p>
+        <p>
+            La normativa consente inoltre, in presenza di specifiche condizioni, anche la gestione di situazioni connesse a più soggetti economicamente collegati.
+        </p>
+    </div>
+</div>
 
-            <h3>Procedura familiare o congiunta</h3>
+<div id="modal-liquidazione" class="law-modal">
+    <div class="law-modal-content">
+        <button class="law-close" onclick="closeLawModal('modal-liquidazione')">×</button>
+        <h2>Liquidazione controllata</h2>
+        <p>
+            Non si tratta di una cancellazione automatica dei debiti, ma di una procedura regolamentata che richiede verifica dei requisiti, ricostruzione patrimoniale e intervento dei soggetti competenti.
+        </p>
+        <p>
+            In presenza delle condizioni previste, il percorso può condurre all’esdebitazione finale del debitore.
+        </p>
+    </div>
+</div>
 
-            <p>
-                La normativa consente, in specifiche situazioni, la gestione coordinata di posizioni debitorie che coinvolgono più soggetti collegati tra loro.
-            </p>
+<div id="modal-familiare" class="law-modal">
+    <div class="law-modal-content">
+        <button class="law-close" onclick="closeLawModal('modal-familiare')">×</button>
+        <h2>Procedura familiare o congiunta</h2>
+        <p>
+            La normativa consente, in specifiche situazioni, la gestione coordinata di posizioni debitorie che coinvolgono più soggetti collegati tra loro.
+        </p>
+        <ul>
+            <li>Componenti dello stesso nucleo familiare;</li>
+            <li>soci o garanti collegati alla stessa attività;</li>
+            <li>soggetti legati da fideiussioni o obbligazioni connesse.</li>
+        </ul>
+        <p>
+            La concreta applicabilità della procedura richiede sempre una valutazione tecnica da parte dei soggetti abilitati.
+        </p>
+    </div>
+</div>
 
-            <ul>
-                <li>Componenti dello stesso nucleo familiare;</li>
-                <li>Soci o garanti collegati alla stessa attività;</li>
-                <li>Soggetti legati da fideiussioni o obbligazioni connesse.</li>
-            </ul>
-
-            <p>
-                La concreta applicabilità della procedura richiede sempre una valutazione tecnica da parte dei soggetti abilitati.
-            </p>
-
+<div id="modal-incapiente" class="law-modal">
+    <div class="law-modal-content">
+        <button class="law-close" onclick="closeLawModal('modal-incapiente')">×</button>
+        <h2>Debitore incapiente ed esdebitazione</h2>
+        <p>
+            La normativa contempla specifiche forme di tutela anche per chi si trova in condizioni di incapienza, cioè senza redditi o beni concretamente utilizzabili per il soddisfacimento dei debiti.
+        </p>
+        <p>
+            In presenza dei requisiti previsti dalla legge e a seguito delle valutazioni dei soggetti competenti, possono essere previsti percorsi finalizzati all’esdebitazione.
+        </p>
+        <div class="mini-note">
+            <strong>Esdebitazione:</strong>
+            indica, nei casi previsti dalla normativa, la liberazione dai debiti residui non soddisfatti al termine del percorso disciplinato dalla legge.
         </div>
-    </details>
-
-    <details class="expand-card">
-        <summary>
-            <span>Debitore incapiente ed esdebitazione</span>
-        </summary>
-
-        <div class="expand-content">
-
-            <h3>Tutele previste per chi non dispone di risorse.</h3>
-
-            <p>
-                La normativa contempla specifiche forme di tutela anche per chi si trova in condizioni di incapienza, cioè senza redditi o beni concretamente utilizzabili per il soddisfacimento dei debiti.
-            </p>
-
-            <p>
-                In presenza dei requisiti previsti dalla legge e a seguito delle valutazioni dei soggetti competenti, possono essere previsti percorsi finalizzati all’esdebitazione.
-            </p>
-
-            <div class="mini-note">
-                <strong>Esdebitazione:</strong>
-                indica, nei casi previsti dalla normativa, la liberazione dai debiti residui non soddisfatti al termine del percorso disciplinato dalla legge.
-            </div>
-
-        </div>
-    </details>
-
+    </div>
 </div>
 
         <div class="law-note">
