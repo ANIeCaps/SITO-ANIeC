@@ -74,7 +74,7 @@ nav{
 
         .premium-hero{position:relative;overflow:hidden;min-height:720px;background-image:linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.90) 45%,rgba(255,255,255,.35) 100%),url('sfondo-pulito.png');background-size:cover;background-position:center -70px;background-repeat:no-repeat;}
         .premium-hero::after{content:"";position:absolute;inset:auto -10% -110px -10%;height:240px;background:linear-gradient(180deg,rgba(255,255,255,0),#edf4fc 78%);pointer-events:none;}
-        .hero-wrap{position:relative;z-index:2;max-width:1220px;margin:0 auto;padding:56px 60px 80px;display:grid;grid-template-columns:1.02fr .78fr;gap:48px;align-items:center;}
+        .hero-wrap{position:relative;z-index:2;max-width:1220px;margin:0 auto;padding:56px 60px 80px;display:grid;grid-template-columns:.95fr .95fr;gap:48px;align-items:center;}
         .eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;font-size:11px;font-weight:900;letter-spacing:.22em;text-transform:uppercase;color:var(--green-aniec);}
         .eyebrow::before{content:"";width:34px;height:2px;background:var(--green-aniec);border-radius:999px;}
         .hero-title{font-size:clamp(2.35rem,4.6vw,4.55rem);line-height:1.02;font-weight:900;letter-spacing:-.045em;color:var(--blue-aniec);margin-bottom:24px;}
@@ -87,8 +87,16 @@ nav{
         .btn-secondary{background:#fff;border:1px solid #dfe8f3;color:var(--blue-aniec);}
         .btn-secondary:hover,.btn-light:hover{background:#f3f8ff;transform:translateY(-2px);}
         .hero-note{max-width:690px;padding:18px 22px;border-left:4px solid var(--gold-aniec);background:rgba(255,255,255,.72);border-radius:18px;box-shadow:0 10px 26px rgba(0,51,102,.06);font-size:14px;line-height:1.65;color:rgba(0,51,102,.72);}
-        .hero-panel{background:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.76);border-radius:32px;box-shadow:0 26px 70px rgba(0,51,102,.11);padding:30px;backdrop-filter:blur(10px);}
-        .service-logo{background:#fff;border:1px solid rgba(0,51,102,.08);border-radius:24px;padding:22px;box-shadow:0 16px 38px rgba(0,51,102,.08);margin-bottom:22px;}
+        .hero-panel{
+    background:rgba(255,255,255,.82);
+    border:1px solid rgba(255,255,255,.76);
+    border-radius:32px;
+    box-shadow:0 26px 70px rgba(0,51,102,.11);
+    padding:30px;
+    max-width:460px;
+    backdrop-filter:blur(10px);
+}
+    .service-logo{background:#fff;border:1px solid rgba(0,51,102,.08);border-radius:24px;padding:22px;box-shadow:0 16px 38px rgba(0,51,102,.08);margin-bottom:22px;}
         .panel-grid{display:grid;gap:14px;}
         .panel-item{padding:18px;border-radius:20px;background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);border:1px solid #e6eef8;}
         .panel-item strong{display:block;font-size:17px;color:var(--blue-aniec);margin-bottom:7px;}
