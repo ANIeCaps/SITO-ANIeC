@@ -175,14 +175,33 @@ nav{
         .scope-list div{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:17px 18px;}
         .scope-list strong{display:block;color:#fff;margin-bottom:4px;}
         .docs-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
-        .doc-chip{background:white;border:1px solid #dfe8f3;border-radius:18px;padding:16px 18px;font-weight:800;color:var(--blue-aniec);font-size:14px;box-shadow:0 10px 24px rgba(0,51,102,.045);}
+        .doc-chip{
+    background:rgba(255,255,255,.90);
+    border:1px solid #dfe8f3;
+    border-radius:20px;
+    padding:18px 22px;
+    font-weight:900;
+    color:var(--green-aniec);
+    font-size:13px;
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing:.045em;
+    box-shadow:0 10px 24px rgba(0,51,102,.045);
+    transition:.25s ease;
+}
+
+.doc-chip:hover{
+    transform:translateY(-3px);
+    box-shadow:0 16px 34px rgba(0,51,102,.08);
+    border-color:#cfdceb;
+}
         .warning-box{border-radius:28px;border:1px solid rgba(180,107,0,.25);background:linear-gradient(180deg,#fff 0%,#fff8f1 100%);padding:30px;box-shadow:0 14px 36px rgba(180,107,0,.07);}
         .warning-box h3{font-size:23px;font-weight:900;color:var(--blue-aniec);margin-bottom:12px;}
         .warning-box p{color:rgba(0,51,102,.72);font-size:16px;}
         .audience{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
         .audience span{padding:13px 20px;background:#fff;border:1px solid #dfe8f3;border-radius:999px;font-size:14px;font-weight:800;color:var(--blue-aniec);box-shadow:0 8px 18px rgba(0,51,102,.04);}
         .final-cta{background:linear-gradient(135deg,#f8fbff 0%,#ffffff 52%,#fff8f1 100%);border:1px solid #e6eef8;border-radius:34px;padding:44px;text-align:center;box-shadow:0 22px 55px rgba(0,51,102,.09);}
-        .final-cta h2{font-size:clamp(2rem,3.2vw,3.2rem);line-height:1.15;font-weight:900;letter-spacing:-.035em;margin-bottom:18px;color:var(--blue-aniec);}
+        .final-cta h2{font-size:clamp(1.9rem,3vw,2.8rem);line-height:1.15;font-weight:900;letter-spacing:-.035em;margin-bottom:18px;color:var(--blue-aniec);}
         .final-cta p{max-width:760px;margin:0 auto 28px;color:rgba(0,51,102,.72);font-size:17px;}
         .trust-band{
     position:relative;
