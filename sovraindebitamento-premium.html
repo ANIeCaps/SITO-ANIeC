@@ -176,6 +176,47 @@ nav{
         .final-cta{background:linear-gradient(135deg,#f8fbff 0%,#ffffff 52%,#fff8f1 100%);border:1px solid #e6eef8;border-radius:34px;padding:44px;text-align:center;box-shadow:0 22px 55px rgba(0,51,102,.09);}
         .final-cta h2{font-size:clamp(2rem,3.2vw,3.2rem);line-height:1.15;font-weight:900;letter-spacing:-.035em;margin-bottom:18px;color:var(--blue-aniec);}
         .final-cta p{max-width:760px;margin:0 auto 28px;color:rgba(0,51,102,.72);font-size:17px;}
+        .trust-band{
+    position:relative;
+    margin-top:-36px;
+    z-index:5;
+    padding:0 60px;
+}
+
+.trust-wrap{
+    max-width:1180px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    background:rgba(255,255,255,.82);
+    border:1px solid rgba(255,255,255,.72);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-radius:28px;
+    padding:24px;
+    box-shadow:0 22px 55px rgba(0,51,102,.10);
+}
+
+.trust-item{
+    padding:10px 14px;
+}
+
+.trust-item strong{
+    display:block;
+    font-size:15px;
+    line-height:1.4;
+    color:var(--blue-aniec);
+    margin-bottom:8px;
+    font-weight:900;
+}
+
+.trust-item span{
+    display:block;
+    font-size:13px;
+    line-height:1.7;
+    color:rgba(0,51,102,.68);
+}
 
         .site-footer{position:relative;padding:28px 60px 0;background:#ffffff;overflow:hidden;border-top:1px solid #eef2f8;}
         .site-footer::before{content:"";position:absolute;left:0;right:0;bottom:34px;height:155px;background-image:url('footer-clean.png');background-size:cover;background-position:center bottom;background-repeat:no-repeat;opacity:.92;z-index:0;}
