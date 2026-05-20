@@ -220,7 +220,78 @@ nav{
     color:rgba(0,51,102,.68);
     text-align:center;
 }
+.law-card{
+    position:relative;
+    overflow:hidden;
+}
 
+.law-card h3{
+    min-height:58px;
+}
+
+.law-detail{
+    margin-top:18px;
+    border-top:1px solid #e6eef8;
+    padding-top:16px;
+}
+
+.law-detail summary{
+    cursor:pointer;
+    list-style:none;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--green-aniec);
+    font-size:12px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+}
+
+.law-detail summary::-webkit-details-marker{
+    display:none;
+}
+
+.law-detail summary::after{
+    content:"+";
+    width:22px;
+    height:22px;
+    border-radius:999px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:#edf4fc;
+    color:var(--green-aniec);
+    font-size:16px;
+    line-height:1;
+}
+
+.law-detail[open] summary::after{
+    content:"–";
+}
+
+.law-detail p{
+    margin-top:14px;
+    font-size:14.5px;
+    line-height:1.75;
+    color:rgba(0,51,102,.70);
+}
+
+.law-note{
+    margin-top:28px;
+    padding:22px 26px;
+    border-radius:22px;
+    background:rgba(255,255,255,.82);
+    border:1px solid #e6eef8;
+    box-shadow:0 14px 34px rgba(0,51,102,.06);
+    font-size:15px;
+    line-height:1.75;
+    color:rgba(0,51,102,.72);
+}
+
+.law-note strong{
+    color:var(--blue-aniec);
+}
         .site-footer{position:relative;padding:28px 60px 0;background:#ffffff;overflow:hidden;border-top:1px solid #eef2f8;}
         .site-footer::before{content:"";position:absolute;left:0;right:0;bottom:34px;height:155px;background-image:url('footer-clean.png');background-size:cover;background-position:center bottom;background-repeat:no-repeat;opacity:.92;z-index:0;}
         .footer-card{position:relative;z-index:1;max-width:1180px;margin:0 auto 28px;padding:32px 52px;min-height:170px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px;background:linear-gradient(180deg,rgba(255,255,255,.48) 0%,rgba(255,255,255,.28) 100%);border:1px solid rgba(255,255,255,.58);border-radius:28px;box-shadow:0 22px 55px rgba(0,51,102,.08);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}
