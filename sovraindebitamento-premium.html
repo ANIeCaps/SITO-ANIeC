@@ -315,6 +315,65 @@ justify-content:space-between;
     border-top:1px solid #e6eef8;
     padding-top:14px;
 }
+ .law-panel-grid{
+    display:grid;
+    gap:16px;
+    margin-top:30px;
+}
+
+.law-panel{
+    background:rgba(255,255,255,.82);
+    border:1px solid #e6eef8;
+    border-radius:24px;
+    box-shadow:0 16px 38px rgba(0,51,102,.06);
+    overflow:hidden;
+}
+
+.law-panel summary{
+    list-style:none;
+    cursor:pointer;
+    padding:22px 26px;
+    font-size:15px;
+    font-weight:900;
+    color:var(--blue-aniec);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+}
+
+.law-panel summary::-webkit-details-marker{
+    display:none;
+}
+
+.law-panel summary::after{
+    content:"+";
+    width:30px;
+    height:30px;
+    border-radius:999px;
+    background:#edf4fc;
+    color:var(--green-aniec);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    font-size:20px;
+}
+
+.law-panel[open] summary::after{
+    content:"–";
+}
+
+.law-panel div{
+    padding:0 26px 24px;
+}
+
+.law-panel p{
+    font-size:15px;
+    line-height:1.8;
+    color:rgba(0,51,102,.72);
+    margin-top:12px;
+}       
 
 .law-note{
     margin-top:28px;
