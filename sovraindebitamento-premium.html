@@ -1139,6 +1139,21 @@ justify-content:space-between;
 <script>
 function toggleMobileMenu(){const menu=document.getElementById('mobileMenu');const button=document.querySelector('.mobile-menu-button');const isOpen=menu.classList.toggle('is-open');button.setAttribute('aria-expanded',isOpen?'true':'false');}
 function closeMobileMenu(){const menu=document.getElementById('mobileMenu');const button=document.querySelector('.mobile-menu-button');menu.classList.remove('is-open');button.setAttribute('aria-expanded','false');}
+function openLawModal(id){
+    const modal = document.getElementById(id);
+    if(modal){
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeLawModal(id){
+    const modal = document.getElementById(id);
+    if(modal){
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
+    }
+}
 </script>
 </body>
 </html>
