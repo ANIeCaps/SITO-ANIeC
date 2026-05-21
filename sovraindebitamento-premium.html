@@ -552,6 +552,40 @@ gap:28px;
     grid-template-columns:repeat(3,1fr);
     gap:16px;
 }
+.occ-province{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin:26px 0 34px;
+}
+
+.occ-province button{
+    border:1px solid #dfe8f3;
+    background:#fff;
+    color:var(--blue-aniec);
+    border-radius:999px;
+    padding:11px 18px;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.05em;
+    cursor:pointer;
+    transition:.22s ease;
+}
+
+.occ-province button:hover,
+.occ-province button.active{
+    background:var(--green-aniec);
+    color:#fff;
+    border-color:var(--green-aniec);
+}
+
+.occ-region-panel{
+    display:none;
+}
+
+.occ-region-panel.is-open{
+    display:block;
+}
 
 .occ-card{
     background:#fff;
