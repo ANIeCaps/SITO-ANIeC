@@ -194,6 +194,18 @@ nav{
     line-height:1.2;
     margin-bottom:10px;
 }
+        .method-card::before,
+.law-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:24px;
+    width:54px;
+    height:3px;
+    border-radius:999px;
+    background:linear-gradient(90deg,#006b3f,#53b987);
+    opacity:.85;
+}
         .method-card::after{content:"";position:absolute;right:-40px;bottom:-40px;width:120px;height:120px;border-radius:999px;background:rgba(0,107,63,.06);}
         .scope-box{background:linear-gradient(135deg,#003366 0%,#064a82 62%,#006b3f 100%);color:white;border-radius:34px;padding:38px;box-shadow:0 24px 62px rgba(0,51,102,.18);}
         .scope-box h2{font-size:clamp(2rem,3vw,3rem);line-height:1.12;font-weight:900;margin-bottom:18px;letter-spacing:-.035em;}
