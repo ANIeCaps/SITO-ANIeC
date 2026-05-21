@@ -278,6 +278,110 @@ nav{
     color:#42638f;
     margin-bottom:10px;
 }
+
+.law-extra-grid{
+    margin-top:20px;
+}
+
+.law-open{
+    margin-top:6px;
+    padding-top:8px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    align-self:flex-start;
+    border:0;
+    background:transparent;
+    color:var(--green-aniec);
+    font-size:11px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:.10em;
+    cursor:pointer;
+}
+
+.law-open::after{
+    content:"→";
+    margin-left:8px;
+}
+
+.law-modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:3000;
+    background:rgba(0,22,48,.58);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    padding:40px 20px;
+    overflow:auto;
+}
+
+.law-modal.is-open{
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+}
+
+.law-modal-content{
+    width:min(920px,100%);
+    background:#fffaf5;
+    border-radius:28px;
+    padding:42px;
+    box-shadow:0 30px 90px rgba(0,0,0,.25);
+    position:relative;
+    color:var(--blue-aniec);
+}
+
+.law-modal-content h2{
+    font-size:clamp(2rem,3vw,3rem);
+    line-height:1.15;
+    font-weight:900;
+    margin-bottom:24px;
+}
+
+.law-modal-content p,
+.law-modal-content li{
+    font-size:17px;
+    line-height:1.85;
+    color:rgba(0,51,102,.78);
+    margin-bottom:16px;
+}
+
+.law-modal-content ul{
+    margin:10px 0 22px 22px;
+}
+
+.law-close{
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:42px;
+    height:42px;
+    border-radius:999px;
+    border:0;
+    background:var(--green-aniec);
+    color:white;
+    font-size:24px;
+    font-weight:900;
+    cursor:pointer;
+}
+
+.law-note{
+    margin-top:24px;
+    padding:22px 26px;
+    border-radius:22px;
+    background:rgba(255,255,255,.82);
+    border:1px solid #e6eef8;
+    box-shadow:0 14px 34px rgba(0,51,102,.06);
+    font-size:15px;
+    line-height:1.75;
+    color:rgba(0,51,102,.72);
+}
+
+.law-note strong{
+    color:var(--blue-aniec);
+}
         
 .mini-note{
     margin-top:18px;
