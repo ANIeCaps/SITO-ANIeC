@@ -1204,165 +1204,211 @@ In presenza dei requisiti previsti dalla normativa, il Codice della Crisi d’Im
 <div id="modal-occ-lombardia" class="law-modal">
     <div class="law-modal-content">
         <button class="law-close" onclick="closeLawModal('modal-occ-lombardia')">×</button>
+
         <h2>Rete OCC Lombardia</h2>
 
         <p>
-            Sezione informativa dedicata agli Organismi di Composizione della Crisi presenti in Lombardia, da organizzare per provincia sulla base degli elenchi pubblici disponibili.
+            Sezione informativa dedicata agli Organismi di Composizione della Crisi presenti in Lombardia, organizzati per provincia sulla base degli elenchi pubblici disponibili.
         </p>
 
         <div class="occ-province">
-
-<button class="active" onclick="openOccRegion(event,'occ-milano')">Milano</button>
-
-<button onclick="openOccRegion(event,'occ-monza')">Monza Brianza</button>
-
-<button onclick="openOccRegion(event,'occ-bergamo')">Bergamo</button>
-
-<button onclick="openOccRegion(event,'occ-brescia')">Brescia</button>
-
-<button onclick="openOccRegion(event,'occ-como')">Como</button>
-
-<button onclick="openOccRegion(event,'occ-lecco')">Lecco</button>
-
-<button onclick="openOccRegion(event,'occ-varese')">Varese</button>
-
-<button onclick="openOccRegion(event,'occ-pavia')">Pavia</button>
-
-<button onclick="openOccRegion(event,'occ-cremona')">Cremona</button>
-
-<button onclick="openOccRegion(event,'occ-mantova')">Mantova</button>
-
-<button onclick="openOccRegion(event,'occ-lodi')">Lodi</button>
-
-<button onclick="openOccRegion(event,'occ-sondrio')">Sondrio</button>
-
-</div>
-<div id="occ-milano" class="occ-region-panel is-open">
-
-<div class="occ-card-grid">
-
-<div class="occ-card">
-<strong>Camera Arbitrale di Milano</strong>
-<span>Milano / Monza Brianza / Lodi</span>
-<span>Via Meravigli 7 - Milano</span>
-</div>
-
-<div class="occ-card">
-<strong>OCC ODCEC Milano</strong>
-<span>Via Pattari 6 - Milano</span>
-<span>Ordine Commercialisti Milano</span>
-</div>
-
-</div>
-</div>
-
-<div id="occ-monza" class="occ-region-panel">
-<div class="occ-card-grid">
-<div class="occ-card">
-<strong>OCC ODCEC Monza Brianza</strong>
-<span>Via Lario 15 - Monza</span>
-</div>
-</div>
-</div>
-
-<div id="occ-bergamo" class="occ-region-panel">
-<div class="occ-card-grid">
-<div class="occ-card">
-<strong>OCC Bergamo</strong>
-<span>Ordine Commercialisti Bergamo</span>
-</div>
-</div>
-</div>
-
-<div id="occ-brescia" class="occ-region-panel">
-<div class="occ-card-grid">
-<div class="occ-card">
-<strong>OCC Brescia</strong>
-<span>Ordine Commercialisti Brescia</span>
-</div>
-</div>
-</div>
-
-<div id="occ-como" class="occ-region-panel">
-<div class="occ-card-grid">
-<div class="occ-card">
-<strong>OCC Como</strong>
-<span>Ordine Commercialisti Como</span>
-</div>
-</div>
-</div>
-
-<div id="occ-lecco" class="occ-region-panel">
-<div class="occ-card-grid">
-<div class="occ-card">
-<strong>OCC Lecco</strong>
-<span>Ordine Commercialisti Lecco</span>
-</div>
-</div>
-</div>
-
-<div id="occ-varese" class="occ-region-panel">
-<div class="occ-card-grid">
-<div class="occ-card">
-<strong>OCC Varese</strong>
-<span>Ordine Commercialisti Varese</span>
-</div>
-</div>
-</div>
-
-<div id="occ-pavia" class="occ-region-panel">
-<div class="occ-card-grid">
-<div class="occ-card">
-<strong>OCC Pavia</strong>
-<span>Ordine Commercialisti Pavia</span>
-</div>
-</div>
-</div>
-
-<div id="occ-cremona" class="occ-region-panel">
-<div class="occ-card-grid">
-<div class="occ-card">
-<strong>OCC Cremona</strong>
-<span>Ordine Avvocati Cremona</span>
-</div>
-</div>
-</div>
-
-<div id="occ-mantova" class="occ-region-panel">
-<div class="occ-card-grid">
-<div class="occ-card">
-<strong>OCC Mantova</strong>
-<span>Ordine Commercialisti Mantova</span>
-</div>
-</div>
-</div>
-
-<div id="occ-lodi" class="occ-region-panel">
-<div class="occ-card-grid">
-<div class="occ-card">
-<strong>Riferimenti territoriali Lodi</strong>
-<span>Consultazione in aggiornamento</span>
-</div>
-</div>
-</div>
-
-<div id="occ-sondrio" class="occ-region-panel">
-<div class="occ-card-grid">
-<div class="occ-card">
-<strong>Riferimenti territoriali Sondrio</strong>
-<span>Consultazione in aggiornamento</span>
-</div>
-</div>
-</div>
+            <button class="active" onclick="openOccRegion(event,'occ-milano')">Milano</button>
+            <button onclick="openOccRegion(event,'occ-monza')">Monza Brianza</button>
+            <button onclick="openOccRegion(event,'occ-bergamo')">Bergamo</button>
+            <button onclick="openOccRegion(event,'occ-brescia')">Brescia</button>
+            <button onclick="openOccRegion(event,'occ-como')">Como</button>
+            <button onclick="openOccRegion(event,'occ-lecco')">Lecco</button>
+            <button onclick="openOccRegion(event,'occ-varese')">Varese</button>
+            <button onclick="openOccRegion(event,'occ-pavia')">Pavia</button>
+            <button onclick="openOccRegion(event,'occ-cremona')">Cremona</button>
+            <button onclick="openOccRegion(event,'occ-mantova')">Mantova</button>
+            <button onclick="openOccRegion(event,'occ-lodi')">Lodi</button>
+            <button onclick="openOccRegion(event,'occ-sondrio')">Sondrio</button>
         </div>
 
-       <div class="mini-note">
-    <strong>Nota informativa:</strong>
-    elenco orientativo basato su fonti pubbliche. Le informazioni possono essere soggette ad aggiornamenti o variazioni da parte degli enti competenti e devono essere verificate sulle fonti ufficiali prima dell’utilizzo.
-</div>
+        <div id="occ-milano" class="occ-region-panel is-open">
+            <div class="occ-card-grid">
+                <div class="occ-card">
+                    <strong>OCC delle Camere di Commercio</strong>
+                    <span>Milano / Monza Brianza / Lodi / Pavia / Sondrio / Varese / Como-Lecco / Cremona</span>
+                    <span>Via Meravigli, 7 - Milano</span>
+                    <span>PEC: camera.arbitrale@legalmail.it</span>
+                </div>
+
+                <div class="occ-card">
+                    <strong>OCC ODCEC Milano</strong>
+                    <span>Via Pattari, 6 - Milano</span>
+                    <span>PEC: occ@pec.odcec.mi.it</span>
+                </div>
+
+                <div class="occ-card">
+                    <strong>OCC Ordine Avvocati Milano</strong>
+                    <span>Organismo iscritto nel registro ministeriale</span>
+                    <span>Ordine degli Avvocati di Milano</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="occ-monza" class="occ-region-panel">
+            <div class="occ-card-grid">
+                <div class="occ-card">
+                    <strong>OCC ODCEC Monza e Brianza</strong>
+                    <span>Via Lario, 15 - Monza</span>
+                    <span>PEC: ordine@odcec.mb.legalmail.it</span>
+                </div>
+
+                <div class="occ-card">
+                    <strong>OCC delle Camere di Commercio</strong>
+                    <span>Ambito Monza Brianza</span>
+                    <span>Riferimento operativo presso Camera Arbitrale di Milano</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="occ-bergamo" class="occ-region-panel">
+            <div class="occ-card-grid">
+                <div class="occ-card">
+                    <strong>OCC ODCEC Bergamo</strong>
+                    <span>Via Rotonda dei Mille, 1 - Bergamo</span>
+                    <span>PEC: pec.segreteria@odcecbergamo.legalmail.it</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="occ-brescia" class="occ-region-panel">
+            <div class="occ-card-grid">
+                <div class="occ-card">
+                    <strong>OCC Commercialisti Brescia</strong>
+                    <span>Via Marsala, 17 - Brescia</span>
+                    <span>PEC: occ@odcecbrescia.it</span>
+                </div>
+
+                <div class="occ-card">
+                    <strong>OCC Ordine Avvocati Brescia</strong>
+                    <span>Via S. Martino della Battaglia, 18 - Brescia</span>
+                    <span>Ordine degli Avvocati di Brescia</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="occ-como" class="occ-region-panel">
+            <div class="occ-card-grid">
+                <div class="occ-card">
+                    <strong>OCC ODCEC Como</strong>
+                    <span>Via Volta, 3 - Como</span>
+                    <span>PEC: odcec.como@legalmail.it</span>
+                </div>
+
+                <div class="occ-card">
+                    <strong>OCC Camere di Commercio Como-Lecco</strong>
+                    <span>Riferimento territoriale camerale</span>
+                    <span>Gestione tramite circuito camerale</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="occ-lecco" class="occ-region-panel">
+            <div class="occ-card-grid">
+                <div class="occ-card">
+                    <strong>OCC Commercialisti Lecco</strong>
+                    <span>Via Parini, 29 - Lecco</span>
+                    <span>Sito: odcec.lecco.it</span>
+                </div>
+
+                <div class="occ-card">
+                    <strong>OCC Camere di Commercio Como-Lecco</strong>
+                    <span>Riferimento territoriale camerale</span>
+                    <span>Gestione tramite circuito camerale</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="occ-varese" class="occ-region-panel">
+            <div class="occ-card-grid">
+                <div class="occ-card">
+                    <strong>OCC Busto Arsizio</strong>
+                    <span>Via Libia, 2 - Busto Arsizio</span>
+                    <span>PEC: ordine.bustoarsizio@pec.commercialisti.it</span>
+                </div>
+
+                <div class="occ-card">
+                    <strong>OCC delle Camere di Commercio</strong>
+                    <span>Ambito Varese</span>
+                    <span>Riferimento operativo presso Camera Arbitrale di Milano</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="occ-pavia" class="occ-region-panel">
+            <div class="occ-card-grid">
+                <div class="occ-card">
+                    <strong>OCC Commercialisti Pavia</strong>
+                    <span>Strada Nuova, 86 - Pavia</span>
+                    <span>PEC: ordinecommercialisti.pavia@pec.it</span>
+                </div>
+
+                <div class="occ-card">
+                    <strong>OCC delle Camere di Commercio</strong>
+                    <span>Ambito Pavia</span>
+                    <span>Riferimento operativo presso Camera Arbitrale di Milano</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="occ-cremona" class="occ-region-panel">
+            <div class="occ-card-grid">
+                <div class="occ-card">
+                    <strong>OCC Ordine Avvocati Cremona</strong>
+                    <span>Via Tribunali, 13 - Cremona</span>
+                    <span>PEC: sovraindebitamento.cr@pec.it</span>
+                </div>
+
+                <div class="occ-card">
+                    <strong>OCC delle Camere di Commercio</strong>
+                    <span>Ambito Cremona</span>
+                    <span>Riferimento operativo presso Camera Arbitrale di Milano</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="occ-mantova" class="occ-region-panel">
+            <div class="occ-card-grid">
+                <div class="occ-card">
+                    <strong>OCC Commercialisti Mantova</strong>
+                    <span>Via Ilaria Alpi, 4 - Mantova</span>
+                    <span>PEC: ordine.mantova@pec.commercialisti.it</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="occ-lodi" class="occ-region-panel">
+            <div class="occ-card-grid">
+                <div class="occ-card">
+                    <strong>OCC delle Camere di Commercio</strong>
+                    <span>Ambito Lodi</span>
+                    <span>Riferimento operativo presso Camera Arbitrale di Milano</span>
+                    <span>PEC: camera.arbitrale@legalmail.it</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="occ-sondrio" class="occ-region-panel">
+            <div class="occ-card-grid">
+                <div class="occ-card">
+                    <strong>OCC delle Camere di Commercio</strong>
+                    <span>Ambito Sondrio</span>
+                    <span>Riferimento operativo presso Camera Arbitrale di Milano</span>
+                    <span>PEC: camera.arbitrale@legalmail.it</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mini-note">
+            <strong>Nota informativa:</strong>
+            i riferimenti presenti derivano da fonti pubbliche e hanno finalità esclusivamente orientative. Gli organismi competenti e i relativi dati possono essere soggetti ad aggiornamenti, variazioni territoriali o modifiche organizzative da parte degli enti preposti.
+        </div>
     </div>
 </div>
-
 <div id="modal-occ-regioni" class="law-modal">
     <div class="law-modal-content">
         <button class="law-close" onclick="closeLawModal('modal-occ-regioni')">×</button>
