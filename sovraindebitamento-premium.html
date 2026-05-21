@@ -140,7 +140,13 @@ nav{
     line-height:1.72;
 }
 
-        .section-soft{background:linear-gradient(180deg,#edf4fc 0%,#f8fbff 100%);}
+        .section-soft{
+    background:
+    radial-gradient(circle at top right,
+    rgba(0,107,63,.035),
+    transparent 26%),
+    linear-gradient(180deg,#edf4fc 0%,#f8fbff 100%);
+}
         .section-white{background:rgba(255,255,255,.90);}
         .container{max-width:1180px;margin:0 auto;padding:0 60px;}
         .section-pad{padding:52px 0;}
@@ -173,6 +179,11 @@ nav{
     overflow:hidden;
     min-height:auto;
     padding:22px 22px 18px;
+}
+    .method-card h3{
+    font-size:1.08rem;
+    line-height:1.2;
+    margin-bottom:10px;
 }
         .method-card::after{content:"";position:absolute;right:-40px;bottom:-40px;width:120px;height:120px;border-radius:999px;background:rgba(0,107,63,.06);}
         .scope-box{background:linear-gradient(135deg,#003366 0%,#064a82 62%,#006b3f 100%);color:white;border-radius:34px;padding:38px;box-shadow:0 24px 62px rgba(0,51,102,.18);}
