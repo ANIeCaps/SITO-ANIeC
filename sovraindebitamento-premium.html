@@ -1262,6 +1262,19 @@ function closeLawModal(id){
         document.body.style.overflow = '';
     }
 }
+function toggleOccPanel(id){
+    const panels = document.querySelectorAll('.occ-panel');
+    panels.forEach(panel => {
+        if(panel.id !== id){
+            panel.classList.remove('is-open');
+        }
+    });
+
+    const panel = document.getElementById(id);
+    if(panel){
+        panel.classList.toggle('is-open');
+    }
+}
 </script>
 </body>
 </html>
