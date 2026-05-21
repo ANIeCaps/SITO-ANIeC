@@ -468,6 +468,120 @@ transition:.2s ease;
     font-weight:800;
     opacity:1;
 }
+
+.occ-network{
+    background:rgba(255,255,255,.92);
+    border:1px solid rgba(214,225,238,.78);
+    border-radius:30px;
+    padding:34px;
+    box-shadow:0 18px 42px rgba(0,51,102,.06);
+}
+
+.occ-network-grid{
+    display:grid;
+    grid-template-columns:330px 1fr;
+    gap:34px;
+    align-items:center;
+}
+
+.occ-network-img{
+    background:linear-gradient(180deg,#ffffff 0%,#f4f9ff 100%);
+    border:1px solid rgba(214,225,238,.78);
+    border-radius:24px;
+    padding:26px;
+    text-align:center;
+}
+
+.occ-network-img img{
+    max-height:220px;
+    margin:0 auto;
+    object-fit:contain;
+}
+
+.occ-network h2{
+    font-size:clamp(1.9rem,2.8vw,2.75rem);
+    line-height:1.12;
+    font-weight:900;
+    letter-spacing:-.035em;
+    margin:12px 0 16px;
+    color:var(--blue-aniec);
+}
+
+.occ-network p{
+    color:rgba(0,51,102,.72);
+    font-size:16px;
+    line-height:1.75;
+    max-width:720px;
+}
+
+.occ-actions{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-top:24px;
+}
+
+.occ-panel{
+    display:none;
+    margin-top:26px;
+    padding:26px;
+    border-radius:24px;
+    background:#f8fbff;
+    border:1px solid #dfe8f3;
+}
+
+.occ-panel.is-open{
+    display:block;
+}
+
+.occ-panel h3{
+    font-size:24px;
+    font-weight:900;
+    margin-bottom:12px;
+    color:var(--blue-aniec);
+}
+
+.occ-panel p{
+    max-width:none;
+    font-size:15px;
+}
+
+.occ-card-grid{
+    margin-top:20px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+}
+
+.occ-card{
+    background:#fff;
+    border:1px solid #e2ebf5;
+    border-radius:20px;
+    padding:18px;
+    box-shadow:0 8px 20px rgba(0,51,102,.04);
+}
+
+.occ-card strong{
+    display:block;
+    color:var(--blue-aniec);
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.occ-card span{
+    display:block;
+    font-size:13px;
+    line-height:1.65;
+    color:rgba(0,51,102,.70);
+}
+
+@media(max-width:767px){
+    .occ-network{padding:24px 20px;}
+    .occ-network-grid{grid-template-columns:1fr;}
+    .occ-network-img img{max-height:170px;}
+    .occ-actions{flex-direction:column;}
+    .occ-card-grid{grid-template-columns:1fr;}
+}
         
 .mini-note{
     margin-top:18px;
