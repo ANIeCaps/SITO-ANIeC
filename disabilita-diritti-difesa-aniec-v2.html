@@ -533,6 +533,44 @@
         transform:scale(1.55);
     }
 }
+        @keyframes ringFlowOne{
+    from{
+        transform:rotate(-12deg) scale(1);
+        opacity:.55;
+    }
+    50%{
+        transform:rotate(-6deg) scale(1.03);
+        opacity:.9;
+    }
+    to{
+        transform:rotate(-12deg) scale(1);
+        opacity:.55;
+    }
+}
+
+@keyframes ringFlowTwo{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes ringFlowThree{
+    from{
+        transform:rotate(18deg) scale(1);
+        opacity:.35;
+    }
+    50%{
+        transform:rotate(10deg) scale(1.04);
+        opacity:.7;
+    }
+    to{
+        transform:rotate(18deg) scale(1);
+        opacity:.35;
+    }
+}
         .network-visual img{max-height:170px;object-fit:contain;position:relative;z-index:2;}
         .network-visual::before{content:"";position:absolute;width:240px;height:240px;border-radius:999px;border:1px dashed rgba(0,51,102,.18);}
         .network-visual::after{content:"";position:absolute;width:340px;height:340px;border-radius:999px;border:1px dashed rgba(0,107,63,.16);}
