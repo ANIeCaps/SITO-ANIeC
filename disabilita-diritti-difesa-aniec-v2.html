@@ -229,8 +229,55 @@
     box-shadow:
         0 16px 34px rgba(0,51,102,.13);
     border:1px solid rgba(255,255,255,.45);
+    transition:.28s ease;
 }
-        .ribbon-content{background:rgba(255,255,255,.88);border:1px solid rgba(214,225,238,.75);border-radius:26px;padding:26px 30px;box-shadow:0 10px 26px rgba(0,51,102,.045);}
+        .ribbon-content{
+    background:
+        linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(248,251,255,.94) 100%);
+    border:1px solid rgba(214,225,238,.72);
+    border-radius:26px;
+    padding:26px 30px;
+    box-shadow:
+        0 12px 30px rgba(0,51,102,.055),
+        inset 0 1px 0 rgba(255,255,255,.80);
+    transition:.28s ease;
+    position:relative;
+    overflow:hidden;
+}
+       .ribbon-content::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:30px;
+    width:64px;
+    height:3px;
+    border-radius:999px;
+    background:linear-gradient(90deg,var(--green-aniec),rgba(0,107,63,.25));
+}
+
+.ribbon-content::after{
+    content:"";
+    position:absolute;
+    right:-46px;
+    bottom:-46px;
+    width:120px;
+    height:120px;
+    border-radius:999px;
+    background:rgba(0,51,102,.035);
+}
+
+.ribbon-item:hover .ribbon-content{
+    transform:translateY(-4px);
+    border-color:rgba(0,107,63,.20);
+    box-shadow:
+        0 22px 48px rgba(0,51,102,.09),
+        inset 0 1px 0 rgba(255,255,255,.90);
+}
+
+.ribbon-item:hover .ribbon-badge{
+    transform:translateY(-4px);
+    box-shadow:0 22px 46px rgba(0,51,102,.16);
+} 
         .ribbon-content h3{font-size:22px;font-weight:900;color:var(--blue-aniec);margin-bottom:10px;}
         .ribbon-content p{font-size:15.5px;color:var(--ink-soft);}
         .ribbon-item:nth-child(even){grid-template-columns:1fr 140px;}
