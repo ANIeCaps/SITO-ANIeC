@@ -339,10 +339,80 @@
         .network-content h2{font-size:clamp(1.7rem,2.5vw,2.5rem);line-height:1.14;font-weight:900;margin:12px 0 16px;letter-spacing:-.035em;}
         .network-content p{font-size:16px;color:rgba(0,51,102,.70);max-width:760px;}
         .network-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px;}
-        .network-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px;}
-        .network-tile{background:#fff;border:1px solid #e2ebf5;border-radius:18px;padding:17px;}
-        .network-tile strong{display:block;font-size:15px;font-weight:900;margin-bottom:7px;}
-        .network-tile span{display:block;font-size:13px;line-height:1.55;color:rgba(0,51,102,.66);}
+        .network-grid{
+    position:relative;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:28px;
+}
+        .network-tile{
+    position:relative;
+    background:
+        radial-gradient(circle at 18% 18%, rgba(0,107,63,.08), transparent 34%),
+        linear-gradient(180deg,#ffffff 0%,#f7fbff 100%);
+    border:1px solid rgba(214,225,238,.72);
+    border-radius:22px;
+    padding:22px 18px;
+    text-align:center;
+    min-height:132px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    box-shadow:
+        0 14px 30px rgba(0,51,102,.055),
+        inset 0 1px 0 rgba(255,255,255,.85);
+    transition:.25s ease;
+    overflow:hidden;
+}
+        .network-tile::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:54px;
+    height:3px;
+    border-radius:999px;
+    background:linear-gradient(90deg,var(--green-aniec),rgba(0,51,102,.35));
+}
+
+.network-tile::after{
+    content:"";
+    position:absolute;
+    right:-38px;
+    bottom:-38px;
+    width:96px;
+    height:96px;
+    border-radius:999px;
+    background:rgba(0,51,102,.04);
+}
+
+.network-tile:hover{
+    transform:translateY(-4px);
+    border-color:rgba(0,107,63,.22);
+    box-shadow:
+        0 22px 46px rgba(0,51,102,.09),
+        inset 0 1px 0 rgba(255,255,255,.9);
+}
+        .network-tile strong{
+    display:block;
+    font-size:15px;
+    font-weight:900;
+    margin-bottom:9px;
+    color:var(--blue-aniec);
+    position:relative;
+    z-index:2;
+}
+        .network-tile span{
+    display:block;
+    font-size:13px;
+    line-height:1.6;
+    color:rgba(0,51,102,.68);
+    position:relative;
+    z-index:2;
+}
 
         /* DESTINATARI E CTA */
         .audience-cloud{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
