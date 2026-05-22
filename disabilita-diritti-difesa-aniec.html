@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disabilità - Diritti & Difesa ANIeC APS</title>
+    <meta name="description" content="ANIeC APS offre orientamento informativo e supporto organizzativo su disabilità, invalidità civile, Legge 104, accompagnamento, barriere, inclusione, agevolazioni e rete territoriale.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        :root{
+            --blue-aniec:#003366;
+            --green-aniec:#006b3f;
+            --gold-aniec:#b46b00;
+            --cream-aniec:#fff8f1;
+            --soft-blue:#edf4fc;
+            --line:rgba(0,51,102,.10);
+            --shadow:0 22px 55px rgba(0,51,102,.10);
+            --radius:28px;
+            --violet-soft:#eef1ff;
+        }
+
+        *{margin:0;padding:0;box-sizing:border-box;}
+        html{scroll-behavior:smooth;}
+        body{
+            font-family:Helvetica, Arial, sans-serif;
+            overflow-x:hidden;
+            color:var(--blue-aniec);
+            background:
+                radial-gradient(circle at 8% 0%, rgba(0,120,74,.08), transparent 30%),
+                radial-gradient(circle at 92% 0%, rgba(0,51,102,.09), transparent 32%),
+                linear-gradient(180deg,#ffffff 0%,#f3f8ff 38%,#e6f0fb 70%,#fff8f1 100%);
+        }
+        p{line-height:1.74;}
+        section{scroll-margin-top:120px;}
+        img{max-width:100%;}
+
+        header.site-header{
+            position:sticky;
+            top:0;
+            z-index:1000;
+            background:rgba(255,255,255,.68);
+            border-bottom:1px solid rgba(0,51,102,.08);
+            box-shadow:0 10px 34px rgba(0,51,102,.06);
+            backdrop-filter:blur(18px);
+            -webkit-backdrop-filter:blur(18px);
+        }
+
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:14px 60px;
+            position:relative;
+            z-index:2;
+            background:transparent;
+        }
+
+        .logo-aniec{
+            height:92px;
+            width:auto;
+            max-width:390px;
+            object-fit:contain;
+            filter:drop-shadow(0 8px 18px rgba(0,51,102,.10));
+        }
+
+        .desktop-menu{display:flex;gap:44px;align-items:center;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--blue-aniec);}
+        .desktop-menu a:hover{color:var(--green-aniec);}
+        .nav-cta{background:var(--green-aniec);color:white;padding:12px 34px;border-radius:999px;font-weight:800;font-size:10px;text-transform:uppercase;box-shadow:0 10px 24px rgba(0,107,63,.22);transition:.25s ease;white-space:nowrap;}
+        .nav-cta:hover{background:#005332;transform:translateY(-2px);}
+        .mobile-menu-button{display:none;width:44px;height:44px;border-radius:999px;border:1px solid rgba(0,51,102,.12);background:rgba(255,255,255,.86);align-items:center;justify-content:center;color:var(--blue-aniec);box-shadow:0 10px 24px rgba(0,51,102,.08);}
+        .mobile-menu-button svg{width:22px;height:22px;}
+        .mobile-menu{display:none;position:absolute;left:20px;right:20px;top:92px;background:rgba(255,255,255,.97);border:1px solid rgba(0,51,102,.08);border-radius:18px;box-shadow:0 18px 40px rgba(0,51,102,.12);padding:14px;z-index:150;backdrop-filter:blur(8px);}
+        .mobile-menu a{display:block;padding:14px 16px;border-radius:12px;color:var(--blue-aniec);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;}
+        .mobile-menu a:hover{background:#f3f8ff;color:var(--green-aniec);}
+
+        .dis-hero{
+            position:relative;
+            overflow:hidden;
+            min-height:620px;
+            background-image:
+                linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.91) 45%,rgba(255,255,255,.36) 100%),
+                url('sfondo-disabilita-soft.png');
+            background-size:cover;
+            background-position:center -70px;
+            background-repeat:no-repeat;
+        }
+
+        .dis-hero::before{
+            content:"";
+            position:absolute;
+            right:-90px;
+            top:120px;
+            width:360px;
+            height:360px;
+            border-radius:999px;
+            background:radial-gradient(circle,rgba(0,107,63,.10),transparent 66%);
+            pointer-events:none;
+        }
+
+        .dis-hero::after{
+            content:"";
+            position:absolute;
+            inset:auto -10% -110px -10%;
+            height:240px;
+            background:linear-gradient(180deg,rgba(255,255,255,0),#edf4fc 78%);
+            pointer-events:none;
+        }
+
+        .hero-wrap{
+            position:relative;
+            z-index:2;
+            max-width:1220px;
+            margin:0 auto;
+            padding:40px 60px 56px;
+            display:grid;
+            grid-template-columns:.95fr .95fr;
+            gap:48px;
+            align-items:center;
+        }
+
+        .eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;font-size:11px;font-weight:900;letter-spacing:.22em;text-transform:uppercase;color:var(--green-aniec);}
+        .eyebrow::before{content:"";width:34px;height:2px;background:var(--green-aniec);border-radius:999px;}
+        .hero-title{font-size:clamp(2rem,3.4vw,3.35rem);line-height:1.12;font-weight:900;letter-spacing:-.045em;color:var(--blue-aniec);margin-bottom:24px;}
+        .hero-title span{color:var(--green-aniec);}
+        .hero-description{font-size:19px;line-height:1.88;color:rgba(0,51,102,.72);max-width:640px;margin-bottom:24px;}
+        .hero-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-top:8px;margin-bottom:22px;}
+
+        .btn-primary,
+        .btn-secondary,
+        .btn-light{
+            display:inline-flex;
+            justify-content:center;
+            align-items:center;
+            min-height:46px;
+            padding:12px 24px;
+            border-radius:999px;
+            font-size:11px;
+            font-weight:900;
+            text-transform:uppercase;
+            letter-spacing:.10em;
+            transition:.25s ease;
+        }
+
+        .btn-primary{background:var(--green-aniec);color:#fff;box-shadow:0 16px 30px rgba(0,107,63,.22);border:0;cursor:pointer;}
+        .btn-primary:hover{background:#005332;transform:translateY(-2px);}
+        .btn-secondary{background:#fff;border:1px solid #dfe8f3;color:var(--blue-aniec);cursor:pointer;}
+        .btn-secondary:hover,.btn-light:hover{background:#f3f8ff;transform:translateY(-2px);}
+
+        .hero-note{max-width:710px;padding:18px 22px;border-left:4px solid var(--gold-aniec);background:rgba(255,255,255,.76);border-radius:18px;box-shadow:0 10px 26px rgba(0,51,102,.06);font-size:14px;line-height:1.65;color:rgba(0,51,102,.72);}
+        .hero-panel{background:rgba(255,255,255,.84);border:1px solid rgba(255,255,255,.76);border-radius:26px;box-shadow:0 26px 70px rgba(0,51,102,.11);padding:24px;max-width:470px;backdrop-filter:blur(10px);}
+        .panel-grid{display:grid;gap:14px;}
+        .panel-item{padding:18px;border-radius:20px;background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);border:1px solid #e6eef8;}
+        .panel-item strong{display:block;font-size:17px;color:var(--blue-aniec);margin-bottom:9px;line-height:1.25;}
+        .panel-item p{font-size:14px;color:rgba(0,51,102,.68);text-align:left;line-height:1.72;}
+
+        .trust-band{position:relative;margin-top:-36px;z-index:5;padding:0 60px;}
+        .trust-wrap{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;background:rgba(255,255,255,.84);border:1px solid rgba(255,255,255,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:28px;padding:24px;box-shadow:0 22px 55px rgba(0,51,102,.10);}
+        .trust-item{padding:12px 16px;text-align:center;}
+        .trust-item strong{display:block;font-size:15px;line-height:1.4;color:var(--blue-aniec);margin-bottom:8px;font-weight:900;text-align:center;}
+        .trust-item span{display:block;font-size:13px;line-height:1.7;color:rgba(0,51,102,.68);text-align:center;}
+
+        .section-soft{background:radial-gradient(circle at top right,rgba(0,107,63,.035),transparent 26%),linear-gradient(180deg,#edf4fc 0%,#f8fbff 100%);}
+        .section-white{background:rgba(255,255,255,.90);}
+        .container{max-width:1180px;margin:0 auto;padding:0 60px;}
+        .section-pad{padding:52px 0;}
+        .tight-top{padding-top:24px !important;}
+        .intro{max-width:850px;margin-bottom:38px;}
+        .intro.center{text-align:center;margin:0 auto 42px;}
+        .intro h2{font-size:clamp(1.9rem,2.8vw,2.95rem);line-height:1.12;font-weight:900;letter-spacing:-.035em;color:var(--blue-aniec);margin:14px 0 18px;}
+        .intro p{font-size:17px;color:rgba(0,51,102,.70);}
+        .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;}
+        .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+        .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+        .align-start{align-items:start;}
+
+        .card-premium{background:rgba(255,255,255,.88);border:1px solid rgba(214,225,238,.72);border-radius:24px;padding:26px;box-shadow:0 10px 26px rgba(0,51,102,.045);}
+        .card-premium h3{font-size:22px;font-weight:900;color:var(--blue-aniec);margin-bottom:12px;}
+        .card-premium p,.card-premium li{font-size:15.5px;color:rgba(0,51,102,.70);line-height:1.72;}
+        .card-premium ul{list-style:none;display:grid;gap:12px;margin-top:16px;}
+        .card-premium li{position:relative;padding-left:24px;}
+        .card-premium li::before{content:"";position:absolute;left:0;top:.65em;width:8px;height:8px;border-radius:999px;background:var(--green-aniec);}
+
+        .pre-box{height:100%;}
+        .soft-blue{background:linear-gradient(180deg,rgba(247,251,255,.96) 0%,rgba(238,246,255,.92) 100%);}
+        .soft-green{background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(239,249,244,.92) 100%);}
+        .mini-note{margin-top:18px;padding:18px 20px;border-radius:18px;background:#f8fbff;border:1px solid #e2ebf5;font-size:14px;line-height:1.75;color:rgba(0,51,102,.72);}
+        .mini-note strong{color:var(--blue-aniec);}
+
+        .check-list{margin-top:28px;display:flex;flex-direction:column;gap:18px;}
+        .check-item{display:flex;align-items:flex-start;gap:14px;}
+        .check-item span{width:28px;height:28px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:#edf7f1;color:var(--green-aniec);font-size:14px;font-weight:900;flex-shrink:0;margin-top:2px;}
+        .check-item p{margin:0;font-size:15px;line-height:1.75;color:rgba(0,51,102,.72);}
+
+        .number{display:inline-flex;width:44px;height:44px;border-radius:999px;background:#edf4fc;align-items:center;justify-content:center;color:var(--green-aniec);font-weight:900;margin-bottom:20px;border:1px solid #dfe8f3;}
+        .method-card{position:relative;overflow:hidden;min-height:auto;padding:22px 22px 18px;transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease;}
+        .method-card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(11,42,84,.08);border-color:rgba(0,107,63,.18);}
+        .method-card h3{font-size:1.08rem;line-height:1.2;margin-bottom:10px;}
+        .method-card::before,.law-card::before{content:"";position:absolute;top:0;left:24px;width:54px;height:3px;border-radius:999px;background:linear-gradient(90deg,#006b3f,#53b987);opacity:.85;}
+        .method-card::after{content:"";position:absolute;right:-40px;bottom:-40px;width:120px;height:120px;border-radius:999px;background:rgba(0,107,63,.06);}
+
+        .law-card{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-start;padding:20px 20px 14px;min-height:auto;border-radius:24px;}
+        .law-card h3{font-size:1.02rem;line-height:1.18;margin:8px 0 10px;letter-spacing:-0.01em;max-width:100%;}
+        .law-card p{font-size:.90rem;line-height:1.58;color:#42638f;margin-bottom:4px;}
+        .law-open{margin-top:auto;padding-top:14px;display:inline-flex;align-items:center;justify-content:center;align-self:flex-start;border:0;background:transparent;color:var(--green-aniec);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.10em;cursor:pointer;}
+        .law-open::after{content:"→";margin-left:8px;}
+
+        .law-modal{display:none;position:fixed;inset:0;z-index:3000;background:rgba(0,22,48,.58);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:40px 20px;overflow:auto;}
+        .law-modal.is-open{display:flex;align-items:flex-start;justify-content:center;}
+        .law-modal-content{width:min(920px,100%);background:linear-gradient(180deg,#fffaf5 0%,#ffffff 100%);border-radius:28px;padding:42px;box-shadow:0 34px 100px rgba(0,22,48,.32);position:relative;color:var(--blue-aniec);}
+        .law-modal-content h2{font-size:clamp(2rem,3vw,3rem);line-height:1.15;font-weight:900;margin-bottom:24px;}
+        .law-modal-content p,.law-modal-content li{font-size:17px;line-height:1.85;color:rgba(0,51,102,.78);margin-bottom:16px;}
+        .law-modal-content ul{margin:10px 0 22px 22px;}
+        .law-close{position:absolute;top:20px;right:20px;width:42px;height:42px;border-radius:999px;border:0;background:#0b7a4b;color:white;font-size:24px;font-weight:900;cursor:pointer;box-shadow:0 10px 24px rgba(0,107,63,.25);transition:.2s ease;}
+        .law-close:hover{transform:scale(1.06);background:#006b3f;}
+        .law-note{margin-top:24px;padding:22px 26px;border-radius:22px;background:rgba(255,255,255,.82);border:1px solid #e6eef8;box-shadow:0 14px 34px rgba(0,51,102,.06);font-size:15px;line-height:1.75;color:rgba(0,51,102,.72);}
+        .law-note strong{color:var(--blue-aniec);}
+
+        .docs-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:920px;margin:0 auto;}
+        .doc-chip{background:rgba(255,255,255,.86);border:1px solid rgba(214,225,238,.72);border-radius:18px;padding:15px 18px;font-weight:850;color:var(--blue-aniec);font-size:12.5px;text-align:center;text-transform:uppercase;letter-spacing:.045em;box-shadow:0 8px 18px rgba(0,51,102,.035);transition:.22s ease;}
+        .doc-chip:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,51,102,.07);color:var(--green-aniec);border-color:rgba(0,107,63,.20);}
+        .doc-note{text-align:center;}
+        .doc-note span{display:block;margin-top:8px;color:rgba(0,51,102,.78);font-weight:800;opacity:1;}
+
+        .territory-box{background:rgba(255,255,255,.92);border:1px solid rgba(214,225,238,.78);padding:22px 28px;border-radius:24px;box-shadow:0 18px 42px rgba(0,51,102,.06);}
+        .territory-grid{display:grid;grid-template-columns:190px 1fr;gap:28px;align-items:center;}
+        .territory-img{background:linear-gradient(180deg,#ffffff 0%,#f4f9ff 100%);border:1px solid rgba(214,225,238,.78);border-radius:24px;padding:26px;text-align:center;}
+        .territory-img img{max-height:150px;margin:0 auto;object-fit:contain;}
+        .territory-box h2{font-size:clamp(1.55rem,2.25vw,2.15rem);font-weight:900;letter-spacing:-.035em;margin:12px 0 16px;color:var(--blue-aniec);}
+        .territory-box p{color:rgba(0,51,102,.72);font-size:15px;line-height:1.65;max-width:760px;}
+        .territory-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px;}
+        .territory-card-grid{margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+        .territory-card{background:#fff;border:1px solid #e2ebf5;border-radius:20px;padding:18px;box-shadow:0 8px 20px rgba(0,51,102,.04);}
+        .territory-card strong{display:block;color:var(--blue-aniec);font-size:16px;margin-bottom:8px;}
+        .territory-card span{display:block;font-size:13px;line-height:1.65;color:rgba(0,51,102,.70);}
+
+        .audience{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+        .audience span{padding:13px 20px;background:#fff;border:1px solid #dfe8f3;border-radius:999px;font-size:14px;font-weight:800;color:var(--blue-aniec);box-shadow:0 8px 18px rgba(0,51,102,.04);}
+
+        .final-cta{background:linear-gradient(135deg,rgba(248,251,255,.94) 0%,rgba(255,255,255,.96) 48%,rgba(255,248,241,.92) 100%);border:1px solid rgba(214,225,238,.72);border-radius:30px;padding:38px 34px;text-align:center;box-shadow:0 18px 42px rgba(0,51,102,.06);position:relative;overflow:hidden;}
+        .final-cta h2{font-size:clamp(1.7rem,2.5vw,2.45rem);line-height:1.14;font-weight:900;letter-spacing:-.03em;margin-bottom:16px;color:var(--blue-aniec);}
+        .final-cta p{max-width:740px;margin:0 auto 24px;color:rgba(0,51,102,.70);font-size:16px;line-height:1.8;}
+
+        .site-footer{position:relative;padding:28px 60px 0;background:#ffffff;overflow:hidden;border-top:1px solid #eef2f8;}
+        .site-footer::before{content:"";position:absolute;left:0;right:0;bottom:34px;height:155px;background-image:url('footer-clean.png');background-size:cover;background-position:center bottom;background-repeat:no-repeat;opacity:.92;z-index:0;}
+        .footer-card{position:relative;z-index:1;max-width:1180px;margin:0 auto 28px;padding:32px 52px;min-height:170px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px;background:linear-gradient(180deg,rgba(255,255,255,.48) 0%,rgba(255,255,255,.28) 100%);border:1px solid rgba(255,255,255,.58);border-radius:28px;box-shadow:0 22px 55px rgba(0,51,102,.08);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}
+        .footer-left{text-align:left;}
+        .footer-logo{height:92px;margin-bottom:14px;width:auto;max-width:320px;object-fit:contain;}
+        .footer-payoff{font-size:15px;line-height:1.55;font-weight:500;color:var(--blue-aniec);}
+        .footer-payoff strong{font-weight:800;font-style:italic;}
+        .footer-right{text-align:right;color:var(--blue-aniec);font-size:14px;line-height:1.85;}
+        .footer-right h3{font-size:20px;font-weight:800;margin-bottom:5px;}
+        .footer-bottom{position:relative;z-index:1;text-align:center;padding:11px 20px;font-size:12px;font-weight:700;color:var(--blue-aniec);background:rgba(255,255,255,.84);border-top:1px solid rgba(0,51,102,.08);}
+
+        @media(max-width:1024px){
+            nav{padding:14px 32px;}
+            .logo-aniec{height:112px;max-width:260px;}
+            .desktop-menu{gap:24px;font-size:10px;}
+            .nav-cta{padding:11px 24px;}
+            .hero-wrap{padding:46px 32px 68px;grid-template-columns:1fr;}
+            .hero-panel{max-width:720px;}
+            .container{padding:0 32px;}
+            .grid-4{grid-template-columns:repeat(2,1fr);}
+            .trust-wrap{grid-template-columns:repeat(2,1fr);}
+        }
+
+        @media(max-width:767px){
+            nav{padding:12px 20px;}
+            .logo-aniec{height:68px;max-width:250px;}
+            .desktop-menu,.nav-cta{display:none;}
+            .mobile-menu-button{display:inline-flex;}
+            .mobile-menu.is-open{display:block;}
+            .dis-hero{min-height:auto;background-image:linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.94) 50%,rgba(255,255,255,.78) 100%),url('sfondo-disabilita-soft.png');background-size:1380px auto;background-position:58% top;}
+            .hero-wrap{padding:34px 20px 54px;gap:26px;}
+            .hero-title{font-size:36px;}
+            .hero-description{font-size:16px;}
+            .hero-actions{flex-direction:column;}
+            .btn-primary,.btn-secondary,.btn-light{width:100%;min-height:52px;}
+            .hero-note{font-size:13px;padding:16px;}
+            .hero-panel{padding:20px;border-radius:24px;}
+            .trust-band{margin-top:-20px;padding:0 20px;}
+            .trust-wrap{grid-template-columns:1fr;padding:20px;border-radius:22px;}
+            .section-pad{padding:54px 0;}
+            .container{padding:0 20px;}
+            .intro h2{font-size:30px;}
+            .intro p{font-size:16px;}
+            .grid-2,.grid-3,.grid-4,.docs-list,.territory-card-grid{grid-template-columns:1fr;}
+            .card-premium{padding:24px 20px;border-radius:22px;}
+            .territory-box{padding:24px 20px;}
+            .territory-grid{grid-template-columns:1fr;}
+            .territory-img img{max-height:170px;}
+            .territory-actions{flex-direction:column;}
+            .law-modal-content{padding:34px 22px;}
+            .law-close{top:14px;right:14px;}
+            .final-cta{padding:32px 20px;border-radius:26px;}
+            .site-footer{padding:32px 20px 0;}
+            .site-footer::before{height:230px;background-size:auto 230px;background-position:center bottom;}
+            .footer-card{grid-template-columns:1fr;text-align:center;padding:26px 22px;gap:22px;min-height:auto;background:rgba(255,255,255,.58);}
+            .footer-left,.footer-right{text-align:center;}
+            .footer-logo{height:60px;max-width:230px;margin-left:auto;margin-right:auto;}
+            .footer-payoff{font-size:14px;}
+            .footer-right{font-size:13px;}
+            .footer-bottom{font-size:11px;line-height:1.4;}
+        }
+
+        @media(max-width:380px){
+            .logo-aniec{height:66px;max-width:180px;}
+            .hero-title{font-size:32px;}
+        }
+    </style>
+</head>
+
+<body>
+<header class="site-header">
+    <nav>
+        <a href="index.html#home" aria-label="Torna alla Home ANIeC APS">
+            <img src="logo-diritti-difesa.png" alt="Diritti & Difesa - ANIeC APS" class="logo-aniec">
+        </a>
+
+        <div class="desktop-menu">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#chi-siamo">Chi Siamo</a>
+            <a href="index.html#processo">Progettazione</a>
+            <a href="index.html#servizi">Servizi</a>
+            <a href="index.html#contatti">Contatti</a>
+        </div>
+
+        <a href="index.html#contatti" class="nav-cta">Contattaci &gt;</a>
+
+        <button class="mobile-menu-button" type="button" aria-label="Apri menu" aria-controls="mobileMenu" aria-expanded="false" onclick="toggleMobileMenu()">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"></path>
+            </svg>
+        </button>
+
+        <div id="mobileMenu" class="mobile-menu">
+            <a href="index.html#home" onclick="closeMobileMenu()">Home</a>
+            <a href="index.html#chi-siamo" onclick="closeMobileMenu()">Chi Siamo</a>
+            <a href="index.html#processo" onclick="closeMobileMenu()">Progettazione</a>
+            <a href="index.html#servizi" onclick="closeMobileMenu()">Servizi</a>
+            <a href="index.html#contatti" onclick="closeMobileMenu()">Contatti</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+<section class="dis-hero">
+    <div class="hero-wrap">
+        <div>
+            <span class="eyebrow">DIRITTI, ACCESSO E ORIENTAMENTO</span>
+
+            <h1 class="hero-title">
+                Disabilità, tutele e percorsi di inclusione
+            </h1>
+
+            <p class="hero-description">
+                ANIeC APS accompagna persone, famiglie e caregiver nella comprensione dei diritti, delle misure di sostegno e dei servizi territoriali collegati alla disabilità, con un approccio umano, ordinato e rispettoso della dignità personale.
+            </p>
+
+            <div class="hero-actions">
+                <a href="index.html#contatti" class="btn-primary">Chiedi orientamento</a>
+                <a href="#metodo" class="btn-secondary">Il percorso ANIeC</a>
+            </div>
+
+            <div class="hero-note">
+                <strong>Nota importante:</strong> ANIeC APS svolge attività di ascolto, informazione, orientamento e supporto organizzativo. Non si sostituisce a medici, patronati, CAF, avvocati, enti pubblici, commissioni medico-legali o altri soggetti abilitati alla valutazione tecnica, sanitaria, amministrativa o professionale.
+            </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Sintesi del servizio disabilità">
+            <div class="panel-grid">
+                <div class="panel-item">
+                    <strong>Ascolto della situazione</strong>
+                    <p>Uno spazio riservato per comprendere bisogni, difficoltà quotidiane, documenti già disponibili e priorità da affrontare.</p>
+                </div>
+
+                <div class="panel-item">
+                    <strong>Orientamento sui diritti</strong>
+                    <p>Informazioni divulgative su invalidità civile, Legge 104, accompagnamento, agevolazioni, barriere e servizi territoriali.</p>
+                </div>
+
+                <div class="panel-item">
+                    <strong>Accompagnamento informativo</strong>
+                    <p>Supporto nell’organizzare i passaggi, preparare le domande giuste e individuare gli interlocutori competenti.</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<section class="trust-band">
+    <div class="trust-wrap">
+        <div class="trust-item">
+            <strong>Persona al centro</strong>
+            <span>Ogni situazione viene ascoltata con attenzione, rispetto e riservatezza.</span>
+        </div>
+
+        <div class="trust-item">
+            <strong>Diritti più comprensibili</strong>
+            <span>Spieghiamo in modo semplice strumenti, procedure e possibili passaggi.</span>
+        </div>
+
+        <div class="trust-item">
+            <strong>Rete territoriale</strong>
+            <span>Orientamento verso servizi sociali, enti, patronati, ASST, ATS e realtà competenti.</span>
+        </div>
+
+        <div class="trust-item">
+            <strong>Ruoli chiari</strong>
+            <span>Supporto associativo informativo, senza sostituirsi ai soggetti abilitati.</span>
+        </div>
+    </div>
+</section>
+
+<section class="section-white section-pad" id="chiarezza">
+    <div class="container">
+        <div class="intro">
+            <span class="eyebrow">Capire prima di agire</span>
+
+            <h2>
+                Nella disabilità il primo bisogno è spesso orientarsi senza sentirsi soli.
+            </h2>
+
+            <p>
+                Invalidità civile, handicap, Legge 104, accompagnamento, agevolazioni, servizi territoriali e barriere possono creare confusione. Le persone e le famiglie hanno spesso documenti, verbali e bisogni concreti, ma non sempre sanno da dove iniziare o a chi rivolgersi.
+            </p>
+        </div>
+
+        <div class="grid-2 align-start">
+            <div class="card-premium pre-box">
+                <h3>Il supporto preliminare ANIeC</h3>
+
+                <p>
+                    ANIeC APS aiuta a mettere ordine nella situazione, distinguendo ciò che riguarda il riconoscimento sanitario, gli aspetti amministrativi, le misure di sostegno e i servizi territoriali disponibili.
+                </p>
+
+                <div class="check-list">
+                    <div class="check-item"><span>✓</span><p>Ascolto della situazione personale, familiare o assistenziale;</p></div>
+                    <div class="check-item"><span>✓</span><p>Lettura orientativa dei bisogni e delle priorità espresse;</p></div>
+                    <div class="check-item"><span>✓</span><p>Organizzazione preliminare della documentazione disponibile;</p></div>
+                    <div class="check-item"><span>✓</span><p>Spiegazione divulgativa dei principali strumenti di tutela;</p></div>
+                    <div class="check-item"><span>✓</span><p>Individuazione degli interlocutori territoriali più pertinenti;</p></div>
+                    <div class="check-item"><span>✓</span><p>Accompagnamento informativo nei passaggi successivi.</p></div>
+                </div>
+            </div>
+
+            <div class="card-premium pre-box soft-green">
+                <span class="eyebrow">Perché è importante</span>
+
+                <h3>Non basta conoscere una norma: serve capire come muoversi.</h3>
+
+                <p>
+                    Una persona con disabilità, un familiare o un caregiver possono trovarsi davanti a pratiche diverse, enti differenti e risposte non sempre coordinate. Questo può generare fatica, ritardi e senso di isolamento.
+                </p>
+
+                <p>
+                    Un orientamento ordinato aiuta a formulare richieste più chiare, raccogliere i documenti utili e preparare un confronto più consapevole con enti, professionisti e servizi competenti.
+                </p>
+
+                <div class="mini-note">
+                    <strong>Importante:</strong> l’associazione non effettua valutazioni medico-legali, non presenta diagnosi, non certifica condizioni sanitarie e non sostituisce gli enti competenti. Il supporto è informativo, orientativo e organizzativo.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="metodo" class="section-soft section-pad">
+    <div class="container">
+        <div class="intro center">
+            <span class="eyebrow">Metodo ANIeC</span>
+            <h2>Un percorso umano, ordinato e comprensibile.</h2>
+            <p>
+                L’obiettivo è aiutare la persona a comprendere la propria situazione, riconoscere le priorità e orientarsi tra diritti, servizi e interlocutori, senza creare false aspettative e senza sostituirsi ai soggetti competenti.
+            </p>
+        </div>
+
+        <div class="grid-3">
+            <div class="card-premium method-card">
+                <span class="number">01</span>
+                <h3>Ascolto riservato</h3>
+                <p>Primo confronto per comprendere bisogni, difficoltà quotidiane, nucleo familiare, urgenze e aspettative.</p>
+            </div>
+
+            <div class="card-premium method-card">
+                <span class="number">02</span>
+                <h3>Raccolta elementi</h3>
+                <p>Verifica orientativa dei documenti disponibili: verbali, comunicazioni, domande, certificati e risposte ricevute.</p>
+            </div>
+
+            <div class="card-premium method-card">
+                <span class="number">03</span>
+                <h3>Quadro preliminare</h3>
+                <p>Organizzazione delle informazioni per distinguere bisogni sanitari, sociali, amministrativi e familiari.</p>
+            </div>
+
+            <div class="card-premium method-card">
+                <span class="number">04</span>
+                <h3>Orientamento sui diritti</h3>
+                <p>Spiegazione divulgativa dei principali strumenti collegati a invalidità, handicap, assistenza e inclusione.</p>
+            </div>
+
+            <div class="card-premium method-card">
+                <span class="number">05</span>
+                <h3>Rete competente</h3>
+                <p>Indicazioni sui possibili interlocutori: enti pubblici, servizi sociali, patronati, medici, professionisti o associazioni specializzate.</p>
+            </div>
+
+            <div class="card-premium method-card">
+                <span class="number">06</span>
+                <h3>Accompagnamento informativo</h3>
+                <p>Supporto nella comprensione dei passaggi successivi, mantenendo chiari limiti, ruoli e responsabilità.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-soft section-pad" id="aree-tutela">
+    <div class="container">
+        <div class="intro">
+            <span class="eyebrow">Aree di orientamento</span>
+
+            <h2>
+                Disabilità significa diritti, accesso, dignità e partecipazione.
+            </h2>
+
+            <p>
+                Ogni situazione può richiedere strumenti diversi. Per questo il servizio è organizzato per aree tematiche, con un linguaggio chiaro e riferimenti essenziali ai principali istituti di tutela.
+            </p>
+        </div>
+
+        <div class="grid-3">
+            <div class="card-premium law-card">
+                <span class="number">A</span>
+                <h3>Invalidità civile</h3>
+                <p>Orientamento sui passaggi collegati al riconoscimento dell’invalidità civile e alla lettura dei verbali.</p>
+                <button class="law-open" type="button" onclick="openLawModal('modal-invalidita')">Approfondisci</button>
+            </div>
+
+            <div class="card-premium law-card">
+                <span class="number">B</span>
+                <h3>Legge 104/1992</h3>
+                <p>Informazioni sui principi generali della legge quadro per assistenza, integrazione sociale e diritti delle persone con disabilità.</p>
+                <button class="law-open" type="button" onclick="openLawModal('modal-104')">Approfondisci</button>
+            </div>
+
+            <div class="card-premium law-card">
+                <span class="number">C</span>
+                <h3>Indennità di accompagnamento</h3>
+                <p>Orientamento divulgativo su requisiti generali, finalità della misura e documentazione normalmente utile.</p>
+                <button class="law-open" type="button" onclick="openLawModal('modal-accompagnamento')">Approfondisci</button>
+            </div>
+
+            <div class="card-premium law-card">
+                <span class="number">D</span>
+                <h3>Barriere architettoniche</h3>
+                <p>Supporto informativo su accessibilità, ostacoli negli spazi di vita e possibili interlocutori territoriali.</p>
+                <button class="law-open" type="button" onclick="openLawModal('modal-barriere')">Approfondisci</button>
+            </div>
+
+            <div class="card-premium law-card">
+                <span class="number">E</span>
+                <h3>Inclusione scolastica e lavorativa</h3>
+                <p>Orientamento su percorsi, bisogni di supporto, accomodamenti e raccordo con soggetti competenti.</p>
+                <button class="law-open" type="button" onclick="openLawModal('modal-inclusione')">Approfondisci</button>
+            </div>
+
+            <div class="card-premium law-card">
+                <span class="number">F</span>
+                <h3>Agevolazioni e benefici</h3>
+                <p>Informazioni generali su misure economiche, fiscali, assistenziali o territoriali collegate alla condizione riconosciuta.</p>
+                <button class="law-open" type="button" onclick="openLawModal('modal-agevolazioni')">Approfondisci</button>
+            </div>
+        </div>
+
+        <div class="law-note">
+            <strong>Riferimenti normativi essenziali:</strong> tra i principali riferimenti rientrano la Legge 104/1992, la disciplina sull’invalidità civile, le norme in materia di inclusione, accessibilità e tutela contro le discriminazioni. I contenuti presenti hanno finalità divulgativa e non sostituiscono valutazioni sanitarie, amministrative o professionali.
+        </div>
+    </div>
+</section>
+
+<div id="modal-invalidita" class="law-modal">
+    <div class="law-modal-content">
+        <button class="law-close" onclick="closeLawModal('modal-invalidita')">×</button>
+        <h2>Invalidità civile</h2>
+        <p>
+            L’invalidità civile riguarda il riconoscimento di una riduzione della capacità lavorativa o, per minori e persone non in età lavorativa, della presenza di difficoltà persistenti nello svolgimento delle funzioni proprie dell’età.
+        </p>
+        <p>
+            Il percorso può prevedere domanda amministrativa, certificazione medica introduttiva, valutazione da parte della commissione competente e successiva comunicazione del verbale.
+        </p>
+        <p>
+            ANIeC APS può aiutare a comprendere il significato generale dei passaggi, raccogliere in modo ordinato i documenti disponibili e orientare verso patronati, medici, enti o professionisti competenti quando necessario.
+        </p>
+    </div>
+</div>
+
+<div id="modal-104" class="law-modal">
+    <div class="law-modal-content">
+        <button class="law-close" onclick="closeLawModal('modal-104')">×</button>
+        <h2>Legge 104/1992</h2>
+        <p>
+            La Legge 104/1992 è la legge quadro per l’assistenza, l’integrazione sociale e i diritti delle persone con disabilità. Rappresenta uno dei riferimenti principali per comprendere tutele, supporti e strumenti di inclusione.
+        </p>
+        <p>
+            Il riconoscimento dello stato di handicap, e nei casi previsti della connotazione di gravità, può avere riflessi su assistenza familiare, permessi lavorativi, priorità, servizi e misure di sostegno.
+        </p>
+        <p>
+            La valutazione dei requisiti e il riconoscimento spettano agli enti e alle commissioni competenti. Il supporto ANIeC resta informativo e organizzativo.
+        </p>
+    </div>
+</div>
+
+<div id="modal-accompagnamento" class="law-modal">
+    <div class="law-modal-content">
+        <button class="law-close" onclick="closeLawModal('modal-accompagnamento')">×</button>
+        <h2>Indennità di accompagnamento</h2>
+        <p>
+            L’indennità di accompagnamento è una misura economica prevista per specifiche condizioni di non autosufficienza, secondo i requisiti stabiliti dalla normativa e accertati dagli organi competenti.
+        </p>
+        <p>
+            Può riguardare persone che necessitano di assistenza continua o che non sono in grado di compiere autonomamente gli atti quotidiani della vita, secondo quanto valutato in sede medico-legale.
+        </p>
+        <p>
+            ANIeC APS può aiutare la persona o la famiglia a comprendere i passaggi generali, preparare le domande da porre agli enti competenti e organizzare la documentazione disponibile.
+        </p>
+    </div>
+</div>
+
+<div id="modal-barriere" class="law-modal">
+    <div class="law-modal-content">
+        <button class="law-close" onclick="closeLawModal('modal-barriere')">×</button>
+        <h2>Barriere architettoniche e accessibilità</h2>
+        <p>
+            Le barriere architettoniche non riguardano solo gli edifici, ma anche l’accesso concreto alla vita quotidiana: abitazione, scuola, lavoro, servizi pubblici, trasporti e luoghi aperti al pubblico.
+        </p>
+        <p>
+            Comprendere il problema, documentarlo e individuare l’interlocutore corretto può essere essenziale per formulare richieste più chiare e responsabili.
+        </p>
+        <p>
+            ANIeC APS può svolgere supporto informativo e orientativo, indirizzando verso amministrazioni, tecnici, servizi sociali, amministratori di condominio o professionisti competenti nei casi necessari.
+        </p>
+    </div>
+</div>
+
+<div id="modal-inclusione" class="law-modal">
+    <div class="law-modal-content">
+        <button class="law-close" onclick="closeLawModal('modal-inclusione')">×</button>
+        <h2>Inclusione scolastica e lavorativa</h2>
+        <p>
+            L’inclusione richiede spesso una rete coordinata tra persona, famiglia, scuola, lavoro, servizi, medici e istituzioni. Non riguarda solo una pratica, ma la possibilità concreta di partecipare alla vita sociale.
+        </p>
+        <p>
+            In ambito scolastico possono essere coinvolti strumenti e figure di supporto specifiche. In ambito lavorativo possono assumere rilievo accomodamenti, collocamento mirato e misure di sostegno previste dalla normativa.
+        </p>
+        <p>
+            ANIeC APS può aiutare a distinguere i bisogni, organizzare le informazioni e orientare verso i soggetti competenti, senza sostituirsi a scuola, datore di lavoro, enti pubblici o professionisti.
+        </p>
+    </div>
+</div>
+
+<div id="modal-agevolazioni" class="law-modal">
+    <div class="law-modal-content">
+        <button class="law-close" onclick="closeLawModal('modal-agevolazioni')">×</button>
+        <h2>Agevolazioni, benefici e misure di sostegno</h2>
+        <p>
+            Le persone con disabilità e i loro familiari possono avere accesso, in presenza dei requisiti, a misure economiche, fiscali, assistenziali, lavorative o territoriali.
+        </p>
+        <p>
+            Le agevolazioni possono dipendere dal tipo di riconoscimento, dalla percentuale indicata nel verbale, dalla situazione personale, familiare, reddituale o dal bisogno specifico.
+        </p>
+        <p>
+            Il supporto ANIeC consiste nell’aiutare a comprendere il quadro generale, evitare confusione tra strumenti diversi e orientare verso CAF, patronati, enti pubblici o professionisti competenti.
+        </p>
+    </div>
+</div>
+
+<section class="section-soft section-pad tight-top" id="documentazione">
+    <div class="container">
+        <div class="intro center">
+            <span class="eyebrow">Documentazione</span>
+            <h2>Mettere ordine nei documenti aiuta a non perdere diritti e opportunità.</h2>
+            <p>
+                La documentazione serve a ricostruire la situazione, evitare dimenticanze e presentarsi in modo più consapevole davanti agli enti e agli interlocutori competenti.
+            </p>
+        </div>
+
+        <div class="docs-list">
+            <div class="doc-chip">Documento di identità e codice fiscale</div>
+            <div class="doc-chip">Certificati medici disponibili</div>
+            <div class="doc-chip">Verbali di invalidità civile</div>
+            <div class="doc-chip">Verbali Legge 104/1992</div>
+            <div class="doc-chip">Comunicazioni INPS o altri enti</div>
+            <div class="doc-chip">Domande già presentate</div>
+            <div class="doc-chip">Documentazione scolastica o lavorativa</div>
+            <div class="doc-chip">ISEE o dati reddituali se richiesti</div>
+            <div class="doc-chip">Documentazione su barriere o accessibilità</div>
+            <div class="doc-chip">Eventuali provvedimenti o risposte ricevute</div>
+        </div>
+
+        <div class="law-note doc-note">
+            <strong>Nota operativa</strong><br>
+            La raccolta documentale con il supporto associativo ANIeC APS ha carattere preliminare, informativo e organizzativo.
+            <span>Non costituisce valutazione sanitaria, consulenza professionale, istruttoria amministrativa o predisposizione tecnica della pratica.</span>
+        </div>
+    </div>
+</section>
+
+<section class="section-white section-pad" id="rete-territoriale">
+    <div class="container">
+        <div class="territory-box">
+            <div class="territory-grid">
+                <div class="territory-img">
+                    <img src="rete-disabilita.png" alt="Rete territoriale disabilità e servizi di supporto">
+                </div>
+
+                <div>
+                    <span class="eyebrow">Rete territoriale</span>
+                    <h2>Diritti e servizi funzionano meglio quando la rete è chiara.</h2>
+
+                    <p>
+                        Le situazioni legate alla disabilità possono coinvolgere più interlocutori: servizi sociali, INPS, ASST, ATS, Comuni, scuole, patronati, CAF, medici, professionisti, amministratori di sostegno, enti del Terzo Settore e associazioni specializzate.
+                    </p>
+
+                    <div class="territory-actions">
+                        <button class="btn-primary" type="button" onclick="openLawModal('modal-rete')">Vedi rete di riferimento</button>
+                        <a href="index.html#contatti" class="btn-secondary">Chiedi orientamento</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-rete" class="law-modal">
+            <div class="law-modal-content">
+                <button class="law-close" onclick="closeLawModal('modal-rete')">×</button>
+                <h2>Rete di riferimento</h2>
+
+                <p>
+                    Ogni territorio può avere modalità operative differenti. Per questo è utile individuare con ordine gli interlocutori corretti in base al bisogno concreto.
+                </p>
+
+                <div class="territory-card-grid">
+                    <div class="territory-card"><strong>Servizi sociali comunali</strong><span>Primo riferimento per bisogni sociali, assistenza, fragilità familiare e raccordo territoriale.</span></div>
+                    <div class="territory-card"><strong>INPS e patronati</strong><span>Domande, verifiche amministrative, invalidità civile, benefici economici e comunicazioni istituzionali.</span></div>
+                    <div class="territory-card"><strong>ASST, ATS e medici</strong><span>Profili sanitari, certificazioni, percorsi di presa in carico e valutazioni di competenza.</span></div>
+                    <div class="territory-card"><strong>CAF e consulenti fiscali</strong><span>ISEE, agevolazioni fiscali, bonus, detrazioni e verifiche collegate alla posizione economica.</span></div>
+                    <div class="territory-card"><strong>Scuola e lavoro</strong><span>Inclusione scolastica, inserimento lavorativo, accomodamenti e interlocutori competenti.</span></div>
+                    <div class="territory-card"><strong>Terzo Settore</strong><span>Associazioni, reti di supporto, sportelli informativi e progetti di prossimità.</span></div>
+                </div>
+
+                <div class="mini-note">
+                    <strong>Nota informativa:</strong> ANIeC APS può aiutare a comprendere quali soggetti coinvolgere, ma non sostituisce gli enti pubblici, i professionisti abilitati o le strutture competenti.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-white section-pad" id="destinatari">
+    <div class="container">
+        <div class="intro center">
+            <span class="eyebrow">Destinatari</span>
+            <h2>A chi può essere utile questo servizio</h2>
+            <p style="max-width:1180px;margin:0 auto;text-wrap:balance;">
+                Pensato per chi ha bisogno di orientarsi tra diritti, servizi e tutele, senza sentirsi abbandonato davanti alla complessità delle procedure.
+            </p>
+        </div>
+
+        <div class="audience">
+            <span>Persone con disabilità</span>
+            <span>Familiari</span>
+            <span>Caregiver</span>
+            <span>Genitori</span>
+            <span>Anziani fragili</span>
+            <span>Lavoratori con disabilità</span>
+            <span>Studenti e famiglie</span>
+            <span>Persone con verbali da comprendere</span>
+            <span>Chi incontra barriere o ostacoli</span>
+            <span>Chi cerca servizi territoriali</span>
+        </div>
+    </div>
+</section>
+
+<section class="section-soft section-pad">
+    <div class="container">
+        <div class="final-cta">
+            <span class="eyebrow">Primo confronto</span>
+            <h2>Ogni diritto diventa più concreto quando qualcuno ti aiuta a orientarti.</h2>
+            <p>
+                Un primo contatto può aiutare a fare ordine, comprendere le priorità e individuare il percorso informativo o territoriale più adatto alla situazione.
+            </p>
+            <a href="index.html#contatti" class="btn-primary">Richiedi un primo orientamento</a>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-card">
+        <div class="footer-left">
+            <img src="logo-aniec.png" alt="ANIeC APS" class="footer-logo">
+            <p class="footer-payoff">
+                La struttura ideale per dare voce ai tuoi <strong>Diritti</strong>,<br>
+                aiutandoti a svolgere con serenità i tuoi <strong>Doveri</strong>.
+            </p>
+        </div>
+
+        <div class="footer-right">
+            <h3>ANIeC APS</h3>
+            <p>Associazione Nazionale</p>
+            <p>Imprenditori &amp; Consumatori</p>
+            <p>Email: info@aniecaps.it</p>
+            <p>Tel: +39 3279342883</p>
+            <p>C.F. 95237870167</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">© 2024 ANIeC APS - Tutti i diritti riservati</div>
+</footer>
+
+<script>
+function toggleMobileMenu(){
+    const menu=document.getElementById('mobileMenu');
+    const button=document.querySelector('.mobile-menu-button');
+    const isOpen=menu.classList.toggle('is-open');
+    button.setAttribute('aria-expanded',isOpen?'true':'false');
+}
+
+function closeMobileMenu(){
+    const menu=document.getElementById('mobileMenu');
+    const button=document.querySelector('.mobile-menu-button');
+    menu.classList.remove('is-open');
+    button.setAttribute('aria-expanded','false');
+}
+
+function openLawModal(id){
+    const modal=document.getElementById(id);
+    if(modal){
+        modal.classList.add('is-open');
+        document.body.style.overflow='hidden';
+    }
+}
+
+function closeLawModal(id){
+    const modal=document.getElementById(id);
+    if(modal){
+        modal.classList.remove('is-open');
+        document.body.style.overflow='';
+    }
+}
+
+window.addEventListener('keydown',function(event){
+    if(event.key==='Escape'){
+        document.querySelectorAll('.law-modal.is-open').forEach(function(modal){
+            modal.classList.remove('is-open');
+        });
+        document.body.style.overflow='';
+    }
+});
+</script>
+</body>
+</html>
