@@ -425,6 +425,38 @@
 .line-c{width:210px;bottom:112px;left:105px;transform:rotate(-26deg);}
 .line-d{width:210px;bottom:112px;right:105px;transform:rotate(26deg);}
 
+        .energy-ring{
+    position:absolute;
+    border-radius:999px;
+    pointer-events:none;
+    mix-blend-mode:screen;
+}
+
+.ring-one{
+    width:340px;
+    height:110px;
+    border-top:1px solid rgba(0,180,255,.16);
+    border-bottom:1px solid rgba(0,107,63,.12);
+    transform:rotate(-12deg);
+    animation:ringFlowOne 12s linear infinite;
+}
+
+.ring-two{
+    width:260px;
+    height:260px;
+    border-left:1px solid rgba(0,107,63,.12);
+    border-right:1px solid rgba(0,90,170,.16);
+    animation:ringFlowTwo 18s linear infinite;
+}
+
+.ring-three{
+    width:390px;
+    height:140px;
+    border-top:1px solid rgba(255,255,255,.45);
+    border-bottom:1px solid rgba(0,51,102,.08);
+    transform:rotate(18deg);
+    animation:ringFlowThree 22s linear infinite;
+}
 .glow-dot{
     position:absolute;
     z-index:4;
