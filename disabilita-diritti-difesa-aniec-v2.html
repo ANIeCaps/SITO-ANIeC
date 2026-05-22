@@ -209,12 +209,27 @@
         /* PERCORSO A NASTRO */
         .ribbon-path{position:relative;display:grid;gap:22px;margin-top:30px;}
         .ribbon-item{position:relative;display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:stretch;}
-        .ribbon-number{display:flex;align-items:center;justify-content:center;border-radius:26px;background:linear-gradient(135deg,#ffffff 0%,#edf7f1 100%);border:1px solid rgba(0,107,63,.16);box-shadow:0 12px 30px rgba(0,51,102,.045);font-size:32px;font-weight:900;color:var(--green-aniec);}
+        .ribbon-badge{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:96px;
+    border-radius:26px;
+    background:
+        linear-gradient(135deg,#003366 0%,#07558e 58%,#006b3f 100%);
+    color:#fff;
+    font-size:13px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    box-shadow:0 16px 34px rgba(0,51,102,.13);
+    border:1px solid rgba(255,255,255,.45);
+}
         .ribbon-content{background:rgba(255,255,255,.88);border:1px solid rgba(214,225,238,.75);border-radius:26px;padding:26px 30px;box-shadow:0 10px 26px rgba(0,51,102,.045);}
         .ribbon-content h3{font-size:22px;font-weight:900;color:var(--blue-aniec);margin-bottom:10px;}
         .ribbon-content p{font-size:15.5px;color:var(--ink-soft);}
         .ribbon-item:nth-child(even){grid-template-columns:1fr 140px;}
-        .ribbon-item:nth-child(even) .ribbon-number{grid-column:2;grid-row:1;}
+        .ribbon-item:nth-child(even) .ribbon-badge{grid-column:2;grid-row:1;}
         .ribbon-item:nth-child(even) .ribbon-content{grid-column:1;grid-row:1;text-align:right;}
 
         /* MAPPA TUTELE */
