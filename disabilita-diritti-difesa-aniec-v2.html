@@ -141,9 +141,40 @@
         .manifesto-left h2{font-size:clamp(1.75rem,2.5vw,2.5rem);line-height:1.13;font-weight:900;letter-spacing:-.035em;margin-bottom:18px;}
         .manifesto-left p{color:rgba(255,255,255,.87);font-size:16px;}
         .manifesto-right{padding:30px;display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
-        .value-cell{border-radius:22px;background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);border:1px solid rgba(214,225,238,.78);padding:22px;}
-        .value-cell strong{display:block;font-size:16px;font-weight:900;margin-bottom:9px;color:var(--blue-aniec);}
-        .value-cell span{display:block;font-size:14px;line-height:1.68;color:rgba(0,51,102,.68);}
+        .value-cell{
+    border-radius:26px;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(244,249,255,.94) 100%);
+    border:1px solid rgba(214,225,238,.65);
+    padding:28px 24px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-height:220px;
+    box-shadow:
+        0 12px 28px rgba(0,51,102,.05),
+        inset 0 1px 0 rgba(255,255,255,.7);
+    transition:.25s ease;
+    position:relative;
+    overflow:hidden;
+}
+    .value-cell strong{
+    display:block;
+    font-size:18px;
+    font-weight:900;
+    margin-bottom:14px;
+    color:var(--blue-aniec);
+    letter-spacing:-.02em;
+}
+        .value-cell span{
+    display:block;
+    font-size:14px;
+    line-height:1.75;
+    color:rgba(0,51,102,.70);
+    max-width:240px;
+}
 
         /* PERCORSO A NASTRO */
         .ribbon-path{position:relative;display:grid;gap:22px;margin-top:30px;}
