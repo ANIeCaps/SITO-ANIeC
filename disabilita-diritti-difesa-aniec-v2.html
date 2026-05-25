@@ -723,7 +723,19 @@
         opacity:.35;
     }
 }
-        .network-visual img{max-height:170px;object-fit:contain;position:relative;z-index:2;}
+        .network-visual img{
+    width:140%;
+    max-width:none;
+    max-height:none;
+    height:auto;
+    display:block;
+    object-fit:contain;
+    position:relative;
+    z-index:2;
+    filter:
+        drop-shadow(0 40px 80px rgba(0,102,153,.10))
+        drop-shadow(0 18px 34px rgba(0,107,63,.08));
+}
         .network-visual::before{content:"";position:absolute;width:240px;height:240px;border-radius:999px;border:1px dashed rgba(0,51,102,.18);}
         .network-visual::after{content:"";position:absolute;width:340px;height:340px;border-radius:999px;border:1px dashed rgba(0,107,63,.16);}
         .network-content h2{font-size:clamp(1.7rem,2.5vw,2.5rem);line-height:1.14;font-weight:900;margin:12px 0 16px;letter-spacing:-.035em;}
