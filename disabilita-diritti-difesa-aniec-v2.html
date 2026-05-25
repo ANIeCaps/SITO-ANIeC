@@ -114,7 +114,28 @@
     line-height:1.65;
     color:rgba(0,51,102,.72);
 }
-        .identity-visual{position:relative;min-height:430px;display:flex;align-items:center;justify-content:center;}
+        .identity-visual{
+    position:relative;
+    min-height:430px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+        .hero-hand-visual{
+    min-height:500px;
+    justify-content:flex-end;
+    overflow:visible;
+}
+
+.hero-hand-img{
+    width:135%;
+    max-width:none;
+    height:auto;
+    display:block;
+    object-fit:contain;
+    transform:translateX(30px);
+    filter:drop-shadow(0 26px 60px rgba(0,51,102,.10));
+}
         .care-orbit{position:relative;top:-46px;width:470px;height:470px;border-radius:999px;background:linear-gradient(145deg,rgba(255,255,255,.82),rgba(237,244,252,.72));border:1px solid rgba(255,255,255,.78);box-shadow:0 34px 90px rgba(0,51,102,.13);backdrop-filter:blur(12px);}
         .care-orbit::before{content:"";position:absolute;inset:40px;border-radius:999px;border:1px dashed rgba(0,51,102,.18);}
         .care-orbit::after{content:"";position:absolute;inset:105px;border-radius:999px;background:linear-gradient(135deg,#003366 0%,#07558e 58%,#006b3f 100%);box-shadow:0 20px 48px rgba(0,51,102,.22);}
