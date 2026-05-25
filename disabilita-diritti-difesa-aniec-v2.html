@@ -486,18 +486,19 @@
         .network-scene{background:rgba(255,255,255,.92);border:1px solid rgba(214,225,238,.78);border-radius:32px;box-shadow:0 18px 42px rgba(0,51,102,.06);padding:32px;display:grid;grid-template-columns:.78fr 1.22fr;gap:34px;align-items:center;}
         .network-visual{
     position:relative;
-    min-height:360px;
-    border-radius:0;
-    background:
-        radial-gradient(circle at 50% 50%, rgba(0,107,63,.14), transparent 28%),
-        radial-gradient(circle at 50% 50%, rgba(0,51,102,.08), transparent 46%),
-        linear-gradient(90deg, transparent 0%, rgba(237,244,252,.58) 100%);
-    border:0;
-    overflow:visible;
     display:flex;
     align-items:center;
     justify-content:center;
+
+    width:100%;
+    min-height:640px;
+
+    background:transparent;
+    border:none;
+    border-radius:0;
     box-shadow:none;
+    overflow:visible;
+    padding:0;
 }
 
 .network-visual::before{
