@@ -122,27 +122,48 @@
     justify-content:center;
 }
         .hero-hand-visual{
-    min-height:500px;
+    min-height:560px;
     justify-content:flex-end;
+    align-items:center;
     overflow:visible;
+    position:relative;
 }
 
 .hero-hand-img{
-    width:155%;
+    width:158%;
     max-width:none;
     height:auto;
     display:block;
     object-fit:contain;
 
-    transform:translateX(40px);
+    transform:translateX(55px);
 
     opacity:.82;
 
     filter:
         saturate(.78)
         contrast(.92)
-        brightness(1.02)
-        drop-shadow(0 20px 40px rgba(0,51,102,.07));
+        brightness(1.03)
+        blur(.15px)
+        drop-shadow(0 18px 40px rgba(0,51,102,.06));
+
+    mix-blend-mode:normal;
+}
+        .hero-hand-visual::after{
+    content:"";
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255,255,255,0) 35%,
+            rgba(245,249,252,.38) 72%,
+            rgba(245,249,252,.75) 100%
+        );
+
+    pointer-events:none;
 }
         .care-orbit{position:relative;top:-46px;width:470px;height:470px;border-radius:999px;background:linear-gradient(145deg,rgba(255,255,255,.82),rgba(237,244,252,.72));border:1px solid rgba(255,255,255,.78);box-shadow:0 34px 90px rgba(0,51,102,.13);backdrop-filter:blur(12px);}
         .care-orbit::before{content:"";position:absolute;inset:40px;border-radius:999px;border:1px dashed rgba(0,51,102,.18);}
