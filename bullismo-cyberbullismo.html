@@ -246,9 +246,14 @@ section{
 .digital-hero::after{
   content:"";
   position:absolute;
-  inset:auto -10% -120px -10%;
-  height:260px;
-  background:linear-gradient(180deg,rgba(237,244,252,0),#edf4fc 82%);
+  inset:auto -10% -80px -10%;
+  height:160px;
+  background:linear-gradient(
+    180deg,
+    rgba(237,244,252,0) 0%,
+    rgba(237,244,252,.82) 72%,
+    #edf4fc 100%
+  );
   pointer-events:none;
 }
 .digital-hero .hero-wrap::before{
