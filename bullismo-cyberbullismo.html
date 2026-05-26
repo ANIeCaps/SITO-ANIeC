@@ -366,10 +366,12 @@ section{
 .trust-band{
   position:relative;
   z-index:8;
-  margin-top:-56px;
+  margin-top:-118px;
   padding:0 60px;
 }
 .trust-wrap{
+  backdrop-filter:blur(22px);
+-webkit-backdrop-filter:blur(22px);
   max-width:1180px;
   margin:0 auto;
   display:grid;
@@ -380,7 +382,9 @@ section{
   backdrop-filter:blur(14px);
   border-radius:30px;
   padding:24px;
-  box-shadow:0 22px 55px rgba(0,51,102,.10);
+ box-shadow:
+  0 30px 80px rgba(0,30,80,.16),
+  0 8px 24px rgba(255,255,255,.32) inset;
 }
 .trust-item{
   padding:14px 16px;
