@@ -1,0 +1,608 @@
+<!-- =========================
+     HERO — BULLISMO & CYBERBULLISMO
+========================= -->
+
+<section class="bc-hero">
+
+  <div class="bc-hero-overlay"></div>
+  <div class="bc-grid">
+
+    <div class="bc-left">
+
+      <span class="bc-kicker">
+        EDUCAZIONE • PREVENZIONE • TUTELA DIGITALE
+      </span>
+
+      <h1 class="bc-title">
+        Bullismo e cyberbullismo:
+        comprendere, prevenire, intervenire.
+      </h1>
+
+      <div class="bc-line"></div>
+
+      <p class="bc-copy">
+        Uno spazio dedicato a studenti, famiglie, scuole e territorio
+        per promuovere consapevolezza, sicurezza digitale,
+        prevenzione educativa e strumenti concreti di supporto.
+      </p>
+
+      <div class="bc-chips">
+        <span>Studenti</span>
+        <span>Famiglie</span>
+        <span>Scuole</span>
+        <span>Docenti</span>
+        <span>Educazione digitale</span>
+        <span>Progetti territoriali</span>
+      </div>
+
+      <div class="bc-actions">
+        <a href="#progetto" class="bc-btn-primary">
+          Scopri il progetto →
+        </a>
+
+        <a href="#supporto" class="bc-btn-secondary">
+          Supporto e orientamento
+        </a>
+      </div>
+
+    </div>
+
+    <div class="bc-right">
+
+      <div class="bc-side-card">
+
+        <div class="bc-side-glow"></div>
+
+        <span class="bc-mini-kicker">
+          PREVENZIONE ATTIVA
+        </span>
+
+        <h3>
+          Educare oggi significa
+          proteggere le relazioni di domani.
+        </h3>
+
+        <p>
+          La prevenzione del bullismo e del cyberbullismo
+          passa dalla cultura digitale, dal dialogo,
+          dalla consapevolezza e dalla collaborazione
+          tra scuola, famiglie e territorio.
+        </p>
+
+        <div class="bc-side-points">
+
+          <div>
+            <strong>Educazione digitale</strong>
+            <span>uso consapevole della rete</span>
+          </div>
+
+          <div>
+            <strong>Supporto scuola</strong>
+            <span>progetti e formazione</span>
+          </div>
+
+          <div>
+            <strong>Orientamento famiglie</strong>
+            <span>strumenti e ascolto</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="bc-feature-strip">
+
+    <div class="bc-feature">
+      <div class="bc-feature-icon">◎</div>
+      <h4>Prevenzione educativa</h4>
+      <p>Promuoviamo cultura del rispetto, dialogo e consapevolezza.</p>
+    </div>
+
+    <div class="bc-feature">
+      <div class="bc-feature-icon">◈</div>
+      <h4>Supporto e orientamento</h4>
+      <p>Ascolto, informazioni e strumenti per famiglie e studenti.</p>
+    </div>
+
+    <div class="bc-feature">
+      <div class="bc-feature-icon">⌘</div>
+      <h4>Educazione digitale</h4>
+      <p>Uso responsabile delle tecnologie e dei social network.</p>
+    </div>
+
+    <div class="bc-feature">
+      <div class="bc-feature-icon">◌</div>
+      <h4>Scuole e territorio</h4>
+      <p>Collaborazioni, incontri e progetti educativi condivisi.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     CSS
+========================= -->
+
+<style>
+
+.bc-hero{
+  position:relative;
+  overflow:hidden;
+
+  min-height:920px;
+
+  padding:
+    90px 48px
+    230px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,20,45,.88) 0%,
+      rgba(5,25,52,.82) 34%,
+      rgba(7,33,66,.62) 58%,
+      rgba(10,40,72,.36) 100%
+    ),
+    url('hero-bullismo.jpg');
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.bc-hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(0,190,255,.16),
+      transparent 28%
+    ),
+
+    radial-gradient(
+      circle at bottom right,
+      rgba(0,120,74,.14),
+      transparent 30%
+    );
+
+  pointer-events:none;
+}
+
+.bc-hero-overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.02),
+      rgba(255,255,255,.00)
+    );
+
+  backdrop-filter:blur(1px);
+}
+
+.bc-grid{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+  grid-template-columns:
+    minmax(0,720px)
+    390px;
+
+  gap:80px;
+
+  max-width:1280px;
+  margin:0 auto;
+}
+
+.bc-kicker{
+  display:inline-block;
+
+  margin-bottom:24px;
+
+  color:#75d4ff;
+
+  font-size:12px;
+  font-weight:900;
+
+  letter-spacing:.30em;
+  text-transform:uppercase;
+}
+
+.bc-title{
+  margin:0;
+
+  max-width:760px;
+
+  color:#ffffff;
+
+  font-family:Georgia, serif;
+
+  font-size:58px;
+  line-height:1.02;
+  letter-spacing:-.04em;
+}
+
+.bc-line{
+  width:64px;
+  height:2px;
+
+  margin:28px 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #00c2ff,
+      rgba(0,194,255,.12)
+    );
+}
+
+.bc-copy{
+  max-width:620px;
+
+  color:rgba(255,255,255,.78);
+
+  font-size:17px;
+  line-height:1.82;
+}
+
+.bc-chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+
+  margin-top:34px;
+}
+
+.bc-chips span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  min-height:42px;
+
+  padding:0 18px;
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,.08);
+
+  border:
+    1px solid rgba(255,255,255,.10);
+
+  backdrop-filter:blur(10px);
+
+  color:#d8ecff;
+
+  font-size:12px;
+  font-weight:800;
+
+  letter-spacing:.04em;
+}
+
+.bc-actions{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+
+  margin-top:40px;
+}
+
+.bc-btn-primary,
+.bc-btn-secondary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  min-height:54px;
+
+  padding:0 28px;
+
+  border-radius:999px;
+
+  font-size:12px;
+  font-weight:900;
+
+  letter-spacing:.08em;
+  text-transform:uppercase;
+
+  transition:.25s ease;
+}
+
+.bc-btn-primary{
+  background:
+    linear-gradient(
+      135deg,
+      #00a2ff,
+      #0074d9
+    );
+
+  color:#fff;
+
+  box-shadow:
+    0 18px 40px rgba(0,120,255,.28);
+}
+
+.bc-btn-secondary{
+  background:
+    rgba(255,255,255,.08);
+
+  border:
+    1px solid rgba(255,255,255,.14);
+
+  color:#fff;
+
+  backdrop-filter:blur(12px);
+}
+
+.bc-btn-primary:hover,
+.bc-btn-secondary:hover{
+  transform:translateY(-2px);
+}
+
+.bc-side-card{
+  position:relative;
+
+  overflow:hidden;
+
+  padding:34px 30px;
+
+  border-radius:28px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.10),
+      rgba(255,255,255,.05)
+    );
+
+  border:
+    1px solid rgba(255,255,255,.10);
+
+  backdrop-filter:blur(18px);
+
+  box-shadow:
+    0 26px 60px rgba(0,0,0,.24);
+}
+
+.bc-side-glow{
+  position:absolute;
+  top:-40px;
+  right:-40px;
+
+  width:180px;
+  height:180px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,194,255,.28),
+      transparent 70%
+    );
+}
+
+.bc-mini-kicker{
+  display:inline-block;
+
+  margin-bottom:18px;
+
+  color:#86dfff;
+
+  font-size:11px;
+  font-weight:900;
+
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+
+.bc-side-card h3{
+  margin:0 0 18px;
+
+  color:#fff;
+
+  font-size:31px;
+  line-height:1.12;
+
+  font-family:Georgia, serif;
+}
+
+.bc-side-card p{
+  color:rgba(255,255,255,.74);
+
+  font-size:14px;
+  line-height:1.8;
+}
+
+.bc-side-points{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+
+  margin-top:28px;
+}
+
+.bc-side-points div{
+  padding:16px 18px;
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,.05);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+}
+
+.bc-side-points strong{
+  display:block;
+
+  margin-bottom:6px;
+
+  color:#fff;
+
+  font-size:13px;
+  letter-spacing:.04em;
+}
+
+.bc-side-points span{
+  color:rgba(255,255,255,.66);
+
+  font-size:12px;
+}
+
+.bc-feature-strip{
+  position:absolute;
+
+  left:48px;
+  right:48px;
+  bottom:42px;
+
+  z-index:5;
+
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+
+  gap:0;
+
+  background:
+    rgba(6,20,45,.62);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  backdrop-filter:blur(18px);
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  box-shadow:
+    0 24px 60px rgba(0,0,0,.24);
+}
+
+.bc-feature{
+  padding:34px 28px;
+
+  text-align:center;
+
+  border-right:
+    1px solid rgba(255,255,255,.06);
+}
+
+.bc-feature:last-child{
+  border-right:0;
+}
+
+.bc-feature-icon{
+  margin-bottom:18px;
+
+  color:#70d9ff;
+
+  font-size:34px;
+}
+
+.bc-feature h4{
+  margin:0 0 12px;
+
+  color:#fff;
+
+  font-size:17px;
+}
+
+.bc-feature p{
+  margin:0;
+
+  color:rgba(255,255,255,.68);
+
+  font-size:13px;
+  line-height:1.7;
+}
+
+@media(max-width:1100px){
+
+  .bc-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .bc-side-card{
+    max-width:680px;
+  }
+
+  .bc-feature-strip{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .bc-hero{
+    min-height:auto;
+
+    padding:
+      110px 20px
+      40px;
+  }
+
+  .bc-grid{
+    gap:30px;
+  }
+
+  .bc-title{
+    font-size:38px;
+    line-height:1.08;
+  }
+
+  .bc-copy{
+    font-size:15px;
+  }
+
+  .bc-actions{
+    flex-direction:column;
+  }
+
+  .bc-btn-primary,
+  .bc-btn-secondary{
+    width:100%;
+  }
+
+  .bc-feature-strip{
+    position:relative;
+
+    left:auto;
+    right:auto;
+    bottom:auto;
+
+    margin-top:34px;
+
+    grid-template-columns:1fr;
+  }
+
+  .bc-feature{
+    border-right:0;
+
+    border-bottom:
+      1px solid rgba(255,255,255,.06);
+  }
+
+  .bc-feature:last-child{
+    border-bottom:0;
+  }
+
+}
+
+</style>
