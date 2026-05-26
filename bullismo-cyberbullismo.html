@@ -464,9 +464,11 @@ section{
 .manifesto-cells{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:18px;
+  gap:16px;
+  align-content:start;
 }
 .value-card,.info-card,.program-card,.resource-card,.law-card{
+  min-height:auto;
   backdrop-filter:blur(18px); position:relative;
   overflow:hidden;
   border-radius:26px;
