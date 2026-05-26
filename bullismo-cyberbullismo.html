@@ -278,11 +278,8 @@ section{
   z-index:4;
   max-width:1220px;
   margin:0 auto;
-  padding:72px 60px 96px;
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:58px;
-  align-items:center;
+  padding:96px 60px 120px;
+  display:block;
 }
 .hero-title{
   color:#fff;
@@ -294,14 +291,18 @@ section{
 
 .hero-title-main{
   display:block;
-  font-size:clamp(2.25rem,4vw,4.15rem);
+  font-size:clamp(2rem,3.45vw,3.55rem);
   line-height:1.02;
+  background:linear-gradient(90deg,#ffffff 0%,#56d7ff 68%,#ffffff 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
 }
 
 .hero-title-sub{
   display:block;
   margin-top:12px;
-  font-size:clamp(1.55rem,2.45vw,2.35rem);
+  font-size:clamp(1.35rem,2.05vw,2rem);
   line-height:1.12;
   color:#fff;
   letter-spacing:-.035em;
@@ -338,6 +339,7 @@ section{
   line-height:1.76;
   max-width:620px;
   margin-bottom:30px;
+  text-align:justify;
 }
 .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin:30px 0}
 .hero-tags{display:flex;flex-wrap:wrap;gap:11px;max-width:650px;margin-top:8px;}
