@@ -1280,6 +1280,32 @@ input:focus,select:focus,textarea:focus{
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .62s ease, transform .62s ease}
 .reveal.is-visible{opacity:1;transform:translateY(0)}
 
+
+/* =========================
+   OTTIMIZZAZIONE RITMO PAGINA
+========================= */
+.digital-break{position:relative;overflow:hidden;width:min(1180px, calc(100% - 120px));margin:86px auto;padding:112px 60px;border-radius:42px;background:radial-gradient(circle at 18% 18%, rgba(0,180,255,.14), transparent 28%),radial-gradient(circle at 86% 28%, rgba(0,120,255,.12), transparent 34%),linear-gradient(135deg,#031a33 0%,#062f60 48%,#0b4f88 100%);box-shadow:0 30px 90px rgba(0,20,60,.24);isolation:isolate;}
+.digital-break::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px),linear-gradient(180deg, rgba(255,255,255,.025) 1px, transparent 1px);background-size:42px 42px;opacity:.42;}
+.digital-break-overlay{position:absolute;inset:0;background:radial-gradient(circle at center, rgba(0,255,255,.09), transparent 56%);filter:blur(42px);}
+.digital-break-content{position:relative;z-index:2;max-width:860px;}
+.digital-label{display:inline-block;margin-bottom:22px;color:#8dd6ff;font-size:12px;font-weight:900;letter-spacing:.22em;text-transform:uppercase;}
+.digital-break h2{font-size:clamp(2.2rem,4vw,4rem);line-height:1.08;letter-spacing:-.04em;color:white;margin:0 0 24px;}
+.digital-break p{max-width:720px;color:rgba(255,255,255,.76);font-size:18px;line-height:1.9;}
+.resource-hub{display:grid;grid-template-columns:1.1fr .95fr .85fr;gap:22px;align-items:stretch;}
+.resource-column{position:relative;overflow:hidden;background:rgba(255,255,255,.92);border:1px solid rgba(214,225,238,.78);border-radius:28px;padding:28px;box-shadow:0 18px 42px rgba(0,51,102,.06);}
+.resource-column::before{content:"";position:absolute;top:0;left:28px;width:70px;height:4px;border-radius:999px;background:linear-gradient(90deg,var(--cyan),var(--green-aniec));}
+.hub-label{display:inline-block;margin-bottom:18px;color:var(--green-aniec);font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;}
+.hub-item{border:1px solid rgba(0,51,102,.08);border-radius:18px;overflow:hidden;margin-bottom:12px;background:#fff;}
+.hub-item button{width:100%;border:0;background:#fff;color:var(--blue-aniec);padding:18px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:14px;font-weight:900;text-align:left;cursor:pointer;}
+.hub-content{display:none;padding:0 18px 18px;}
+.hub-item.is-open .hub-content{display:block;}
+.hub-content p,.source-panel p,.action-panel p{color:rgba(0,51,102,.70);font-size:14.5px;line-height:1.75;}
+.source-chips.compact{margin-top:22px;}
+.action-panel{background:linear-gradient(135deg,#062f60 0%,#07558e 64%,#006b3f 100%);color:#fff;border-color:rgba(255,255,255,.22);}
+.action-panel::before{background:rgba(255,255,255,.75);}.action-panel .hub-label,.action-panel h3{color:#fff;}.action-panel h3{font-size:24px;line-height:1.18;margin:0 0 14px;}.action-panel p{color:rgba(255,255,255,.82);margin-bottom:24px;}.action-panel .btn-primary{background:#fff;color:var(--blue-aniec);box-shadow:0 16px 34px rgba(0,0,0,.16);}
+@media(max-width:1080px){.digital-break{width:min(100% - 64px, 1180px);padding:86px 42px;}.resource-hub{grid-template-columns:1fr;}}
+@media(max-width:768px){.digital-break{width:calc(100% - 40px);margin:54px auto;padding:62px 24px;border-radius:28px;}.digital-break p{font-size:16px;}.resource-column{padding:24px 20px;border-radius:22px;}}
+
 @media(max-width:1080px){
   .navbar{padding:14px 32px}
   .desktop-menu{gap:24px;font-size:10px}
@@ -1554,6 +1580,15 @@ input:focus,select:focus,textarea:focus{
   </div>
 </section>
 
+<section class="digital-break" aria-label="Pausa visuale prevenzione digitale">
+  <div class="digital-break-overlay"></div>
+  <div class="digital-break-content reveal">
+    <span class="digital-label">Prevenzione • educazione • consapevolezza</span>
+    <h2>Comprendere il digitale significa proteggere relazioni, identità e crescita.</h2>
+    <p>Il cyberbullismo non nasce solo online. Nasce nelle relazioni, nel linguaggio, nell’isolamento e nella mancanza di consapevolezza. Per questo la risposta deve essere educativa, adulta e territoriale.</p>
+  </div>
+</section>
+
 <section class="section-soft section-pad" id="aiuto">
   <div class="container">
     <div class="intro center">
@@ -1668,13 +1703,6 @@ input:focus,select:focus,textarea:focus{
           <p>Quando necessario, orientamento verso scuola, servizi territoriali, professionisti, canali istituzionali o autorità competenti.</p>
         </div>
       </div>
-      <div class="timeline-row reveal">
-        <div class="timeline-badge">Fase 05</div>
-        <div class="timeline-card">
-          <h3>Prevenzione strutturata</h3>
-          <p>Trasformare il singolo caso o bisogno in un percorso educativo più ampio: laboratori, incontri, formazione e cultura digitale.</p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -1697,10 +1725,6 @@ input:focus,select:focus,textarea:focus{
         <div class="program-card reveal">
           <h3>Laboratorio relazioni e gruppo classe</h3>
           <p>Attività su rispetto, esclusione, linguaggio, ruoli del gruppo, spettatori, responsabilità e gestione dei conflitti.</p>
-        </div>
-        <div class="program-card reveal">
-          <h3>Cittadinanza digitale</h3>
-          <p>Uso consapevole di social e chat, reputazione online, privacy, consenso, identità digitale e responsabilità comunicativa.</p>
         </div>
         <div class="program-card reveal">
           <h3>Incontro famiglie</h3>
@@ -1762,68 +1786,45 @@ input:focus,select:focus,textarea:focus{
 <section class="section-white section-pad" id="risorse">
   <div class="container">
     <div class="intro center">
-      <span class="eyebrow">Strumenti e risorse</span>
-      <h2>Materiali, riferimenti e strumenti per orientarsi con serietà.</h2>
-      <p>La pagina integra un approccio divulgativo fondato su fonti istituzionali e autorevoli, con linguaggio accessibile e uso operativo.</p>
+      <span class="eyebrow">Risorse • Normativa • Strumenti</span>
+      <h2>Un unico spazio operativo per orientarsi senza disperdersi.</h2>
+      <p>Abbiamo raccolto in una sola sezione riferimenti normativi, fonti autorevoli e strumenti pratici, così la pagina resta più leggera ma più utile.</p>
     </div>
 
-    <div class="resources-grid">
-      <div class="resource-card reveal">
-        <h3>Per studenti e ragazzi</h3>
-        <p>Strumenti per riconoscere situazioni dannose, chiedere aiuto, proteggere la propria identità digitale e non restare isolati.</p>
-        <ul>
-          <li>Come distinguere scherzo, conflitto e prevaricazione</li>
-          <li>Cosa conservare quando qualcosa accade online</li>
-          <li>A chi rivolgersi se si ha paura di esporsi</li>
-        </ul>
+    <div class="resource-hub reveal">
+      <div class="resource-column resource-accordion">
+        <span class="hub-label">Normativa e tutela</span>
+        <div class="hub-item is-open">
+          <button type="button" onclick="toggleHub(this)">Legge 71/2017 sul cyberbullismo <span>+</span></button>
+          <div class="hub-content"><p>Riferimento nazionale specifico per la prevenzione e il contrasto del cyberbullismo, con attenzione alla tutela dei minori e al ruolo della scuola.</p></div>
+        </div>
+        <div class="hub-item">
+          <button type="button" onclick="toggleHub(this)">Legge 70/2024 su bullismo e cyberbullismo <span>+</span></button>
+          <div class="hub-content"><p>Rafforza l’approccio preventivo, educativo e istituzionale verso bullismo e cyberbullismo, valorizzando responsabilità, percorsi e interventi coordinati.</p></div>
+        </div>
+        <div class="hub-item">
+          <button type="button" onclick="toggleHub(this)">Linee di orientamento scolastiche <span>+</span></button>
+          <div class="hub-content"><p>Indicazioni utili per scuole, docenti e comunità educante nella prevenzione, nell’osservazione dei segnali e nell’attivazione di procedure proporzionate.</p></div>
+        </div>
+        <div class="hub-item">
+          <button type="button" onclick="toggleHub(this)">Responsabilità digitale <span>+</span></button>
+          <div class="hub-content"><p>Privacy, identità digitale, reputazione online, diffusione di immagini, linguaggio e permanenza dei contenuti sono elementi centrali nella prevenzione.</p></div>
+        </div>
       </div>
 
-      <div class="resource-card reveal">
-        <h3>Per famiglie</h3>
-        <p>Indicazioni per ascoltare senza giudizio, osservare i segnali e attivare un confronto ordinato con scuola o soggetti competenti.</p>
-        <ul>
-          <li>Segnali emotivi e comportamentali</li>
-          <li>Uso del telefono e cambiamenti improvvisi</li>
-          <li>Primo colloquio e protezione della persona</li>
-        </ul>
+      <div class="resource-column source-panel">
+        <span class="hub-label">Fonti autorevoli</span>
+        <p>Per la costruzione dei contenuti informativi e progettuali si assumono come riferimenti fonti istituzionali e realtà autorevoli del settore educativo e della tutela minorile.</p>
+        <div class="source-chips compact" aria-label="Fonti autorevoli">
+          <span>UNICEF</span><span>MIM</span><span>Polizia Postale</span><span>Generazioni Connesse</span><span>Telefono Azzurro</span><span>Save The Children</span><span>Garante Infanzia</span>
+        </div>
       </div>
 
-      <div class="resource-card reveal">
-        <h3>Per docenti</h3>
-        <p>Supporti per leggere dinamiche di classe, ruolo degli spettatori, esclusione relazionale e impatto digitale sugli studenti.</p>
-        <ul>
-          <li>Osservazione del gruppo</li>
-          <li>Procedure scolastiche e dialogo con le famiglie</li>
-          <li>Prevenzione stabile, non occasionale</li>
-        </ul>
-      </div>
-
-      <div class="law-card reveal">
-        <h3>Riferimenti normativi</h3>
-        <p>La pagina richiama la normativa italiana e le linee di orientamento sulla prevenzione e sul contrasto del bullismo e cyberbullismo.</p>
-        <ul>
-          <li>Legge 29 maggio 2017, n. 71 sul cyberbullismo</li>
-          <li>Legge 17 maggio 2024, n. 70 su bullismo e cyberbullismo</li>
-          <li>Linee di orientamento scolastiche e cittadinanza digitale</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="source-board reveal">
-      <span class="eyebrow">Fonti autorevoli integrate</span>
-      <p>
-        Per la costruzione dei contenuti informativi e progettuali si assumono come riferimenti: UNICEF, Ministero dell’Istruzione e del Merito, Polizia Postale, Generazioni Connesse, Telefono Azzurro, Save The Children, Autorità Garante per l’Infanzia e l’Adolescenza, normativa italiana vigente.
-      </p>
-      <div class="source-chips" aria-label="Fonti autorevoli">
-        <span>UNICEF</span>
-        <span>MIM</span>
-        <span>Polizia Postale</span>
-        <span>Generazioni Connesse</span>
-        <span>Telefono Azzurro</span>
-        <span>Save The Children</span>
-        <span>Garante Infanzia</span>
-        <span>Legge 71/2017</span>
-        <span>Legge 70/2024</span>
+      <div class="resource-column action-panel">
+        <span class="hub-label">Strumenti operativi</span>
+        <h3>Per scuole, famiglie e territorio</h3>
+        <p>Materiali, incontri e percorsi possono essere costruiti in base all’età, al contesto, ai bisogni emersi e agli obiettivi educativi condivisi.</p>
+        <a class="btn-primary" href="#contatto">Richiedi informazioni</a>
       </div>
     </div>
   </div>
@@ -1989,7 +1990,7 @@ input:focus,select:focus,textarea:focus{
 
     <div class="footer-right">
       <h3>ANIeC APS</h3>
-      <p>Associazione Nazionale Inclusione e Cittadinanza</p>
+      <p>Associazione Nazionale Imprenditori &amp; Consumatori</p>
       <p>Area DIRITTI &amp; DIFESA</p>
       <p>Bullismo e Cyberbullismo</p>
     </div>
@@ -2066,6 +2067,12 @@ const observer=new IntersectionObserver((entries)=>{
   });
 },{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+function toggleHub(btn){
+  const item = btn.closest('.hub-item');
+  if(!item) return;
+  item.classList.toggle('is-open');
+}
+
 </script>
 </body>
 </html>
