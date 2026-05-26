@@ -828,13 +828,18 @@ rgba(248,251,255,.82) 100%);
 .program-card{min-height:210px}
 
 .network-scene{
+  backdrop-filter:blur(16px);
   display:grid;
   grid-template-columns:.92fr 1.08fr;
   gap:34px;
   align-items:center;
   padding:34px;
   border-radius:34px;
-  background:rgba(255,255,255,.92);
+  background:
+linear-gradient(
+180deg,
+rgba(255,255,255,.88) 0%,
+rgba(248,251,255,.78) 100%);
   border:1px solid rgba(214,225,238,.78);
   box-shadow:0 18px 42px rgba(6,47,96,.06);
 }
