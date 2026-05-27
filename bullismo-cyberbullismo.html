@@ -1405,6 +1405,21 @@ rgba(255,255,255,.34) 100%);
 }
 @media(max-width:768px){
   .navbar{padding:12px 20px}
+  .manifesto-cells{
+  min-height:auto;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+
+.manifesto-cells .value-card{
+  position:relative;
+  inset:auto !important;
+  width:100%;
+  height:auto;
+  min-height:190px;
+  border-radius:28px;
+}
   .logo-aniec{height:68px;max-width:250px}
   .desktop-menu,.nav-cta{display:none}
   .mobile-menu-button{display:inline-flex}
