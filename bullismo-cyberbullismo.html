@@ -844,22 +844,11 @@ section{
   position:relative;
   overflow:visible;
   border-radius:0;
-  padding:0 0 0 26px;
+  padding:0;
   background:transparent;
   border:0;
   box-shadow:none;
   transition:none;
-}
-
-.timeline-card::before{
-  content:"";
-  position:absolute;
-  top:4px;
-  left:0;
-  width:3px;
-  height:54px;
-  border-radius:999px;
-  background:linear-gradient(180deg,var(--green),var(--cyan2));
 }
 
 .timeline-card:hover{
@@ -868,6 +857,8 @@ section{
 }
 
 .timeline-card h3{
+  max-width:620px;
+  color:var(--blue);
   font-size:25px;
   font-weight:900;
   letter-spacing:-.025em;
