@@ -953,15 +953,19 @@ section{
 .network-full{
   position:relative;
   overflow:hidden;
-  border-radius:38px;
-  background:#f5efe6;
-  box-shadow:
-    0 30px 90px rgba(6,47,96,.08);
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
 }
 
 .network-full-image{
   width:100%;
   display:block;
+  border-radius:0;
+  filter:
+    saturate(.82)
+    hue-rotate(188deg)
+    brightness(1.04);
 }
 
 .network-overlay{
