@@ -425,8 +425,8 @@ section{
 .manifesto-grid{
   display:grid;
   grid-template-columns:.88fr 1.12fr;
-  gap:30px;
-  align-items:stretch;
+  gap:42px;
+  align-items:center;
 }
 .manifesto-panel{
   border-radius:34px;
@@ -462,10 +462,8 @@ section{
   font-size:16px;
 }
 .manifesto-cells{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:16px;
-  align-content:start;
+  position:relative;
+  min-height:520px;
 }
 .value-card,.info-card,.program-card,.resource-card,.law-card{
   min-height:auto;
@@ -481,6 +479,98 @@ rgba(248,251,255,.82) 100%);
   box-shadow:0 14px 34px rgba(6,47,96,.055);
   padding:22px;
   transition:.26s ease;
+}
+  .manifesto-cells .value-card{
+  position:absolute;
+  width:265px;
+  height:265px;
+  border-radius:50%;
+  padding:42px 34px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:
+    radial-gradient(circle at 38% 28%,rgba(255,255,255,.98),rgba(246,251,255,.90) 58%,rgba(231,244,252,.72) 100%);
+  border:1px solid rgba(86,215,255,.28);
+  box-shadow:
+    0 24px 54px rgba(6,47,96,.10),
+    inset 0 0 34px rgba(86,215,255,.10);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
+
+.manifesto-cells .value-card::before{
+  content:"";
+  position:absolute;
+  inset:8px;
+  border-radius:50%;
+  border-top:4px solid rgba(86,215,255,.72);
+  border-left:4px solid rgba(0,120,74,.45);
+  border-right:4px solid transparent;
+  border-bottom:4px solid transparent;
+  pointer-events:none;
+}
+
+.manifesto-cells .value-card::after{
+  content:"";
+  position:absolute;
+  inset:-18px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(86,215,255,.12),transparent 64%);
+  z-index:-1;
+}
+
+.manifesto-cells .value-card strong{
+  font-size:22px;
+  line-height:1.08;
+  margin:0 0 14px;
+}
+
+.manifesto-cells .value-card span{
+  font-size:14px;
+  line-height:1.48;
+}
+  .manifesto-cells .value-card:nth-child(1){
+  right:20px;
+  bottom:18px;
+  z-index:4;
+}
+
+.manifesto-cells .value-card:nth-child(2){
+  left:42px;
+  top:0;
+  z-index:3;
+}
+
+.manifesto-cells .value-card:nth-child(3){
+  left:8px;
+  bottom:38px;
+  z-index:2;
+}
+
+.manifesto-cells .value-card:nth-child(4){
+  right:0;
+  top:110px;
+  z-index:5;
+}
+  .manifesto-cells::before{
+  content:"";
+  position:absolute;
+  inset:35px 20px;
+  border-radius:50%;
+  border:1px dashed rgba(86,215,255,.26);
+  transform:rotate(-14deg);
+}
+
+.manifesto-cells::after{
+  content:"";
+  position:absolute;
+  inset:90px 70px;
+  border-radius:50%;
+  border:1px solid rgba(0,120,74,.10);
+  transform:rotate(18deg);
 }
 .value-card:hover,.info-card:hover,.program-card:hover,.resource-card:hover,.law-card:hover{
   transform:translateY(-4px);
