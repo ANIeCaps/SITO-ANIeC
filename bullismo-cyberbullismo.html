@@ -463,7 +463,10 @@ section{
 }
 .manifesto-cells{
   position:relative;
-  min-height:520px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+  align-items:center;
 }
 .value-card,.info-card,.program-card,.resource-card,.law-card{
   min-height:auto;
@@ -480,25 +483,63 @@ rgba(248,251,255,.82) 100%);
   padding:22px;
   transition:.26s ease;
 }
-  .manifesto-cells .value-card{
-  position:absolute;
-  width:265px;
-  height:265px;
+ .manifesto-cells .value-card{
+  position:relative;
+  width:100%;
+  aspect-ratio:1 / 1;
+  max-width:260px;
+  margin:auto;
   border-radius:50%;
-  padding:42px 34px;
+  padding:34px 26px;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
   text-align:center;
   background:
-    radial-gradient(circle at 38% 28%,rgba(255,255,255,.98),rgba(246,251,255,.90) 58%,rgba(231,244,252,.72) 100%);
-  border:1px solid rgba(86,215,255,.28);
+    radial-gradient(circle at 36% 28%,rgba(255,255,255,.98),rgba(246,251,255,.92) 58%,rgba(232,247,255,.78) 100%);
+  border:1px solid rgba(86,215,255,.30);
   box-shadow:
-    0 24px 54px rgba(6,47,96,.10),
-    inset 0 0 34px rgba(86,215,255,.10);
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
+    0 22px 48px rgba(6,47,96,.10),
+    inset 0 0 28px rgba(86,215,255,.10);
+  overflow:hidden;
+}
+  .manifesto-cells .value-card::before{
+  content:"";
+  position:absolute;
+  inset:7px;
+  border-radius:50%;
+  border-top:4px solid rgba(86,215,255,.72);
+  border-left:4px solid rgba(0,120,74,.42);
+  border-right:4px solid transparent;
+  border-bottom:4px solid transparent;
+  pointer-events:none;
+}
+
+.manifesto-cells .value-card::after{
+  content:"";
+  position:absolute;
+  inset:-22px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(86,215,255,.12),transparent 66%);
+  z-index:0;
+}
+
+.manifesto-cells .value-card strong,
+.manifesto-cells .value-card span{
+  position:relative;
+  z-index:2;
+}
+
+.manifesto-cells .value-card strong{
+  font-size:20px;
+  line-height:1.1;
+  margin:0 0 12px;
+}
+
+.manifesto-cells .value-card span{
+  font-size:13.5px;
+  line-height:1.45;
 }
 
 .manifesto-cells .value-card::before{
@@ -532,46 +573,7 @@ rgba(248,251,255,.82) 100%);
   font-size:14px;
   line-height:1.48;
 }
-  .manifesto-cells .value-card:nth-child(1){
-  right:20px;
-  bottom:18px;
-  z-index:4;
-}
 
-.manifesto-cells .value-card:nth-child(2){
-  left:42px;
-  top:0;
-  z-index:3;
-}
-
-.manifesto-cells .value-card:nth-child(3){
-  left:8px;
-  bottom:38px;
-  z-index:2;
-}
-
-.manifesto-cells .value-card:nth-child(4){
-  right:0;
-  top:110px;
-  z-index:5;
-}
-  .manifesto-cells::before{
-  content:"";
-  position:absolute;
-  inset:35px 20px;
-  border-radius:50%;
-  border:1px dashed rgba(86,215,255,.26);
-  transform:rotate(-14deg);
-}
-
-.manifesto-cells::after{
-  content:"";
-  position:absolute;
-  inset:90px 70px;
-  border-radius:50%;
-  border:1px solid rgba(0,120,74,.10);
-  transform:rotate(18deg);
-}
 .value-card:hover,.info-card:hover,.program-card:hover,.resource-card:hover,.law-card:hover{
   transform:translateY(-4px);
   box-shadow:0 24px 54px rgba(6,47,96,.095);
@@ -1405,18 +1407,14 @@ rgba(255,255,255,.34) 100%);
 }
 @media(max-width:768px){
   .navbar{padding:12px 20px}
-  .manifesto-cells{
-  min-height:auto;
-  display:grid;
+ .manifesto-cells{
   grid-template-columns:1fr;
-  gap:16px;
+  gap:18px;
 }
 
 .manifesto-cells .value-card{
-  position:relative;
-  inset:auto !important;
-  width:100%;
-  height:auto;
+  max-width:100%;
+  aspect-ratio:auto;
   min-height:190px;
   border-radius:28px;
 }
