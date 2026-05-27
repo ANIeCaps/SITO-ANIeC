@@ -1382,13 +1382,17 @@ rgba(255,255,255,.34) 100%);
 @media(max-width:768px){
   .navbar{padding:12px 20px}
  .manifesto-cells{
+  min-height:auto;
+  display:grid;
   grid-template-columns:1fr;
   gap:18px;
 }
 
 .manifesto-cells .value-card{
-  max-width:100%;
-  aspect-ratio:auto;
+  position:relative;
+  inset:auto !important;
+  width:100%;
+  height:auto;
   min-height:190px;
   border-radius:28px;
 }
