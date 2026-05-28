@@ -2065,6 +2065,15 @@ rgba(255,255,255,.34) 100%);
 </div>
 
 <section class="section-soft section-pad" id="faq">
+  <style>
+#faq{
+  padding-bottom:34px !important;
+}
+
+#contatto{
+  padding-top:34px !important;
+}
+</style>
   <div class="container">
     <div class="intro center">
       <span class="eyebrow">Domande frequenti</span>
@@ -2532,6 +2541,15 @@ function closeFaqDetail(){
   document.getElementById("faqDetailOverlay").classList.remove("is-open");
   document.body.style.overflow = "";
 }
+    document.querySelectorAll('.faq-question').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    const match = this.getAttribute('onclick')?.match(/'([^']+)'/);
+
+    if(match && match[1]){
+      openFaqDetail(match[1]);
+    }
+  });
+});
 </script>
 </body>
 </html>
