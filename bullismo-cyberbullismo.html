@@ -1831,6 +1831,374 @@ section{
 section{
   scroll-margin-top:110px;
 }
+  /* =========================
+   FIX MOBILE DEFINITIVO
+========================= */
+
+@media(max-width:768px){
+
+  body{
+    background:#edf4fc;
+  }
+
+  .container{
+    width:100%;
+    max-width:100%;
+    padding:0 18px;
+  }
+
+  .section-pad{
+    padding-top:46px;
+    padding-bottom:46px;
+  }
+
+  /* HEADER */
+  .navbar{
+    padding:10px 14px;
+  }
+
+  .logo-aniec{
+    height:54px;
+    max-width:230px;
+  }
+
+  .mobile-menu{
+    top:74px;
+    left:14px;
+    right:14px;
+  }
+
+  /* HERO */
+  .digital-hero{
+    min-height:auto;
+    background-position:center;
+  }
+
+  .hero-wrap{
+    padding:34px 18px 54px;
+  }
+
+  .hero-wrap > div{
+    width:100% !important;
+    max-width:100% !important;
+  }
+
+  .hero-title{
+    margin-bottom:18px;
+  }
+
+  .hero-title-main{
+    font-size:31px;
+    line-height:1.02;
+  }
+
+  .hero-title-sub{
+    font-size:18px;
+    line-height:1.18;
+  }
+
+  .hero-description{
+    max-width:100%;
+    font-size:14.5px;
+    line-height:1.68;
+  }
+
+  .hero-actions{
+    gap:10px;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-dark,
+  .btn-light{
+    width:100%;
+    min-height:46px;
+    padding:12px 18px;
+    font-size:10px;
+    white-space:normal;
+    text-align:center;
+  }
+
+  /* INTRO E TITOLI */
+  .intro.center{
+    margin-bottom:28px;
+  }
+
+  .intro h2{
+    font-size:29px;
+    line-height:1.08;
+  }
+
+  .intro p{
+    font-size:14.5px;
+    line-height:1.68;
+  }
+
+  .eyebrow{
+    font-size:9.5px;
+    letter-spacing:.18em;
+    gap:8px;
+  }
+
+  .eyebrow::before{
+    width:26px;
+  }
+
+  /* VISIONE ANIEC */
+  .manifesto-grid{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+
+  .manifesto-panel{
+    padding:26px 20px;
+    border-radius:22px;
+  }
+
+  .manifesto-panel h2{
+    font-size:27px;
+  }
+
+  .manifesto-panel p{
+    font-size:14px;
+    line-height:1.72;
+  }
+
+  .manifesto-cells{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:14px;
+    min-height:auto;
+  }
+
+  .manifesto-cells .value-card{
+    position:relative !important;
+    inset:auto !important;
+    width:100% !important;
+    height:auto !important;
+    min-height:auto;
+    border-radius:20px;
+    padding:24px 20px;
+  }
+
+  .manifesto-cells .value-card strong{
+    font-size:18px;
+  }
+
+  .manifesto-cells .value-card span{
+    font-size:13.5px;
+  }
+
+  /* CARD GENERALI */
+  .def-grid,
+  .services-grid,
+  .prevention-grid{
+    grid-template-columns:1fr !important;
+    gap:14px;
+  }
+
+  .info-card,
+  .service-card,
+  .prevention-item{
+    min-height:auto;
+  }
+
+  .service-card{
+    padding:26px 22px;
+    border-radius:18px;
+  }
+
+  .service-card h3{
+    font-size:21px;
+    padding-top:28px;
+  }
+
+  .service-card p,
+  .service-card li{
+    font-size:13.8px;
+  }
+
+  /* BLOCCO DARK */
+  .dark-scope{
+    padding:30px 22px;
+    border-radius:24px;
+  }
+
+  .dark-scope h2{
+    font-size:29px;
+    line-height:1.08;
+  }
+
+  .dark-scope p{
+    font-size:14.5px;
+  }
+
+  /* DIGITAL BREAK */
+  .digital-break{
+    width:calc(100% - 36px);
+    margin:42px auto;
+    padding:46px 22px;
+    border-radius:24px;
+  }
+
+  .digital-break h2{
+    font-size:30px;
+  }
+
+  .digital-break p{
+    font-size:14.5px;
+  }
+
+  /* SCUOLE */
+  .school-lab{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+
+  .school-side{
+    position:relative;
+    top:auto;
+    padding:0;
+  }
+
+  .school-side h2{
+    font-size:29px;
+  }
+
+  .school-side p,
+  .school-note{
+    font-size:14.3px;
+  }
+
+  .program-card{
+    padding:24px 0 24px 52px;
+  }
+
+  .program-card::before{
+    width:32px;
+    height:32px;
+    top:26px;
+  }
+
+  .program-card h3{
+    font-size:20px;
+  }
+
+  .program-card p{
+    font-size:14px;
+  }
+
+  /* RETE EDUCATIVA */
+  .network-full{
+    overflow:hidden;
+  }
+
+  .network-full-image{
+    width:100%;
+    opacity:.92;
+    mix-blend-mode:normal;
+  }
+
+  .network-overlay{
+    position:relative !important;
+    top:auto !important;
+    right:auto !important;
+    width:100% !important;
+    padding:24px 18px 8px !important;
+    text-align:center;
+  }
+
+  .network-overlay h2{
+    font-size:26px;
+  }
+
+  .network-overlay p{
+    font-size:14px;
+    line-height:1.65;
+  }
+
+  /* FAQ */
+  .faq-columns{
+    grid-template-columns:1fr !important;
+    gap:16px;
+  }
+
+  .faq-column{
+    padding:20px 18px;
+    border-radius:20px;
+  }
+
+  .faq-column-head{
+    margin-bottom:12px !important;
+  }
+
+  .faq-column-head h3{
+    font-size:12px;
+    letter-spacing:.14em;
+  }
+
+  .faq-question{
+    font-size:14px;
+    padding:13px 38px 13px 14px;
+    border-radius:14px;
+  }
+
+  .faq-detail-panel{
+    width:calc(100% - 26px);
+    max-height:84vh;
+    margin:6vh auto 0;
+    padding:32px 20px;
+    border-radius:22px;
+  }
+
+  .faq-detail-panel h2{
+    font-size:26px;
+    margin-right:42px;
+  }
+
+  .faq-detail-panel p,
+  .faq-detail-panel li{
+    font-size:14.5px;
+    line-height:1.78;
+  }
+
+  /* FORM */
+  .contact-box{
+    padding:28px 20px;
+    border-radius:24px;
+  }
+
+  .contact-box h2{
+    font-size:27px;
+  }
+
+  .form-row{
+    grid-template-columns:1fr;
+  }
+
+  input,
+  select,
+  textarea{
+    font-size:14px;
+  }
+
+  /* FOOTER */
+  .site-footer{
+    padding:26px 18px 0;
+  }
+
+  .footer-card{
+    grid-template-columns:1fr;
+    gap:18px;
+    padding:24px 18px;
+    border-radius:22px;
+  }
+
+  .footer-left,
+  .footer-right{
+    text-align:center;
+  }
+}
 </style>
 </head>
 
