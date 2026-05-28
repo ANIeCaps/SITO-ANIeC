@@ -1564,10 +1564,29 @@ rgba(255,255,255,.34) 100%);
 /* =========================
    OTTIMIZZAZIONE RITMO PAGINA
 ========================= */
-.digital-break{position:relative;overflow:hidden;width:min(1180px, calc(100% - 120px));margin:86px auto;padding:112px 60px;border-radius:42px;background:radial-gradient(circle at 18% 18%, rgba(0,180,255,.14), transparent 28%),radial-gradient(circle at 86% 28%, rgba(0,120,255,.12), transparent 34%),linear-gradient(135deg,#031a33 0%,#062f60 48%,#0b4f88 100%);box-shadow:0 30px 90px rgba(0,20,60,.24);isolation:isolate;}
-.digital-break::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px),linear-gradient(180deg, rgba(255,255,255,.025) 1px, transparent 1px);background-size:42px 42px;opacity:.42;}
+.digital-break{
+  position:relative;
+  overflow:hidden;
+  width:min(1180px, calc(100% - 120px));
+  margin:64px auto;
+  padding:72px 70px;
+  border-radius:42px;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(0,180,255,.14), transparent 28%),
+    radial-gradient(circle at 86% 28%, rgba(0,120,255,.12), transparent 34%),
+    linear-gradient(135deg,#031a33 0%,#062f60 48%,#0b4f88 100%);
+  box-shadow:0 30px 90px rgba(0,20,60,.24);
+  isolation:isolate;
+}
+  .digital-break::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px),linear-gradient(180deg, rgba(255,255,255,.025) 1px, transparent 1px);background-size:42px 42px;opacity:.42;}
 .digital-break-overlay{position:absolute;inset:0;background:radial-gradient(circle at center, rgba(0,255,255,.09), transparent 56%);filter:blur(42px);}
-.digital-break-content{position:relative;z-index:2;max-width:860px;}
+.digital-break-content{
+  position:relative;
+  z-index:2;
+  max-width:900px;
+  margin:0 auto;
+  text-align:center;
+}
 .digital-label{display:inline-block;margin-bottom:22px;color:#8dd6ff;font-size:12px;font-weight:900;letter-spacing:.22em;text-transform:uppercase;}
 .digital-break h2{font-size:clamp(2.2rem,4vw,4rem);line-height:1.08;letter-spacing:-.04em;color:white;margin:0 0 24px;}
 .digital-break p{max-width:720px;color:rgba(255,255,255,.76);font-size:18px;line-height:1.9;}
