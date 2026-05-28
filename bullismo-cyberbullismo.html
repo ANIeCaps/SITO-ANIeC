@@ -2333,5 +2333,210 @@ function toggleHub(btn){
 }
 
 </script>
+  <script>
+const faqDetails = {
+  "ragazzi-bullismo-1": {
+    label: "Ragazzi e studenti · Bullismo",
+    title: "Come capisco se è bullismo e non solo uno scherzo?",
+    text: `
+      <p>Uno scherzo dovrebbe far ridere tutti, non lasciare qualcuno umiliato, isolato o spaventato. Quando una presa in giro si ripete, quando una persona viene scelta come bersaglio, quando il gruppo ride mentre qualcuno sta male, si entra in una dinamica diversa.</p>
+      <p>Nel bullismo conta molto lo squilibrio: chi subisce spesso sente di non riuscire a difendersi, teme conseguenze o perde sicurezza nel gruppo.</p>
+      <ul>
+        <li>non minimizzare ciò che provi;</li>
+        <li>non restare solo;</li>
+        <li>parla con un adulto affidabile;</li>
+        <li>racconta fatti concreti: chi, dove, quando, cosa accade.</li>
+      </ul>`
+  },
+
+  "ragazzi-bullismo-2": {
+    label: "Ragazzi e studenti · Bullismo",
+    title: "Cosa posso fare se vengo escluso o umiliato dal gruppo?",
+    text: `
+      <p>L’esclusione continua, le battute pesanti, le umiliazioni davanti agli altri o il sentirsi sempre “quello preso di mira” non sono cose da sopportare in silenzio.</p>
+      <p>La prima cosa utile è ricostruire cosa succede senza affrontare tutto da solo: episodi, persone presenti, luoghi, frequenza e conseguenze.</p>
+      <ul>
+        <li>cerca un adulto che possa ascoltarti senza giudicarti;</li>
+        <li>evita risposte impulsive o vendicative;</li>
+        <li>non cancellare subito elementi utili;</li>
+        <li>chiedi aiuto prima che la situazione diventi più pesante.</li>
+      </ul>`
+  },
+
+  "ragazzi-bullismo-3": {
+    label: "Ragazzi e studenti · Bullismo",
+    title: "Se vedo un compagno preso di mira, cosa dovrei fare?",
+    text: `
+      <p>Chi assiste non è responsabile del comportamento di chi agisce, ma può avere un ruolo importante. Ridere, condividere, restare in silenzio o fare finta di nulla può rafforzare il gruppo che colpisce.</p>
+      <p>Non devi esporti in modo rischioso. Puoi però interrompere la complicità, avvisare un adulto, stare vicino alla persona esclusa o aiutare a raccontare ciò che accade.</p>
+      <p>Nel bullismo il gruppo è spesso decisivo: anche un piccolo gesto di distanza può cambiare la dinamica.</p>`
+  },
+
+  "ragazzi-cyber-1": {
+    label: "Ragazzi e studenti · Cyberbullismo",
+    title: "Cosa faccio se girano messaggi, foto o video su di me?",
+    text: `
+      <p>Nel cyberbullismo la velocità di diffusione può aumentare paura e vergogna. La cosa più importante è non agire d’impulso e non affrontare tutto da solo.</p>
+      <p>Prima di cancellare, bloccare o rispondere, può essere utile conservare elementi ordinati: screenshot, link, nomi profilo, date, orari e piattaforme coinvolte.</p>
+      <ul>
+        <li>non rilanciare il contenuto;</li>
+        <li>non rispondere con minacce o insulti;</li>
+        <li>segnala sulla piattaforma quando possibile;</li>
+        <li>coinvolgi subito un adulto affidabile.</li>
+      </ul>`
+  },
+
+  "ragazzi-cyber-2": {
+    label: "Ragazzi e studenti · Cyberbullismo",
+    title: "Devo rispondere agli insulti online?",
+    text: `
+      <p>Di solito no. Rispondere subito può alimentare la situazione, produrre nuovi screenshot contro di te e dare più visibilità al contenuto.</p>
+      <p>La risposta migliore non è sempre quella pubblica. Spesso è più efficace raccogliere le informazioni, bloccare o limitare i contatti, segnalare e chiedere supporto.</p>
+      <p>Non rispondere non significa essere deboli: significa proteggersi e scegliere una strada più sicura.</p>`
+  },
+
+  "ragazzi-cyber-3": {
+    label: "Ragazzi e studenti · Bullismo e cyberbullismo",
+    title: "Quando devo parlarne con un adulto?",
+    text: `
+      <p>È il momento di parlarne quando ti senti in ansia, eviti la scuola, hai paura del telefono, ricevi minacce, ti senti umiliato o non riesci più a gestire la situazione.</p>
+      <p>Non aspettare che tutto diventi grave. Chiedere aiuto prima permette di intervenire con più calma e con passaggi più ordinati.</p>
+      <p>Puoi iniziare da una persona adulta di cui ti fidi: genitore, docente, educatore, referente scolastico o altra figura affidabile.</p>`
+  },
+
+  "famiglie-bullismo-1": {
+    label: "Famiglie · Bullismo",
+    title: "Quali segnali possono indicare bullismo?",
+    text: `
+      <p>I segnali non sono sempre evidenti. Un ragazzo può non raccontare subito ciò che accade per vergogna, paura di peggiorare la situazione o timore di non essere creduto.</p>
+      <ul>
+        <li>rifiuto della scuola o malesseri frequenti;</li>
+        <li>isolamento, irritabilità o chiusura;</li>
+        <li>calo del rendimento;</li>
+        <li>perdita di amicizie o esclusione dal gruppo;</li>
+        <li>paura di determinate persone o contesti.</li>
+      </ul>
+      <p>Il singolo segnale non basta per concludere, ma merita ascolto e osservazione.</p>`
+  },
+
+  "famiglie-bullismo-2": {
+    label: "Famiglie · Bullismo",
+    title: "Come parlare con mio figlio senza metterlo sotto pressione?",
+    text: `
+      <p>La prima reazione dei genitori è spesso rabbia o paura. È comprensibile, ma davanti al ragazzo serve creare uno spazio sicuro.</p>
+      <p>Meglio usare domande aperte, evitare interrogatori, non colpevolizzare e non promettere azioni immediate senza aver capito bene il quadro.</p>
+      <ul>
+        <li>“Raccontami cosa sta succedendo con calma”;</li>
+        <li>“Non devi affrontarlo da solo”;</li>
+        <li>“Vediamo insieme quali passi fare”.</li>
+      </ul>`
+  },
+
+  "famiglie-bullismo-3": {
+    label: "Famiglie · Bullismo",
+    title: "Quando coinvolgere la scuola?",
+    text: `
+      <p>La scuola va coinvolta quando la dinamica riguarda compagni, classe, ambienti scolastici, tragitto, chat di gruppo collegate alla scuola o episodi ripetuti.</p>
+      <p>È utile arrivare al confronto con informazioni ordinate, non solo con uno sfogo emotivo: episodi, date, persone coinvolte, impatto sul ragazzo e richiesta chiara di attenzione educativa.</p>
+      <p>L’obiettivo non è “fare guerra”, ma attivare una risposta proporzionata e tutelante.</p>`
+  },
+
+  "famiglie-cyber-1": {
+    label: "Famiglie · Cyberbullismo",
+    title: "Cosa fare se circolano immagini o chat?",
+    text: `
+      <p>Nel digitale è importante agire con ordine. Cancellare tutto subito può far perdere elementi utili, mentre reagire pubblicamente può amplificare il contenuto.</p>
+      <ul>
+        <li>conservare screenshot leggibili;</li>
+        <li>annotare piattaforma, profili, date e orari;</li>
+        <li>evitare condivisioni ulteriori;</li>
+        <li>valutare segnalazione alla piattaforma;</li>
+        <li>coinvolgere scuola o figure competenti se il contesto lo richiede.</li>
+      </ul>`
+  },
+
+  "famiglie-cyber-2": {
+    label: "Famiglie · Cyberbullismo",
+    title: "Conviene togliere subito telefono e social?",
+    text: `
+      <p>Togliere tutto può sembrare una soluzione rapida, ma spesso rischia di far sentire il ragazzo punito invece che protetto.</p>
+      <p>Può essere utile ridurre temporaneamente l’esposizione, modificare privacy, bloccare contatti, controllare impostazioni e concordare regole, ma senza trasformare il ragazzo nel colpevole.</p>
+      <p>La protezione digitale deve essere accompagnata da ascolto, fiducia e guida adulta.</p>`
+  },
+
+  "famiglie-cyber-3": {
+    label: "Famiglie · Cyberbullismo",
+    title: "Quando servono canali istituzionali o figure competenti?",
+    text: `
+      <p>Servono passaggi più qualificati quando ci sono minacce, diffusione di immagini intime o umilianti, profili falsi, estorsioni, persecuzione, danni importanti o forte sofferenza psicologica.</p>
+      <p>In questi casi non basta una gestione familiare. È opportuno orientarsi verso scuola, servizi, professionisti, piattaforme, canali istituzionali o autorità competenti, secondo la gravità.</p>`
+  },
+
+  "aniec-1": {
+    label: "ANIeC · Orientamento",
+    title: "ANIeC può aiutare a leggere la situazione?",
+    text: `
+      <p>Sì. ANIeC può aiutare a mettere ordine tra episodi, segnali, contesto relazionale, dinamiche scolastiche e componenti digitali.</p>
+      <p>L’obiettivo è evitare confusione, minimizzazione o reazioni impulsive, distinguendo ciò che richiede ascolto educativo da ciò che richiede passaggi più strutturati.</p>`
+  },
+
+  "aniec-2": {
+    label: "ANIeC · Ruolo",
+    title: "ANIeC interviene direttamente nei conflitti?",
+    text: `
+      <p>ANIeC non sostituisce scuola, psicologi, avvocati, servizi o autorità. Il suo ruolo è orientativo, divulgativo, educativo e organizzativo.</p>
+      <p>Può però aiutare le persone a comprendere il problema, preparare il confronto, individuare i passaggi utili e orientarsi verso le figure competenti.</p>`
+  },
+
+  "aniec-3": {
+    label: "ANIeC · Supporto",
+    title: "Può supportare famiglie e studenti?",
+    text: `
+      <p>Sì. Il supporto può riguardare ascolto iniziale, lettura della situazione, orientamento sui passi sicuri e collegamento con scuola o rete territoriale quando necessario.</p>
+      <p>Non si tratta di sostituirsi alle persone coinvolte, ma di accompagnarle a non restare sole e a muoversi con maggiore chiarezza.</p>`
+  },
+
+  "aniec-4": {
+    label: "ANIeC · Scuole",
+    title: "Può proporre percorsi per le scuole?",
+    text: `
+      <p>Sì. Possono essere costruiti incontri, laboratori, percorsi educativi e azioni territoriali rivolte a studenti, famiglie e docenti.</p>
+      <p>I percorsi possono distinguere bullismo, cyberbullismo, educazione digitale, ruolo del gruppo, responsabilità degli spettatori e prevenzione relazionale.</p>`
+  },
+
+  "aniec-5": {
+    label: "ANIeC · Cyberbullismo",
+    title: "Può orientare nei casi digitali?",
+    text: `
+      <p>Sì. ANIeC può aiutare a comprendere come raccogliere informazioni, evitare condivisioni dannose, valutare segnalazioni, coinvolgere adulti competenti e distinguere tra disagio relazionale e possibile necessità di tutela.</p>
+      <p>Nei casi più gravi, l’orientamento deve portare verso canali istituzionali o figure abilitate.</p>`
+  },
+
+  "aniec-6": {
+    label: "ANIeC · Rete",
+    title: "Quando indirizza a figure competenti?",
+    text: `
+      <p>Quando emergono rischi per la sicurezza, forte sofferenza, minacce, contenuti gravi, comportamenti persecutori o necessità tecniche, psicologiche, legali o istituzionali.</p>
+      <p>In questi casi ANIeC favorisce l’orientamento corretto, evitando di trattare situazioni complesse con risposte generiche.</p>`
+  }
+};
+
+function openFaqDetail(key){
+  const item = faqDetails[key];
+  if(!item) return;
+
+  document.getElementById("faqDetailLabel").textContent = item.label;
+  document.getElementById("faqDetailTitle").textContent = item.title;
+  document.getElementById("faqDetailText").innerHTML = item.text;
+
+  document.getElementById("faqDetailOverlay").classList.add("is-open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeFaqDetail(){
+  document.getElementById("faqDetailOverlay").classList.remove("is-open");
+  document.body.style.overflow = "";
+}
+</script>
 </body>
 </html>
