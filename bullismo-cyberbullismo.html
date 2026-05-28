@@ -1127,7 +1127,7 @@ section{
   display:flex;
   flex-direction:column;
   min-height:100%;
-  padding:26px;
+  padding:26px 26px 22px;
   border-radius:28px;
   background:rgba(255,255,255,.86);
   border:1px solid rgba(214,225,238,.82);
@@ -1153,19 +1153,21 @@ section{
 
 .faq-question{
   width:100%;
-  min-height:58px;
-  margin-top:10px;
-  padding:14px 16px;
   border:1px solid rgba(6,47,96,.10);
-  border-radius:16px;
   background:#fff;
-  color:var(--blue);
-  font-size:14px;
-  line-height:1.35;
-  font-weight:850;
+  border-radius:18px;
+  padding:16px 18px;
   text-align:left;
-  cursor:pointer;
+  font-size:17px;
+  font-weight:600;
+  line-height:1.35;
+  color:#0b3b78;
   transition:.22s ease;
+  cursor:pointer;
+}
+
+  .faq-question span{
+  font-weight:500;
 }
 
 .faq-question:hover{
