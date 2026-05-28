@@ -2290,6 +2290,40 @@ section{
   outline:none;
   box-shadow:none;
 }
+  /* FIX DESKTOP BLOCCO DIGITALE BLU */
+@media(min-width:769px){
+
+  .dark-scope{
+    padding:46px 58px 48px;
+    border-radius:34px;
+    min-height:auto;
+  }
+
+  .dark-scope h2{
+    max-width:760px;
+    font-size:clamp(2.1rem,3vw,3.45rem);
+    margin-bottom:18px;
+  }
+
+  .dark-scope p{
+    max-width:720px;
+    font-size:16.5px;
+    line-height:1.76;
+  }
+
+  .dark-scope::after{
+    content:"";
+    position:absolute;
+    right:70px;
+    top:50%;
+    width:230px;
+    height:230px;
+    transform:translateY(-50%);
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(86,215,255,.16),transparent 68%);
+    pointer-events:none;
+  }
+}
 </style>
 </head>
 
